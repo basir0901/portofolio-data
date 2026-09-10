@@ -202,12 +202,6 @@ const Index = () => {
       {/* ========== NAVIGATION ========== */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/65 backdrop-blur-xl border-b border-slate-200/50">
         <div className="max-w-7xl mx-auto flex flex-col items-center justify-center gap-2 px-6 py-4">
-          <a href="#" className="group" aria-label="Basir logo">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-blue-200 bg-gradient-to-br from-blue-600 to-indigo-600 text-white shadow-sm transition-all duration-300 group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-blue-500/25">
-              <span className="text-2xl font-semibold leading-none" style={{ fontFamily: "'Times New Roman', serif" }}>ℬ</span>
-            </div>
-          </a>
-
           <div className="flex items-center gap-3 text-[12px] font-semibold tracking-[0.16em] uppercase font-mono text-slate-600">
             {/* <a
               href="/assets/cv_basir.pdf"
@@ -241,7 +235,7 @@ const Index = () => {
       <section className="pt-40 pb-32 px-6">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-[clamp(3rem,8vw,4rem)] font-bold leading-[0.9] tracking-tight text-neutral-800 uppercase">
-            BASIR ARSY SYAMS
+            BASIR ARSY SYAMS TESTING
           </h1>
         </div>
       </section>
