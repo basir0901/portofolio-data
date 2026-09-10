@@ -23,9 +23,8 @@ const Index = () => {
   const projects: Project[] = [
     {
       title: "Enterprise Frontend Migration",
-      description:
-        "Migrated a enterprise frontend for client PT Kansai Paint Indonesia 4 main modules, 20 business modules, and 49 workflow submodules, including Request Management (Purchase Request, Reimbursement, Cash Advance, Settlement), Tracking Document (Purchase Request, AR Invoice, Purchase Order, Reimbursement, Outgoing Payments, PR-to-PO), and Approval Report (Purchase Order, AR Invoice, Outgoing Payment Reimbursement, Outgoing Payment Cash Advance, Outgoing Payment AP Invoice), from a HTML, CSS, Vanila Javascript multi-page architecture to a React js Single Page Application (SPA), successfully completing development, testing, and deployment within 5 weeks.",
-      tags: ["React.js", "SPA", "JavaScript"],
+      description:"Migrated an enterprise frontend for PT Kansai Paint Indonesia covering 4 main modules, comprising 30 Business modules and 49 workflow steps, including Master Data (Users Management, Business Partners, Chart of Accounts, Expenses COA, Categories, Remarks, Account Names, Departments, Classifications, Master Access, Approval Rules, and Items), Request Management (Purchase Request, Reimbursement, Cash Advance, and Settlement), Tracking Document (Purchase Request, Purchase Order, Reimbursement, Cash Advance, Settlement, AR Invoice, Outgoing Payment Reimbursement, Outgoing Payment Cash Advance, Outgoing Payment AP Invoice, and PR-to-PO), and Approval Report (Purchase Order, AR Invoice, Outgoing Payment Reimbursement, Outgoing Payment Cash Advance, and Outgoing Payment AP Invoice), transforming the application from a HTML, CSS, and Vanilla JavaScript architecture into a React.js Single Page Application (SPA) and successfully completing development, testing, and deployment within 5 weeks. ",
+      tags: ["React.js""", "SPA", "JavaScript"],
       technologies: [
         "React.js",
         "Single Page Application (SPA)",
@@ -235,7 +234,7 @@ const Index = () => {
       <section className="pt-40 pb-32 px-6">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-[clamp(3rem,8vw,4rem)] font-bold leading-[0.9] tracking-tight text-neutral-800 uppercase">
-            BASIR ARSY SYAMS Testing 
+            BASIR ARSY SYAMS Testing mnaknfdkjakjfkjkjadkfjkl
           </h1>
         </div>
       </section>
