@@ -235,7 +235,7 @@ const Index = () => {
       <section className="pt-40 pb-32 px-6">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-[clamp(3rem,8vw,4rem)] font-bold leading-[0.9] tracking-tight text-neutral-800 uppercase">
-            BASIR ARSY SYAMS Testing mnaknfdkjakjfkjkjadkfjkl
+            BASIR ARSY SYAMS Testing 
           </h1>
         </div>
       </section>
