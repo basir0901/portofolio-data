@@ -23,7 +23,7 @@ const Index = () => {
   const projects: Project[] = [
     {
       title: "Enterprise Frontend Migration",
-      description:"Migrated an enterprise frontend for client covering 4 main modules, comprising 30 Business modules and 49 workflow steps, including Master Data (Users Management, Business Partners, Chart of Accounts, Expenses COA, Categories, Remarks, Account Names, Departments, Classifications, Master Access, Approval Rules, and Items), Request Management (Purchase Request, Reimbursement, Cash Advance, and Settlement), Tracking Document (Purchase Request, Purchase Order, Reimbursement, Cash Advance, Settlement, AR Invoice, Outgoing Payment Reimbursement, Outgoing Payment Cash Advance, Outgoing Payment AP Invoice, and PR-to-PO), and Approval Report (Purchase Order, AR Invoice, Outgoing Payment Reimbursement, Outgoing Payment Cash Advance, and Outgoing Payment AP Invoice), transforming the application from a HTML, CSS, and Vanilla JavaScript architecture into a React.js Single Page Application (SPA) and successfully completing development, testing, and deployment within 5 weeks. ",
+      description:"Migrated an enterprise frontend for client covering 4 main modules, comprising 30 Business modules and 49 workflow steps, including Request Management (Purchase Request, Reimbursement, Cash Advance, and Settlement), Approval Report (Purchase Order, AR Invoice, Outgoing Payment Reimbursement, Outgoing Payment Cash Advance, and Outgoing Payment AP Invoice), Tracking Document (Purchase Request, Purchase Order, Reimbursement, Cash Advance, Settlement, AR Invoice, Outgoing Payment Reimbursement, Outgoing Payment Cash Advance, Outgoing Payment AP Invoice, and PR-to-PO), and Master Data (Users Management, Business Partners, Chart of Accounts, Expenses COA, Categories, Remarks, Account Names, Departments, Classifications, Master Access, Approval Rules, and Items), transforming the application from a HTML, CSS, and Vanilla JavaScript architecture into a React.js Single Page Application (SPA) and successfully completing development and testing within 5 weeks.",
       tags: ["React.js", "SPA", "JavaScript"],
       technologies: [
         "React.js",
@@ -73,7 +73,7 @@ const Index = () => {
     },
     {
       title: "Data Validation System",
-      description: "Designed and developed a web-based Data Validation System with two main module: Module validating SLA records that exceed standards by routing them to responsible teams for remarks and Module enabling high-volume raw data uploads into separate staging databases", 
+      description: "Designed and developed a web-based Data Validation System with two main module: Module validating SLA records that exceed standards by routing them to responsible teams for remarks and Module enabling high-volume raw data uploads into separate staging databases",
       tags: ["Laravel", "ReactJS", "Postgresql"],
       technologies: ["Laravel", "React", "PostgreSQL"],
       company: "PT Sinergi Informatika Semen Indonesia",
@@ -93,7 +93,7 @@ const Index = () => {
       images: [
         "/assets/magangTelkomsat/magangTel1.png",
         "/assets/magangTelkomsat/magangTel2.png",
-        "/assets/magangTelkomsat/magangTel3.png",        
+        "/assets/magangTelkomsat/magangTel3.png",
         "/assets/magangTelkomsat/sertifikatTelkomsat.jpg",
       ],
     },
@@ -234,7 +234,7 @@ const Index = () => {
       <section className="pt-40 pb-32 px-6">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-[clamp(3rem,8vw,4rem)] font-bold leading-[0.9] tracking-tight text-neutral-800 uppercase">
-            BASIR ARSY SYAMS 
+            BASIR ARSY SYAMS
           </h1>
         </div>
       </section>
