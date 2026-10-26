@@ -22,8 +22,10 @@ const Index = () => {
 
   const projects: Project[] = [
     {
+    
+const project = {
       title: "Enterprise Frontend Migration",
-      description:"Migrated an enterprise frontend for client covering 4 main modules, comprising 30 Business modules and 49 workflow steps, including Request Management (Purchase Request, Reimbursement, Cash Advance, and Settlement), Approval Report (Purchase Order, AR Invoice, Outgoing Payment Reimbursement, Outgoing Payment Cash Advance, and Outgoing Payment AP Invoice), Tracking Document (Purchase Request, Purchase Order, Reimbursement, Cash Advance, Settlement, AR Invoice, Outgoing Payment Reimbursement, Outgoing Payment Cash Advance, Outgoing Payment AP Invoice, and PR-to-PO), and Master Data (Users Management, Business Partners, Chart of Accounts, Expenses COA, Categories, Remarks, Account Names, Departments, Classifications, Master Access, Approval Rules, and Items), transforming the application from a HTML, CSS, and Vanilla JavaScript architecture into a React.js Single Page Application (SPA) and successfully completing development and testing within 5 weeks.",
+      description: "Developed the frontend for an enterprise application for a client using React.js, covering 4 main modules comprising 30 business modules and 49 workflow steps, including Request Management (Purchase Request, Reimbursement, Cash Advance, and Settlement), Approval Report (Purchase Order, AR Invoice, Outgoing Payment Reimbursement, Outgoing Payment Cash Advance, and Outgoing Payment AP Invoice), Tracking Document (Purchase Request, Purchase Order, Reimbursement, Cash Advance, Settlement, AR Invoice, Outgoing Payment Reimbursement, Outgoing Payment Cash Advance, Outgoing Payment AP Invoice, and PR-to-PO), and Master Data (Users Management, Business Partners, Chart of Accounts, Expenses COA, Categories, Remarks, Account Names, Departments, Classifications, Master Access, Approval Rules, and Items). Completed development and testing within 4 weeks.",
       tags: ["React.js", "SPA", "JavaScript"],
       technologies: [
         "React.js",
