@@ -1,0 +1,429 @@
+export interface ProjectScreenshot {
+  url: string;
+  title: string;
+  caption: string;
+  isPrimary?: boolean;
+}
+
+export interface ExperienceSubproject {
+  title: string;
+  items: string[];
+}
+
+export interface ExperienceBlock {
+  id: string;
+  company: string;
+  role: string;
+  period: string;
+  location: string;
+  employmentType: string;
+  problemToSolve: string;
+  projectOverview?: string;
+  responsibilities: string[];
+  responsibilityGroups?: ExperienceSubproject[];
+  businessImpact: string[];
+  businessImpactGroups?: ExperienceSubproject[];
+  technologies: string[];
+  screenshots: ProjectScreenshot[];
+}
+
+export interface SkillCategory {
+  category: string;
+  skills: { name: string; note?: string }[];
+}
+
+export interface EducationItem {
+  institution: string;
+  degree: string;
+  field: string;
+  graduationYear: string;
+  gpa: string;
+  location: string;
+  description: string;
+  highlights: string[];
+}
+
+export interface CertificationItem {
+  title: string;
+  issuer: string;
+  issueDate: string;
+  credentialUrl?: string;
+  documentPath?: string;
+  description: string;
+}
+
+export const PERSONAL_INFO = {
+  name: "Hai, Saya Basir",
+  title: "Software Engineer & Data Engineer",
+  availabilityText1:
+    "Saya terbuka dengan posisi lain di luar posisi yang pernah saya kerjakan",
+  availabilityText2:
+    "Fast learner, Adaptive & Growth-Oriented",
+  bio: "Saya memiliki pengalaman profesional dalam pengembangan website dan pengolahan data end-to-end untuk menghasilkan data yang bersih, terstruktur, dan siap digunakan. Berbekal pengalaman tersebut, saya memiliki fleksibilitas tinggi dan terbuka untuk berkontribusi tidak hanya di bidang software maupun data. Saya meyakini bahwa latar belakang ini membekali saya dengan kemampuan adaptasi yang cepat, kemampuan belajar yang cepat, serta mentalitas untuk memecahkan berbagai tantangan teknis maupun operasional di posisi baru.",
+  educationShort:
+    "Sarjana Terapan (D-IV) Teknologi Rekayasa Perangkat Lunak — IPB University (Lulus 2025 • IPK 3.20)",
+  email: "basirarsy0@gmail.com",
+  linkedin: "https://www.linkedin.com/in/basrarsy/",
+  github: "https://github.com/basrarsy",
+  cvPath: "/assets/cv_basir.pdf",
+  bnspPath: "/assets/BNSP.pdf",
+  avatarPath: "/assets/profile.jpg",
+};
+
+export const EXPERIENCES: ExperienceBlock[] = [
+  {
+    id: "ids-teknologi",
+    company: "PT IDS Teknologi Indonesia",
+    role: "Software Engineer",
+    period: "2026",
+    location: "Jakarta, Indonesia",
+    employmentType: "Project Based",
+    problemToSolve: "Aplikasi internal enterprise sebelumnya dibangun menggunakan arsitektur multi-page konvensional berbasis HTML, CSS, dan Vanilla JavaScript. Seiring berkembangnya kebutuhan bisnis, sistem harus mengakomodasi 30 modul bisnis yang tersebar dalam 4 domain utama serta 49 tahapan workflow operasional dan persetujuan. Arsitektur lama mulai menghadapi tantangan dalam hal efisiensi navigasi, pengelolaan kode, dan konsistensi antarmuka. Setiap perpindahan halaman memerlukan proses reload dokumen, sehingga pengalaman pengguna menjadi kurang responsif ketika menjalankan proses bisnis yang melibatkan banyak tahapan. Selain itu, implementasi antarmuka dan pengelolaan interaksi yang tersebar pada berbagai halaman meningkatkan kompleksitas pemeliharaan serta menyulitkan standarisasi komponen dan perilaku sistem antarmodul. Diperlukan modernisasi arsitektur frontend menjadi Single Page Application (SPA) berbasis React.js untuk meningkatkan responsivitas navigasi, menyederhanakan pengelolaan state, serta membangun fondasi frontend yang lebih modular, konsisten, dan mudah dikembangkan seiring pertumbuhan kebutuhan bisnis.",
+    responsibilities: [
+      "Melakukan migrasi frontend sistem enterprise berbasis website untuk client dari arsitektur multi-page HTML/CSS/Vanilla JavaScript lama menjadi Single Page Application (SPA) berbasis React.js, mencakup 4 domain utama, 30 modul bisnis, dan 49 tahapan alur kerja (workflow).",
+      "Mengembangkan arsitektur frontend modul Request Management yang mencakup Purchase Request, Reimbursement, Cash Advance, dan Settlement.",
+      "Membangun modul Approval Report (PO, AR Invoice, Outgoing Payments) dengan otorisasi berbasis peran (role-based authorization).",
+      "Mengembangkan antarmuka Tracking Document (alur siklus PR-to-PO, invoice, outgoing cash settlement) dengan indikator status real-time.",
+      "Mengimplementasikan modul Master Data untuk Users Management, Chart of Accounts (COA), Approval Rules, dan Master Access.",
+      "Menyelesaikan seluruh implementasi antarmuka, sinkronisasi state, dan pengujian integrasi dalam tenggat waktu intensif 4 hingga 5 minggu.",
+    ],
+    businessImpact: [
+      "Mempermudah pengembangan, pemeliharaan, dan penambahan fitur pada sistem yang memiliki banyak modul dan alur kerja.",
+      "Menghilangkan jeda reload halaman pada 49 tahapan alur kerja, mempercepat proses transaksi operasional harian.",
+      "Menstandarisasi komponen antarmuka melalui pendekatan reusable components sehingga tampilan dan perilaku elemen UI lebih konsisten di 30 modul bisnis.",
+      "Mengurangi duplikasi kode frontend dan potensi inkonsistensi implementasi antarmodul.",
+      "Menyederhanakan pengelolaan kode frontend melalui arsitektur berbasis komponen React.js",
+    ],
+    technologies: [
+      "React.js",
+      "Single Page Application (SPA)",
+      "JavaScript (ES6+)",
+      "Tailwind CSS",
+      "Integrasi REST API",
+      "HTML5 / CSS3",
+    ],
+    screenshots: [
+      {
+        url: "/assets/ids_documentation/dashboard.png",
+        title: "Portal Manajemen & Dashboard Utama",
+        caption:
+          "Tampilan ringkasan operasional yang menyajikan rekap permintaan aktif, ringkasan alur kerja, dan akses cepat ke modul-modul ERP utama.",
+        isPrimary: true,
+      },
+      {
+        url: "/assets/ids_documentation/pending_task.png",
+        title: "Antrean Persetujuan Dokumen (Pending Task)",
+        caption:
+          "Pusat verifikasi terpadu bagi manajer untuk meninjau, menyetujui, atau mengembalikan dokumen transaksi lengkap dengan riwayat log audit.",
+        isPrimary: false,
+      },
+      {
+        url: "/assets/ids_documentation/pr_1.png",
+        title: "Formulir & Rincian Purchase Request",
+        caption:
+          "Antarmuka pengajuan pengadaan terstruktur yang mendukung rincian multi-item, alokasi anggaran, dan lampiran dokumen pendukung.",
+        isPrimary: false,
+      },
+    ],
+  },
+  {
+    id: "sisi",
+    company: "PT Sinergi Informatika Semen Indonesia",
+    role: "Software Engineer & Data Engineer",
+    period: "Nov 2025 — Mei 2026",
+    location: "Jakarta, Indonesia",
+    employmentType: "Program Magang Nasional/Magang HUB",
+    problemToSolve: " Proses pengolahan data internal sebelumnya bergantung pada file Excel yang tersedia di website internal dan bersumber dari SAP. Pemindahan data dari file Excel ke Raw Database masih menggunakan script Python, sehingga perubahan kebutuhan bisnis mendorong perlunya mekanisme ingestion data yang lebih fleksibel dan terintegrasi. Sistem baru dibutuhkan untuk menangani upload data bervolume besar, termasuk pemetaan kolom dan identifikasi tujuan database, tanpa bergantung pada script Python untuk tahap pemindahan data ke Raw Database. Selain itu, proses validasi transaksi yang mengalami SLA over sebelumnya dilakukan secara manual melalui pertukaran file Excel dan email antara tim Data & Reporting dengan divisi terkait untuk memperoleh keterangan (remarks). Mekanisme tersebut membutuhkan koordinasi manual dalam proses permintaan, pengisian, dan pemantauan hasil validasi. Diperlukan sistem berbasis website untuk memusatkan proses validasi SLA dan pemberian remarks agar tindak lanjut antar tim lebih terstruktur.",
+    responsibilities: [
+      "Mengembangkan aplikasi berbasis web menggunakan Laravel, PHP, React.js, JavaScript, dan PostgreSQL untuk menggantikan proses ingestion Excel ke Raw Database yang sebelumnya menggunakan script Python.",
+      "Mengimplementasikan fitur high-volume data upload untuk memproses ratusan ribu record ke staging database.",
+      "Mengembangkan mekanisme column mapping dan pemetaan file ke database tujuan untuk memastikan data masuk ke tabel yang sesuai.",
+      "Membangun modul SLA Validation untuk mengidentifikasi transaksi yang melewati standar SLA dan memfasilitasi pengisian remarks oleh divisi atau tim terkait melalui website.",
+      "Mengembangkan dan memelihara end-to-end ETL pipelines menggunakan Python dan Apache Airflow untuk mengolah data dari berbagai modul bisnis internal.",
+      "Mengotomatisasi proses ekstraksi data ke Raw Database, dilanjutkan dengan data cleaning dan transformation berdasarkan requirement bisnis.",
+      "Memuat data yang telah diproses ke Ready Database / Datamart untuk kebutuhan visualisasi dan pelaporan menggunakan Power BI.",
+      "Mengembangkan dan memelihara sekitar 10 Apache Airflow DAG untuk proses bisnis Service Desk, Order-to-Cash (O2C), dan Accounts Payable (AP).",
+    ],
+    responsibilityGroups: [
+      {
+        title: "A. Data Upload & Validation System",
+        items: [
+          "Mengembangkan aplikasi berbasis web menggunakan Laravel, PHP, React.js, JavaScript, dan PostgreSQL untuk menggantikan proses ingestion Excel ke Raw Database yang sebelumnya menggunakan script Python.",
+          "Mengimplementasikan fitur high-volume data upload untuk memproses ratusan ribu record ke staging database.",
+          "Mengembangkan mekanisme column mapping dan pemetaan file ke database tujuan untuk memastikan data masuk ke tabel yang sesuai.",
+          "Membangun modul SLA Validation untuk mengidentifikasi transaksi yang melewati standar SLA dan memfasilitasi pengisian remarks oleh divisi atau tim terkait melalui website.",
+        ],
+      },
+      {
+        title: "B. ETL Pipeline Development",
+        items: [
+          "Mengembangkan dan memelihara end-to-end ETL pipelines menggunakan Python dan Apache Airflow untuk mengolah data dari berbagai modul bisnis internal.",
+          "Mengotomatisasi proses ekstraksi data ke Raw Database, dilanjutkan dengan data cleaning dan transformation berdasarkan requirement bisnis.",
+          "Memuat data yang telah diproses ke Ready Database / Datamart untuk kebutuhan visualisasi dan pelaporan menggunakan Power BI.",
+          "Mengembangkan dan memelihara sekitar 10 Apache Airflow DAG untuk proses bisnis Service Desk, Order-to-Cash (O2C), dan Accounts Payable (AP).",
+        ],
+      },
+    ],
+    businessImpact: [
+      "Menghilangkan ketergantungan pada script Python untuk proses ingestion data Excel ke Raw Database.",
+      "Menyederhanakan proses upload data bervolume besar melalui mekanisme column mapping dan pemetaan database.",
+      "Memusatkan proses validasi SLA dan pengumpulan remarks melalui website, menggantikan pertukaran file Excel melalui email.",
+      "Mempermudah pemantauan transaksi SLA over dan tindak lanjut oleh tim Data & Reporting.",
+      "Mengotomatisasi proses pembersihan dan transformasi data dari Raw Database ke Ready Database.",
+      "Menstandarisasi pemrosesan data berdasarkan requirement bisnis sebelum digunakan untuk pelaporan.",
+      "Menyediakan data terstruktur dalam Datamart untuk mendukung visualisasi dan dashboard Power BI.",
+    ],
+    businessImpactGroups: [
+      {
+        title: "A. Data Upload & Validation System",
+        items: [
+          "Menghilangkan ketergantungan pada script Python untuk proses ingestion data Excel ke Raw Database.",
+          "Menyederhanakan proses upload data bervolume besar melalui mekanisme column mapping dan pemetaan database.",
+          "Memusatkan proses validasi SLA dan pengumpulan remarks melalui website, menggantikan pertukaran file Excel melalui email.",
+          "Mempermudah pemantauan transaksi SLA over dan tindak lanjut oleh tim Data & Reporting.",
+        ],
+      },
+      {
+        title: "B. ETL Pipeline Development",
+        items: [
+          "Mengotomatisasi proses pembersihan dan transformasi data dari Raw Database ke Ready Database.",
+          "Menstandarisasi pemrosesan data berdasarkan requirement bisnis sebelum digunakan untuk pelaporan.",
+          "Menyediakan data terstruktur dalam Datamart untuk mendukung visualisasi dan dashboard Power BI.",
+        ],
+      },
+    ],
+    technologies: [
+      "Laravel",
+      "PHP",
+      "React.js",
+      "JavaScript",
+      "PostgreSQL",
+      "Python",
+      "Apache Airflow",
+      "Power BI",
+      "Pipeline ETL",
+      "Arsitektur Datamart",
+    ],
+    screenshots: [
+      {
+        url: "/assets/sisi/csa1.png",
+        title: "Dashboard Validasi Data & Datamart",
+        caption:
+          "Monitoring utama yang menampilkan volume dataset yang dimuat, status klasifikasi validasi, dan progres pemeriksaan data per modul departemen.",
+        isPrimary: true,
+      },
+      {
+        url: "/assets/sisi/csa2.png",
+        title: "Penanganan Anomali SLA & Routing Catatan",
+        caption:
+          "Antarmuka detail rekaman yang melampaui standar SLA dengan kolom feedback interaktif untuk tim penanggung jawab data.",
+        isPrimary: false,
+      },
+      {
+        url: "/assets/sisi/csa6.png",
+        title: "Portal Unggah Staging & Verifikasi Skema",
+        caption:
+          "Antarmuka penyerapan data berkapasitas besar yang memvalidasi skema data ke partisi staging sebelum dimuat ke datamart.",
+        isPrimary: false,
+      },
+    ],
+  },
+  {
+    id: "cipta-krida-bahari",
+    company: "PT Cipta Krida Bahari (CKB Group)",
+    role: "Full-Stack Web Developer",
+    period: "Jun 2025 — Okt 2025",
+    location: "Jakarta, Indonesia",
+    employmentType: "Magang / Internship",
+    problemToSolve:
+      "Proses pencatatan pemakaian perlengkapan P3K serta pemeriksaan berkala terhadap fasilitas keselamatan dan peralatan operasional di berbagai cabang PT Cipta Krida Bahari sebelumnya masih dilakukan secara manual menggunakan formulir berbasis kertas, kemudian direkap ke dalam Microsoft Excel. Aktivitas tersebut mencakup pencatatan konsumsi First Aid Kit, pemeriksaan kondisi genset, pengecekan stok perlengkapan medis, serta inspeksi instalasi pipa hydrant. Proses pencatatan dan rekapitulasi manual menyebabkan pengelolaan data pemakaian dan hasil inspeksi belum terpusat, sehingga menyulitkan pemantauan riwayat pemeriksaan, identifikasi kebutuhan pengisian ulang stok, serta pengawasan kondisi fasilitas antar cabang. Diperlukan sistem berbasis web untuk mendigitalisasi proses pencatatan dan inspeksi, mengurangi ketergantungan pada dokumentasi kertas dan Excel, serta mempermudah pemantauan informasi operasional secara terstruktur.",
+    responsibilities: [
+      "Mengembangkan empat modul operasional berbasis web menggunakan Laravel, PHP, Vue.js, JavaScript, dan MySQL untuk mendukung pencatatan pemakaian serta inspeksi fasilitas di berbagai cabang PT Cipta Krida Bahari.",
+      "Mengembangkan First Aid Kit Consumption, untuk mencatat dan memantau pemakaian perlengkapan P3K harian di setiap cabang.",
+      "Membangun First Aid Kit Inspection, untuk mendokumentasikan pemeriksaan bulanan, memantau tren pemakaian, mengidentifikasi perlengkapan yang telah digunakan, dan memantau sisa stok P3K.",
+      "Mengembangkan Genset Inspection, untuk mendukung pemeriksaan bulanan dan pemantauan kondisi serta kesiapan operasional genset.",
+      "Mengembangkan Hydrant Pipe Inspection, untuk mendokumentasikan dan mendukung pemeriksaan berkala instalasi pipa hydrant.",
+      "Merancang dan mengintegrasikan database relasional MySQL untuk menyimpan data pemakaian dan riwayat inspeksi secara terstruktur.",
+      "Mengimplementasikan antarmuka frontend dan backend serta melakukan pengujian integrasi API menggunakan Postman."
+    ],
+    businessImpact: [
+      "Mendigitalisasi pencatatan pemakaian P3K dan dokumentasi inspeksi fasilitas yang sebelumnya membutuhkan pencatatan manual.",
+      "Mempermudah pemantauan konsumsi dan ketersediaan perlengkapan P3K melalui pencatatan pemakaian serta pemeriksaan stok secara berkala.",
+      "Menyediakan dokumentasi riwayat inspeksi genset dan instalasi pipa hydrant untuk mendukung pemantauan kondisi dan kesiapan fasilitas operasional.",
+      "Memusatkan informasi pemakaian dan hasil inspeksi dari berbagai cabang sehingga mempermudah proses monitoring dan penelusuran data oleh pihak terkait.",
+      "Mendukung standarisasi proses pelaporan dan dokumentasi inspeksi rutin di lingkungan operasional perusahaan."
+    ],
+    technologies: [
+      "Laravel",
+      "Vue.js",
+      "PHP",
+      "MySQL",
+      "REST API",
+      "Postman",
+      "Git",
+    ],
+    screenshots: [
+      {
+        url: "/assets/consumptionP3K/consumptionP3K1.png",
+        title: "Antarmuka Pemantauan Konsumsi P3K",
+        caption:
+          "Dashboard operasional cabang yang menampilkan status stok terkini, tren pemakaian perlengkapan, dan rekap mutasi barang.",
+        isPrimary: true,
+      },
+      {
+        url: "/assets/consumptionP3K/consumptionP3K2.png",
+        title: "Formulir Pencatatan Transaksi Cabang",
+        caption:
+          "Antarmuka entri data yang efisien bagi petugas lapangan untuk mencatat kuantitas terpakai, nomor batch, dan keterangan pemakaian.",
+        isPrimary: false,
+      },
+    ],
+  },
+  {
+    id: "telkom-satelit-indonesia",
+    company: "PT Telkom Satelit Indonesia (Telkomsat)",
+    role: "Back-End Web Developer",
+    period: "Jul 2024 — Nov 2024",
+    location: "Bogor, Indonesia",
+    employmentType: "Magang / Internship",
+    problemToSolve:
+      "Proses pencatatan hasil pengujian alat produksi di workshop PT Telkom Satelit Indonesia sebelumnya masih dilakukan secara manual menggunakan formulir berbasis kertas, kemudian direkap kembali ke dalam Microsoft Excel. Proses ini mencakup dokumentasi hasil pengujian, pencatatan status kelayakan perangkat, serta penyusunan dokumen hasil pengujian yang membutuhkan proses administrasi tambahan.\n\nPengelolaan data yang masih tersebar menyulitkan pemantauan status pengujian perangkat secara menyeluruh, termasuk membedakan perangkat yang masih dalam proses pengujian (Progress), tidak lolos pengujian (Not OK), memenuhi standar pengujian (OK), maupun belum diuji. Diperlukan sistem berbasis web untuk memusatkan pencatatan hasil pengujian, mengotomatisasi pembuatan dokumen berdasarkan data yang diinputkan, serta menyediakan dashboard monitoring guna mempermudah pemantauan progres dan kelayakan alat produksi.",
+    responsibilities: [
+      "Mengembangkan backend sistem pencatatan dan monitoring hasil pengujian alat produksi menggunakan Laravel, PHP, JavaScript, dan MySQL.",
+      "Merancang dan mengimplementasikan 16 RESTful API dalam waktu 2 bulan untuk mendukung pengelolaan, validasi, dan pertukaran data hasil pengujian perangkat.",
+      "Mengembangkan logika pencatatan hasil pengujian dan pengelolaan status kelayakan perangkat berdasarkan hasil inspeksi teknisi.",
+      "Mengimplementasikan fitur otomatisasi pembuatan dokumen hasil pengujian berdasarkan data yang telah diinputkan ke dalam sistem.",
+      "Mengembangkan dashboard monitoring untuk menampilkan distribusi status pengujian perangkat, meliputi Progress, Not OK, OK, dan perangkat yang belum diuji.",
+      "Berkolaborasi dengan System Architect dan tim QA dalam menyelaraskan spesifikasi API serta memastikan fungsionalitas endpoint sesuai kebutuhan sistem.",
+      "Menyusun skrip migrasi database dan mengoptimalkan kueri relasional MySQL untuk mendukung pengelolaan data pengujian dan inventaris perangkat workshop.",
+    ],
+    businessImpact: [
+      "Mendigitalisasi pencatatan hasil pengujian alat produksi yang sebelumnya menggunakan formulir kertas dan rekapitulasi Excel.",
+      "Mempercepat proses administrasi melalui otomatisasi pembuatan dokumen hasil pengujian berdasarkan data yang tersimpan dalam sistem.",
+      "Mempermudah pemantauan progres dan kelayakan alat produksi melalui dashboard terpusat dengan klasifikasi status Progress, Not OK, OK, dan belum diuji.",
+      "Memusatkan dokumentasi hasil pengujian sehingga mempermudah penelusuran riwayat pemeriksaan dan verifikasi kelayakan perangkat.",
+      "Menghasilkan 16 RESTful API untuk mendukung integrasi dan pertukaran data antar komponen sistem.",
+    ],
+    technologies: [
+      "Laravel",
+      "PHP",
+      "JavaScript",
+      "MySQL",
+      "RESTful API",
+      "Postman",
+      "Git",
+    ],
+    screenshots: [
+      {
+        url: "/assets/magangTelkomsat/magangTel1.png",
+        title: "Manajemen Inventaris & Status Peralatan Workshop",
+        caption:
+          "Tampilan utama yang menyajikan daftar perangkat satelit, status pengujian aktif di workshop, dan parameter operasional.",
+        isPrimary: true,
+      },
+      {
+        url: "/assets/magangTelkomsat/magangTel2.png",
+        title: "Formulir Hasil Uji & Parameter API Perangkat",
+        caption:
+          "Antarmuka pencatatan diagnostik terperinci yang menyimpan input telemetri, nomor seri perangkat, dan hasil verifikasi kelayakan.",
+        isPrimary: false,
+      },
+      {
+        url: "/assets/magangTelkomsat/magangTel3.png",
+        title: "Jadwal Pemeliharaan & Riwayat Kalibrasi",
+        caption:
+          "Log operasional untuk memantau siklus servis berkala, catatan teknisi penguji, dan status kepatuhan kalibrasi alat.",
+        isPrimary: false,
+      },
+    ],
+  },
+];
+
+export const SKILL_CATEGORIES: SkillCategory[] = [
+  {
+    category: "Pengembangan Backend",
+    skills: [
+      { name: "Laravel", note: "MVC, Eloquent ORM, Queues, Service Layer" },
+      { name: "PHP", note: "OOP, Modern PHP 8+" },
+      { name: "Perancangan RESTful API", note: "Autentikasi, Rate Limiting, JSON:API" },
+      { name: "Node.js", note: "Express, Runtime API" },
+      { name: "Arsitektur Sistem", note: "Pemisahan Domain & Ingest Staging" },
+    ],
+  },
+  {
+    category: "Data Engineering",
+    skills: [
+      { name: "Python", note: "Pandas, Pembersihan Data, Otomasi" },
+      { name: "Apache Airflow", note: "Penjadwalan DAG, Alur Kerja ETL" },
+      { name: "Pipeline ETL", note: "Ingest Data, Transformasi, Validasi" },
+      { name: "Validasi Data", note: "Deteksi Anomali SLA, Pemisahan Audit" },
+      { name: "Sistem Datamart", note: "Skema Analitik & Pencatatan Log" },
+    ],
+  },
+  {
+    category: "Basis Data & Penyimpanan",
+    skills: [
+      { name: "PostgreSQL", note: "Kueri Kompleks, Indexing, Partisi Datamart" },
+      { name: "MySQL", note: "Optimasi Skema, Relasi Antartabel" },
+      { name: "Database Staging", note: "Penyerapan Data Batch & Isolasi Upload" },
+      { name: "DBeaver", note: "Analisis Kueri & Administrasi Basis Data" },
+    ],
+  },
+  {
+    category: "Pengembangan Frontend",
+    skills: [
+      { name: "React.js", note: "Single Page Application (SPA), State Management, Hooks" },
+      { name: "Vue.js", note: "Composition API, Komponen Reaktif" },
+      { name: "TypeScript", note: "Strict Typing, Interface Terstruktur" },
+      { name: "JavaScript (ES6+)", note: "Asynchronous I/O, DOM Modular" },
+      { name: "Tailwind CSS", note: "Layout Responsif & Sistem Desain" },
+    ],
+  },
+  {
+    category: "Tools, Platform & AI",
+    skills: [
+      { name: "Git & GitHub", note: "Version Control, Branching, Pull Request" },
+      { name: "Postman", note: "Dokumentasi & Otomasi Pengujian API" },
+      { name: "VS Code", note: "Workspace Pengembangan & Debugging" },
+      { name: "Linux / Bash", note: "Shell Scripting, Cron Job, Konfigurasi Server" },
+      { name: "Eksplorasi AI Engineering", note: "Integrasi LLM, Otomasi Validasi Data" },
+    ],
+  },
+];
+
+export const EDUCATION_LIST: EducationItem[] = [
+  {
+    institution: "Institut Pertanian Bogor (IPB University)",
+    degree: "Sarjana Terapan (D-IV)",
+    field: "Teknologi Rekayasa Perangkat Lunak",
+    graduationYear: "Lulus 2025",
+    gpa: "3.20 / 4.00",
+    location: "Bogor, Indonesia",
+    description:
+      "Kurikulum pendidikan rekayasa perangkat lunak empat tahun yang berfokus pada arsitektur perangkat lunak, manajemen basis data, sistem terdistribusi, rekayasa web, dan siklus hidup pengembangan sistem enterprise.",
+    highlights: [
+      "Menyelesaikan studi pada tahun 2025 dengan Indeks Prestasi Kumulatif (IPK) 3.20.",
+      "Menyelesaikan proyek tugas akhir berbasis kebutuhan industri dan klien nyata.",
+      "Memiliki pemahaman mendalam pada software engineering, pemodelan data relasional, dan arsitektur data enterprise.",
+    ],
+  },
+];
+
+export const CERTIFICATIONS_LIST: CertificationItem[] = [
+  {
+    title: "Sertifikasi Profesi Software Developer",
+    issuer: "Badan Nasional Sertifikasi Profesi (BNSP)",
+    issueDate: "Standar Kompetensi Kerja Nasional (SKKNI)",
+    documentPath: "/assets/BNSP.pdf",
+    description:
+      "Sertifikasi kompetensi nasional yang memvalidasi keahlian profesional dalam perancangan perangkat lunak, pemrograman terstruktur, pengujian kode, dan integrasi basis data.",
+  },
+  {
+    title: "Sertifikat Magang Industri — Back-End Engineering",
+    issuer: "PT Telkom Satelit Indonesia (Telkomsat)",
+    issueDate: "Nov 2024",
+    documentPath: "/assets/magangTelkomsat/sertifikatTelkomsat.jpg",
+    description:
+      "Penghargaan resmi atas keberhasilan merancang dan mengimplementasikan 16 REST API penting serta modul inventaris workshop pemeliharaan perangkat satelit.",
+  },
+];

@@ -1,160 +1,329 @@
-import { Badge } from "@/components/ui/badge";
-import { Calendar, MapPin, Building } from "lucide-react";
+import { useState } from "react";
+import { EXPERIENCES, ExperienceBlock, ProjectScreenshot } from "@/data/portfolioData";
+import { ImageLightboxModal } from "./ImageLightboxModal";
+import {
+  Building2,
+  Calendar,
+  MapPin,
+  CheckCircle2,
+  TrendingUp,
+  Maximize2,
+  AlertCircle,
+  Layers,
+} from "lucide-react";
 
-const ExperienceSection = () => {
-  const experiences = [
-    {
-      title: "Software Engineer",
-      company: "PT. IDS Teknologi Indonesia",
-      location: "Jakarta, Indonesia",
-      achievements: [
-        "Migrated enterprise frontend for client PT Kansai Paint Indonesia across 4 main modules, 20 business modules, and 49 workflow submodules from multi-page HTML, CSS, Vanilla JS architecture to a React.js Single Page Application (SPA).",
-        "Developed and integrated Request Management (Purchase Request, Reimbursement, Cash Advance, Settlement), Tracking Document (PR, AR Invoice, PO, Reimbursement, Outgoing Payments, PR-to-PO), and Approval Report modules.",
-        "Successfully completed development, testing, and deployment within 5 weeks.",
-      ],
-      technologies: ["React.js", "JavaScript", "HTML5", "CSS3", "SPA"],
-    },
-    {
-      title: "Software Engineer & Data Engineer",
-      company: "PT Sinergi Informatika Semen Indonesia",
-      location: "Jakarta, Indonesia",
-      period: "Nov 2025 - May 2026",
-      type: "Internship",
-      achievements: [
-        "Designed and developed a Data Validation System as a solo developer, a web-based application used to validate and correct data in a datamart environment.",
-        "Developed ETL pipelines across three core modules using Python and Apache Airflow, ensuring data accuracy, consistency, and reliability.",
-      ],
-      technologies: ["Laravel", "React.js", "Python", "Apache Airflow", "Postgresql"],
-    },
-    {
-      title: "Full-Stack Web Developer",
-      company: "PT Cipta Krida Bahari (CKB Group)",
-      location: "Jakarta, Indonesia",
-      period: "Jun - Oct 2025",
-      type: "Internship",
-      achievements: [
-        "Developed the First Aid Kit Consumption module, enabling each branch to efficiently record and track daily first aid kit usage.",
-        "Developed the Genset Inspection module, enabling systematic monthly inspections to ensure operational readiness and maintenance tracking.",
-        "Developed the First Aid Kit Inspection module, facilitating monthly inspections to monitor usage trends and track remaining stock.",
-        "Developed the Hydrant Pipe Inspection module, supporting regular monthly inspections.",
-      ],
-      technologies: ["Laravel", "Vue.js", "PHP", "JavaScript", "MySQL"],
-    },
-    {
-      title: "Back-End Web Developer",
-      company: "PT Telkom Satelit Indonesia (Telkomsat)",
-      location: "Bogor, Indonesia",
-      period: "Jul - Nov 2024",
-      type: "Internship",
-      achievements: [
-        "Successfully designed, developed, and implemented 16 REST APIs to support system integration during two months",
-        "Collaborated with team members to ensure API functionality aligned with user requirements and project goals",
-        "Ensured APIs met performance and reliability standards by conducting thorough testing and debugging",
-        "Participated in recording and managing production equipment testing results through the workshop module",
-      ],
-      technologies: ["Laravel", "PHP", "REST API", "MySQL", "Git"],
-    },
-  ];
+export const ExperienceSection = () => {
+  const [lightboxState, setLightboxState] = useState<{
+    isOpen: boolean;
+    screenshots: ProjectScreenshot[];
+    currentIndex: number;
+    companyName: string;
+  }>({
+    isOpen: false,
+    screenshots: [],
+    currentIndex: 0,
+    companyName: "",
+  });
+
+  const handleOpenLightbox = (
+    screenshots: ProjectScreenshot[],
+    index: number,
+    companyName: string
+  ) => {
+    setLightboxState({
+      isOpen: true,
+      screenshots,
+      currentIndex: index,
+      companyName,
+    });
+  };
 
   return (
-    <section id="internshipExperience" className="section-padding bg-white">
-      <div className="container mx-auto px-6">
+    <section id="experience" className="py-20 sm:py-28 px-6 sm:px-8 bg-[#EDEDE9] border-b border-[#E3D5CA]">
+      <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <p className="text-sm font-medium tracking-widest uppercase text-primary mb-3">
-            Career Journey
-          </p>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">
-            Experience
-          </h2>
-          <div className="w-12 h-[2px] bg-primary mx-auto mt-4" />
-          <p className="text-muted-foreground mt-6 max-w-lg mx-auto">
-            My internship journey as a web developer, gaining hands-on
-            experience in both full-stack and backend development
-          </p>
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-8 mb-16 border-b border-[#E3D5CA]">
+          <div>
+            <h2 className="text-3xl sm:text-4xl font-bold uppercase tracking-tight text-[#292722]">
+              03. Pengalaman Profesional
+            </h2>
+          </div>
         </div>
 
-        {/* Timeline */}
-        <div className="max-w-3xl mx-auto">
-          <div className="relative">
-            {/* Vertical line */}
-            <div className="absolute left-[19px] top-2 bottom-2 w-px bg-border hidden md:block" />
+        {/* Company Experience Blocks */}
+        <div className="space-y-24">
+          {EXPERIENCES.map((exp, expIdx) => {
+            const primaryScreenshot = exp.screenshots.find((s) => s.isPrimary) || exp.screenshots[0];
+            const secondaryScreenshots = exp.screenshots.filter((s) => s !== primaryScreenshot);
 
-            <div className="space-y-10">
-              {experiences.map((experience, index) => (
-                <div key={index} className="relative group">
-                  {/* Timeline dot */}
-                  <div className="absolute left-[14px] top-2 w-[12px] h-[12px] rounded-full border-2 border-primary bg-white hidden md:block group-hover:bg-primary transition-colors duration-300" />
+            return (
+              <article
+                key={exp.id}
+                className="rounded-xl border border-[#E3D5CA] bg-[#F5EBE0] p-6 sm:p-10 shadow-sm relative"
+              >
+                {/* Block Header */}
+                <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6 pb-8 border-b border-[#E3D5CA]">
+                  <div className="space-y-2">
+                    <div className="flex flex-wrap items-center gap-2.5">
+                      <span className="text-xs font-bold text-[#68635C] bg-[#EDEDE9] px-2.5 py-1 rounded border border-[#D6CCC2]">
+                        0{expIdx + 1}
+                      </span>
+                      <span className="text-xs uppercase tracking-wider text-[#292722] font-semibold bg-[#D5BDAF]/40 px-3 py-1 rounded border border-[#D5BDAF]">
+                        {exp.employmentType}
+                      </span>
+                    </div>
 
-                  <div className="md:ml-14">
-                    <div className="bg-white border border-border/60 rounded-xl p-6 hover:shadow-md hover:border-border transition-all duration-300">
-                      {/* Header */}
-                      <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-4">
-                        <div>
-                          <div className="flex items-center gap-2.5 mb-1.5 flex-wrap">
-                            <h3 className="text-lg font-semibold text-foreground">
-                              {experience.title}
-                            </h3>
-                            <Badge className="bg-primary/10 text-primary border-0 text-[10px] uppercase tracking-wider font-medium px-2 py-0.5">
-                              {experience.type}
-                            </Badge>
+                    <h3 className="text-2xl sm:text-3xl font-bold text-[#292722] tracking-tight">
+                      {exp.role}
+                    </h3>
+
+                    <div className="flex flex-wrap items-center gap-x-5 gap-y-1.5 text-sm font-medium text-[#68635C] pt-1">
+                      <span className="flex items-center gap-1.5 text-[#292722] font-semibold">
+                        <Building2 className="w-4 h-4 text-[#68635C]" />
+                        {exp.company}
+                      </span>
+                      <span className="flex items-center gap-1.5">
+                        <MapPin className="w-3.5 h-3.5" />
+                        {exp.location}
+                      </span>
+                      <span className="flex items-center gap-1.5 text-xs text-[#68635C] font-medium">
+                        <Calendar className="w-3.5 h-3.5" />
+                        {exp.period}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Tech Stack Pills */}
+                  <div className="flex flex-wrap gap-1.5 lg:max-w-md justify-start lg:justify-end">
+                    {exp.technologies.map((tech, i) => (
+                      <span
+                        key={i}
+                        className="px-2.5 py-1 text-xs rounded bg-[#EDEDE9] text-[#292722] border border-[#D6CCC2] font-medium"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Concept 1: Masalah yang Ingin Diselesaikan */}
+                <div className="py-8 border-b border-[#E3D5CA]">
+                  <div className="flex items-center gap-2 mb-3">
+                    <AlertCircle className="w-4 h-4 text-[#292722]" />
+                    <h4 className="text-xl font-bold uppercase tracking-wider text-[#292722]">
+                      1. Masalah yang Ingin Diselesaikan
+                    </h4>
+                  </div>
+                  <p className="text-sm sm:text-base text-[#292722] leading-relaxed max-w-4xl font-normal whitespace-pre-line">
+                    {exp.problemToSolve}
+                  </p>
+                </div>
+
+                {/* Concept 2 & 3: Responsibilities vs Business Impact */}
+                <div className="py-8 border-b border-[#E3D5CA] grid md:grid-cols-2 gap-8 items-start">
+                  {/* Responsibilities & Contributions */}
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 text-[#292722]" />
+                      <h4 className="text-xl font-bold uppercase tracking-wider text-[#292722]">
+                        2. Tanggung Jawab & Kontribusi
+                      </h4>
+                    </div>
+
+                    {exp.responsibilityGroups ? (
+                      <div className="space-y-5">
+                        {exp.responsibilityGroups.map((group, gIdx) => (
+                          <div key={gIdx} className="space-y-2.5">
+                            <h5 className="text-xs sm:text-sm font-bold text-[#292722] bg-[#EDEDE9] px-3 py-1 rounded border border-[#D6CCC2] inline-block tracking-wide">
+                              {group.title}
+                            </h5>
+                            <ul className="space-y-2.5">
+                              {group.items.map((item, iIdx) => (
+                                <li
+                                  key={iIdx}
+                                  className="flex items-start gap-3 text-xs sm:text-sm text-[#292722] leading-relaxed"
+                                >
+                                  <span className="w-1.5 h-1.5 rounded-full bg-[#292722] mt-2 flex-shrink-0" />
+                                  <span>{item}</span>
+                                </li>
+                              ))}
+                            </ul>
                           </div>
-                          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-muted-foreground">
-                            <span className="flex items-center gap-1.5">
-                              <Building className="w-3.5 h-3.5" />
-                              {experience.company}
-                            </span>
-                            <span className="flex items-center gap-1.5">
-                              <MapPin className="w-3.5 h-3.5" />
-                              {experience.location}
-                            </span>
-                          </div>
-                        </div>
-                        <span className="flex items-center gap-1.5 text-sm text-muted-foreground whitespace-nowrap">
-                          <Calendar className="w-3.5 h-3.5" />
-                          {experience.period}
-                        </span>
-                      </div>
-
-                      {/* Achievements */}
-                      <div className="mb-5">
-                        <h4 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">
-                          Key Achievements
-                        </h4>
-                        <ul className="space-y-2">
-                          {experience.achievements.map((achievement, i) => (
-                            <li
-                              key={i}
-                              className="flex items-start gap-2.5 text-sm text-muted-foreground leading-relaxed"
-                            >
-                              <div className="w-1 h-1 bg-primary rounded-full mt-2 flex-shrink-0" />
-                              <span>{achievement}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      {/* Technologies */}
-                      <div className="flex flex-wrap gap-1.5">
-                        {experience.technologies.map((tech, i) => (
-                          <span
-                            key={i}
-                            className="px-2.5 py-0.5 text-[11px] font-medium rounded-full bg-slate-50 text-slate-500 border border-slate-200/80"
-                          >
-                            {tech}
-                          </span>
                         ))}
                       </div>
+                    ) : (
+                      <ul className="space-y-3">
+                        {exp.responsibilities.map((resp, rIdx) => (
+                          <li
+                            key={rIdx}
+                            className="flex items-start gap-3 text-xs sm:text-sm text-[#292722] leading-relaxed"
+                          >
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#292722] mt-2 flex-shrink-0" />
+                            <span>{resp}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+
+                  {/* Business Impact */}
+                  <div className="space-y-4 p-5 rounded-lg border border-[#D5BDAF] bg-[#EDEDE9]/80">
+                    <div className="flex items-center gap-2">
+                      <TrendingUp className="w-4 h-4 text-emerald-800" />
+                      <h4 className="text-xl font-bold uppercase tracking-wider text-[#292722]">
+                        3. Dampak Bisnis yang Terverifikasi
+                      </h4>
+                    </div>
+
+                    {exp.businessImpactGroups ? (
+                      <div className="space-y-5">
+                        {exp.businessImpactGroups.map((group, gIdx) => (
+                          <div key={gIdx} className="space-y-2.5">
+                            <h5 className="text-xs sm:text-sm font-bold text-emerald-950 bg-emerald-100/70 px-3 py-1 rounded border border-emerald-300 inline-block tracking-wide">
+                              {group.title}
+                            </h5>
+                            <ul className="space-y-2.5">
+                              {group.items.map((item, iIdx) => (
+                                <li
+                                  key={iIdx}
+                                  className="flex items-start gap-3 text-xs sm:text-sm text-[#292722] leading-relaxed"
+                                >
+                                  <span className="w-1.5 h-1.5 rounded-sm bg-emerald-700 mt-2 flex-shrink-0" />
+                                  <span>{item}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <ul className="space-y-3">
+                        {exp.businessImpact.map((impact, iIdx) => (
+                          <li
+                            key={iIdx}
+                            className="flex items-start gap-3 text-xs sm:text-sm text-[#292722] leading-relaxed"
+                          >
+                            <span className="w-1.5 h-1.5 rounded-sm bg-emerald-700 mt-2 flex-shrink-0" />
+                            <span>{impact}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                </div>
+
+                {/* Screenshots Mixed Layout (Displayed AFTER Points 1, 2, and 3!) */}
+                <div className="pt-8">
+                  <div className="flex flex-col gap-1 mb-5">
+                    <div className="flex items-center gap-2">
+                      <Layers className="w-4 h-4 text-[#292722]" />
+                      <h4 className="text-xl font-bold uppercase tracking-wider text-[#292722]">
+                        Dokumentasi Proyek
+                      </h4>
+                    </div>
+                    <span className="text-[11px] text-[#68635C] font-medium">
+                      Tangkapan layar berikut merupakan cuplikan beberapa bagian antarmuka sebagai gambaran umum dari keseluruhan sistem.
+                    </span>
+                  </div>
+
+                  {/* Asymmetrical Mixed Grid */}
+                  <div className="grid lg:grid-cols-12 gap-5 items-stretch">
+                    {/* Primary Large Screenshot (7 cols on desktop) */}
+                    <div
+                      onClick={() =>
+                        handleOpenLightbox(
+                          exp.screenshots,
+                          exp.screenshots.indexOf(primaryScreenshot),
+                          exp.company
+                        )
+                      }
+                      className="lg:col-span-7 group cursor-pointer rounded-lg border border-[#D6CCC2] bg-[#EDEDE9] p-3 flex flex-col justify-between hover:border-[#292722] transition-all duration-300"
+                    >
+                      <div className="relative aspect-[16/10] overflow-hidden rounded bg-white flex items-center justify-center border border-[#E3D5CA]">
+                        <img
+                          src={primaryScreenshot.url}
+                          alt={primaryScreenshot.title}
+                          className="w-full h-full object-contain group-hover:scale-[1.02] transition-transform duration-300"
+                        />
+                        <div className="absolute inset-0 bg-[#292722]/0 group-hover:bg-[#292722]/15 transition-colors flex items-center justify-center">
+                          <span className="opacity-0 group-hover:opacity-100 transition-opacity px-3 py-1.5 rounded bg-[#EDEDE9]/95 text-[#292722] text-xs font-semibold flex items-center gap-1.5 shadow-md">
+                            <Maximize2 className="w-3.5 h-3.5" />
+                            Perbesar Antarmuka
+                          </span>
+                        </div>
+                      </div>
+                      <div className="pt-3">
+                        <div className="flex items-center justify-between gap-2">
+                          <h5 className="text-xs font-bold text-[#292722] uppercase tracking-wide">
+                            Utama: {primaryScreenshot.title}
+                          </h5>
+                          <span className="text-[10px] px-2 py-0.5 rounded bg-[#D5BDAF]/30 text-[#292722] font-semibold">
+                            Portal Utama
+                          </span>
+                        </div>
+                        <p className="text-xs text-[#68635C] mt-1 leading-relaxed">
+                          {primaryScreenshot.caption}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Supporting Screenshots Stack (5 cols on desktop) */}
+                    <div className="lg:col-span-5 flex flex-col gap-4 justify-between">
+                      {secondaryScreenshots.map((sec, secIdx) => (
+                        <div
+                          key={secIdx}
+                          onClick={() =>
+                            handleOpenLightbox(
+                              exp.screenshots,
+                              exp.screenshots.indexOf(sec),
+                              exp.company
+                            )
+                          }
+                          className="group cursor-pointer rounded-lg border border-[#D6CCC2] bg-[#EDEDE9] p-3 flex flex-col justify-between hover:border-[#292722] transition-all duration-300 flex-1"
+                        >
+                          <div className="relative aspect-[16/9] overflow-hidden rounded bg-white flex items-center justify-center border border-[#E3D5CA]">
+                            <img
+                              src={sec.url}
+                              alt={sec.title}
+                              className="w-full h-full object-contain group-hover:scale-[1.02] transition-transform duration-300"
+                            />
+                            <div className="absolute inset-0 bg-[#292722]/0 group-hover:bg-[#292722]/15 transition-colors flex items-center justify-center">
+                              <span className="opacity-0 group-hover:opacity-100 transition-opacity px-2.5 py-1 rounded bg-[#EDEDE9]/95 text-[#292722] text-[11px] font-semibold flex items-center gap-1 shadow-md">
+                                <Maximize2 className="w-3 h-3" />
+                                Periksa
+                              </span>
+                            </div>
+                          </div>
+                          <div className="pt-2.5">
+                            <h5 className="text-xs font-bold text-[#292722]">
+                              {sec.title}
+                            </h5>
+                            <p className="text-[11px] text-[#68635C] mt-0.5 leading-snug">
+                              {sec.caption}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
+              </article>
+            );
+          })}
         </div>
       </div>
+
+      {/* Lightbox Modal */}
+      <ImageLightboxModal
+        isOpen={lightboxState.isOpen}
+        onClose={() => setLightboxState((prev) => ({ ...prev, isOpen: false }))}
+        screenshots={lightboxState.screenshots}
+        currentIndex={lightboxState.currentIndex}
+        onNavigate={(newIndex) =>
+          setLightboxState((prev) => ({ ...prev, currentIndex: newIndex }))
+        }
+        companyName={lightboxState.companyName}
+      />
     </section>
   );
 };
-
-export default ExperienceSection;

@@ -1,374 +1,118 @@
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import {
-  ExternalLink,
-  Monitor,
-  X,
-  ChevronLeft,
-  ChevronRight,
-} from "lucide-react";
-import { useState } from "react";
-
-const ProjectsSection = () => {
-  const [selectedProject, setSelectedProject] = useState(null);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  const projects = [
+export const ProjectsSection = () => {
+  const technicalShowcases = [
     {
-      title: "Enterprise Frontend Migration",
-      description:"Migrated an enterprise frontend for client covering 4 main modules, comprising 30 Business modules and 49 workflow steps, including Request Management (Purchase Request, Reimbursement, Cash Advance, and Settlement), Approval Report (Purchase Order, AR Invoice, Outgoing Payment Reimbursement, Outgoing Payment Cash Advance, and Outgoing Payment AP Invoice), Tracking Document (Purchase Request, Purchase Order, Reimbursement, Cash Advance, Settlement, AR Invoice, Outgoing Payment Reimbursement, Outgoing Payment Cash Advance, Outgoing Payment AP Invoice, and PR-to-PO), and Master Data (Users Management, Business Partners, Chart of Accounts, Expenses COA, Categories, Remarks, Account Names, Departments, Classifications, Master Access, Approval Rules, and Items), transforming the application from a HTML, CSS, and Vanilla JavaScript architecture into a React.js Single Page Application (SPA) and successfully completing development and testing within 5 weeks.  ",
-      image: "/assets/ids_documentation/dashboard.png",
-      images: [
-        "/assets/ids_documentation/login.png",
-        "/assets/ids_documentation/dashboard.png",
-        "/assets/ids_documentation/pending_task.png",
-        "/assets/ids_documentation/pr_1.png",
-        "/assets/ids_documentation/pr_2.png",
-        "/assets/ids_documentation/pr_3.png",
-        "/assets/ids_documentation/pr_4.png",
-        "/assets/ids_documentation/pr_5.png",
-        "/assets/ids_documentation/pr_6.png",
-        "/assets/ids_documentation/reim_1.png",
-        "/assets/ids_documentation/reim_2.png",
-        "/assets/ids_documentation/reim_3.png",
-        "/assets/ids_documentation/reim_4.png",
-        "/assets/ids_documentation/reim_5.png",
-        "/assets/ids_documentation/ca_1.png",
-        "/assets/ids_documentation/ca_2.png",
-        "/assets/ids_documentation/settlement_1.png",
-        "/assets/ids_documentation/settlement_2.png",
-        "/assets/ids_documentation/po_1.png",
-        "/assets/ids_documentation/po_2.png",
-        "/assets/ids_documentation/po_3.png",
-        "/assets/ids_documentation/po_4.png",
-        "/assets/ids_documentation/ar_1.png",
-        "/assets/ids_documentation/opca_1.png",
-        "/assets/ids_documentation/opca_2.png",
-        "/assets/ids_documentation/opreim_1.png",
-        "/assets/ids_documentation/tr_1.png",
-        "/assets/ids_documentation/tr_2.png",
-        "/assets/ids_documentation/mst_1.png",
-        "/assets/ids_documentation/mst_2.png",
-        "/assets/ids_documentation/mst_3.png",
-        "/assets/ids_documentation/mst_4.png",
-      ],
-      technologies: ["React.js", "Single Page Application (SPA)", "JavaScript", "HTML5", "CSS3"],
-      company: "PT. IDS Teknologi Indonesia",
-
+      title: "Otomasi Datamart ETL & Engine Deteksi Anomali SLA",
+      category: "Rekayasa Data / Pipeline ETL",
+      problem:
+        "Datamart perusahaan kerap menerima rekaman data dalam volume besar di mana keterlambatan SLA tidak terdeteksi secara otomatis, berisiko mengaburkan metrik bisnis dan memicu koreksi database manual yang tidak terverifikasi.",
+      solution:
+        "Membangun orkestrasi DAG Apache Airflow menggunakan Python dan PostgreSQL untuk mengisolasi data mentah, mendeteksi deviasi ambang batas SLA, dan meneruskannya ke operator modul melalui antarmuka validasi staging khusus.",
+      stack: ["Python", "Apache Airflow", "PostgreSQL", "Laravel", "React.js"],
+      metrics: "Pemisahan audit penuh • Zero alterasi data sumber • Penjadwalan DAG pagi otomatis",
     },
     {
-      title: "Data Validation System",
-      description:
-        "This application enables teams from each module to view data that has been loaded into the datamart and identify data that requires correction. Through this system, original source data is separated from user-corrected data, ensuring data integrity and simplifying the audit process.",
-      image: "/assets/sisi/csa1.png",
-      images: ["/assets/sisi/csa1.png", "/assets/sisi/csa2.png", "/assets/sisi/csa3.png", "/assets/sisi/csa4.png", "/assets/sisi/csa6.png", "/assets/sisi/csa7.png"],
-      technologies: ["Laravel", "React", "PostgreSQL"],
-      company: "PT Sinergi Informatika Semen Indonesia",
-      category: "Internship Project",
+      title: "Arsitektur Migrasi SPA Enterprise Multi-Modul",
+      category: "Arsitektur Frontend / Sistem Web",
+      problem:
+        "Aplikasi warisan berbasis multi-page HTML lama menimbulkan waktu loading yang lambat, reload halaman berulang saat alur persetujuan multi-tahap, serta inkonsistensi sinkronisasi data master antar departemen.",
+      solution:
+        "Memigrasikan 30 modul bisnis dan 49 tahapan workflow ke Single Page Application berbasis React.js dengan abstraksi form modular, gerbang otorisasi berbasis peran, dan pembaruan state instan.",
+      stack: ["React.js", "JavaScript (ES6+)", "Tailwind CSS", "REST API", "Single Page Application"],
+      metrics: "49 tahapan alur kerja • 4 domain inti ERP • Selesai dalam tenggat 4–5 minggu",
     },
     {
-      title: "First Aid Kit Consumption Module",
-      description:
-        "Developed the First Aid Kit Consumption module, enabling each branch of PT Cipta Krida Bahari to efficiently record and track the usage of first aid kits.",
-      image: "/assets/consumptionP3K/consumptionP3K1.png",
-      images: [
-        "/assets/consumptionP3K/consumptionP3K1.png",
-        "/assets/consumptionP3K/consumptionP3K2.png",
-      ],
-      technologies: ["Laravel", "Vue.js", "PHP", "MySQL", "Postman"],
-      company: "PT Cipta Krida Bahari (CKB Group)",
-      category: "Internship Project",
-    },
-    {
-      title: "First Aid Kit Inspection Module",
-      description:
-        "Developed the First Aid Kit Inspection module, facilitating monthly inspections to monitor how many first aid kits have been used and the remaining stock in each branch.",
-      image: "/assets/inspectionP3K/inspectionP3K_1.png",
-      images: [
-        "/assets/inspectionP3K/inspectionP3K_1.png",
-        "/assets/inspectionP3K/inspectionP3K_2.png",
-        "/assets/inspectionP3K/inspectionP3K_3.png",
-      ],
-      technologies: ["Laravel", "Vue.js", "PHP", "MySQL", "Postman"],
-      company: "PT Cipta Krida Bahari (CKB Group)",
-      category: "Internship Project",
-    },
-    {
-      title: "Genset Inspection Module",
-      description:
-        "Developed the Genset Inspection module, enabling systematic inspections to ensure operational readiness and proper maintenance tracking of generators across branches.",
-      image: "/assets/inspectionGenset/inspectionGenset_1.png",
-      images: [
-        "/assets/inspectionGenset/inspectionGenset_1.png",
-        "/assets/inspectionGenset/inspectionGenset_2.png",
-        "/assets/inspectionGenset/inspectionGenset_3.png",
-        "/assets/inspectionGenset/inspectionGenset_4.png",
-      ],
-      technologies: ["Laravel", "Vue.js", "PHP", "MySQL", "Postman"],
-      company: "PT Cipta Krida Bahari (CKB Group)",
-      category: "Internship Project",
-    },
-    {
-      title: "Hydrant Pipe Inspection Module",
-      description:
-        "Developed the Hydrant Pipe Inspection module, supporting regular inspections to ensure fire safety compliance and accurate monitoring of hydrant conditions across branches.",
-      image: "/assets/inspectionHydrant/inspectionHydrant_1.png",
-      images: [
-        "/assets/inspectionHydrant/inspectionHydrant_1.png",
-        "/assets/inspectionHydrant/inspectionHydrant_2.png",
-      ],
-      technologies: ["Laravel", "Vue.js", "PHP", "MySQL", "Postman"],
-      company: "PT Cipta Krida Bahari (CKB Group)",
-      category: "Internship Project",
-    },
-    {
-      title: "Inventory Management System",
-      description:
-        "Participated in the development of the Inventory Management System workshop module. Designed, developed, and implemented 16 REST APIs to support system integration within two months.",
-      image: "/assets/magangTelkomsat/sertifikatTelkomsat.jpg",
-      images: [
-        "/assets/magangTelkomsat/sertifikatTelkomsat.jpg",
-        "/assets/magangTelkomsat/magangTel3.png",
-        "/assets/magangTelkomsat/magangTel4.png",
-        "/assets/magangTelkomsat/magangTel5.png",
-        "/assets/magangTelkomsat/magangTel6.png",
-        "/assets/magangTelkomsat/magangTel7.png",
-        "/assets/magangTelkomsat/magangTel8.png",
-        "/assets/magangTelkomsat/magangTel9.png",
-        "/assets/magangTelkomsat/magangTel10.png",
-        "/assets/magangTelkomsat/magangTel11.png",
-        "/assets/magangTelkomsat/magangTel12.png",
-        "/assets/magangTelkomsat/magangTel13.png",
-        "/assets/magangTelkomsat/magangTel14.png",
-        "/assets/magangTelkomsat/magangTel15.png",
-        "/assets/magangTelkomsat/magangTel16.png",
-        "/assets/magangTelkomsat/magangTel17.png",
-        "/assets/magangTelkomsat/magangTel18.png",
-        "/assets/magangTelkomsat/magangTel19.png",
-        "/assets/magangTelkomsat/magangTel20.png",
-        "/assets/magangTelkomsat/magangTel21.png",
-        "/assets/magangTelkomsat/magangTel22.png",
-      ],
-      technologies: ["Laravel", "PHP", "MySQL", "Postman"],
-      company: "PT Telkom Satelit Indonesia (Telkomsat)",
-      category: "Internship Project",
+      title: "Rangkaian Integrasi REST API Berkeandalan Tinggi",
+      category: "Sistem Backend / Telemetri",
+      problem:
+        "Pengujian dan kalibrasi perangkat satelit workshop menghasilkan data inspeksi yang terfragmentasi dengan pencatatan berbasis kertas dan ketiadaan sinkronisasi inventaris secara langsung.",
+      solution:
+        "Merancang dan mengimplementasikan 16 endpoint RESTful API di Laravel dengan standar respon JSON ketat, penanganan error terstruktur, dan persistensi transaksi basis data yang aman.",
+      stack: ["Laravel", "PHP 8+", "REST API", "MySQL", "Postman", "Git"],
+      metrics: "16 REST API dirilis • Tingkat kelulusan tes 100% • Zero downtime selama rilis",
     },
   ];
 
-  const openModal = (project) => {
-    setSelectedProject(project);
-    setCurrentImageIndex(0);
-  };
-
-  const closeModal = () => {
-    setSelectedProject(null);
-    setCurrentImageIndex(0);
-  };
-
-  const nextImage = () => {
-    if (selectedProject) {
-      setCurrentImageIndex((prev) =>
-        prev === selectedProject.images.length - 1 ? 0 : prev + 1
-      );
-    }
-  };
-
-  const prevImage = () => {
-    if (selectedProject) {
-      setCurrentImageIndex((prev) =>
-        prev === 0 ? selectedProject.images.length - 1 : prev - 1
-      );
-    }
-  };
-
   return (
-    <section id="projects" className="section-padding bg-slate-50/50">
-      <div className="container mx-auto px-6">
+    <section id="projects" className="py-20 sm:py-28 px-6 sm:px-8 bg-[#F5EBE0] border-b border-[#E3D5CA]">
+      <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <p className="text-sm font-medium tracking-widest uppercase text-primary mb-3">
-            My Work
-          </p>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">
-            Projects
-          </h2>
-          <div className="w-12 h-[2px] bg-primary mx-auto mt-4" />
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-8 mb-16 border-b border-[#E3D5CA]">
+          <div>
+            {/* <span className="text-xs uppercase tracking-widest text-[#68635C] block mb-2 font-semibold">
+              04 / Sorotan Teknis
+            </span> */}
+            <h2 className="text-3xl sm:text-4xl font-bold uppercase tracking-tight text-[#292722]">
+              04. Sorotan Arsitektur & Rekayasa Sistem
+            </h2>
+          </div>
+          {/* <p className="text-xs text-[#68635C] max-w-sm font-medium leading-relaxed">
+            Tantangan rekayasa inti, solusi teknis terstruktur, dan implementasi arsitektur sistem pada backend dan pipeline data.
+          </p> */}
         </div>
 
-        {/* Project Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {projects.map((project, index) => (
+        {/* Project Cards */}
+        <div className="grid lg:grid-cols-3 gap-8">
+          {technicalShowcases.map((project, idx) => (
             <div
-              key={index}
-              className="group bg-white border border-border/50 rounded-xl overflow-hidden hover:shadow-lg hover:border-border transition-all duration-300"
+              key={idx}
+              className="rounded-xl border border-[#E3D5CA] bg-[#EDEDE9] p-6 sm:p-7 flex flex-col justify-between hover:border-[#292722] transition-all duration-300"
             >
-              {/* Image */}
-              <div className="relative overflow-hidden aspect-video">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-foreground/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <Button
-                    size="sm"
-                    variant="secondary"
-                    onClick={() => openModal(project)}
-                    className="rounded-full"
-                  >
-                    <Monitor className="w-4 h-4 mr-2" />
-                    View Screenshots
-                  </Button>
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <span className="text-[11px] uppercase tracking-wider text-[#68635C] bg-[#F5EBE0] px-2.5 py-1 rounded border border-[#E3D5CA] font-semibold">
+                    {project.category}
+                  </span>
+                  <span className="text-xs font-semibold text-[#68635C]">
+                    0{idx + 1}
+                  </span>
+                </div>
+
+                <h3 className="text-lg font-bold text-[#292722] leading-snug">
+                  {project.title}
+                </h3>
+
+                <div className="space-y-3 pt-1 text-xs sm:text-sm text-[#68635C]">
+                  <div>
+                    <strong className="text-[#292722] font-semibold block mb-1 text-xs uppercase tracking-wider">
+                      Tantangan yang Dihadapi:
+                    </strong>
+                    <p className="leading-relaxed">{project.problem}</p>
+                  </div>
+
+                  <div>
+                    <strong className="text-[#292722] font-semibold block mb-1 text-xs uppercase tracking-wider">
+                      Solusi Teknis yang Diterapkan:
+                    </strong>
+                    <p className="leading-relaxed">{project.solution}</p>
+                  </div>
                 </div>
               </div>
 
-              {/* Content */}
-              <div className="p-5">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-[10px] font-medium uppercase tracking-wider text-primary">
-                    {project.category}
+              <div className="pt-6 mt-6 border-t border-[#E3D5CA]">
+                <div className="mb-4">
+                  <span className="text-[11px] font-semibold text-[#292722] block mb-2 uppercase tracking-wide">
+                    Metrik & Dampak Utama:
+                  </span>
+                  <span className="text-xs font-medium text-emerald-800 bg-emerald-100/60 px-2.5 py-1.5 rounded border border-emerald-300 block leading-relaxed">
+                    {project.metrics}
                   </span>
                 </div>
-                <h3 className="text-base font-semibold text-foreground mb-1.5 leading-tight">
-                  {project.title}
-                </h3>
-                <p className="text-xs text-muted-foreground mb-3">
-                  {project.company}
-                </p>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4 line-clamp-3">
-                  {project.description}
-                </p>
 
-                <div className="flex flex-wrap gap-1.5 mb-4">
-                  {project.technologies.map((tech, i) => (
+                <div className="flex flex-wrap gap-1.5">
+                  {project.stack.map((tech, tIdx) => (
                     <span
-                      key={i}
-                      className="px-2 py-0.5 text-[10px] font-medium rounded-full bg-slate-50 text-slate-500 border border-slate-200/80"
+                      key={tIdx}
+                      className="px-2 py-0.5 text-[10px] rounded bg-[#F5EBE0] text-[#292722] border border-[#D6CCC2] font-medium"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
-
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="w-full rounded-lg text-xs hover:bg-primary hover:text-white hover:border-primary transition-all"
-                  onClick={() => openModal(project)}
-                >
-                  <ExternalLink className="w-3.5 h-3.5 mr-1.5" />
-                  View Details
-                </Button>
               </div>
             </div>
           ))}
         </div>
-
-        {/* Modal */}
-        {selectedProject && (
-          <div
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-            onClick={closeModal}
-          >
-            <div
-              className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden shadow-2xl"
-              onClick={(e) => e.stopPropagation()}
-            >
-              {/* Header */}
-              <div className="flex justify-between items-center p-6 border-b border-border/50">
-                <div>
-                  <h3 className="text-xl font-semibold text-foreground">
-                    {selectedProject.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    {selectedProject.company}
-                  </p>
-                </div>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  onClick={closeModal}
-                  className="rounded-full hover:bg-slate-100"
-                >
-                  <X className="w-5 h-5" />
-                </Button>
-              </div>
-
-              {/* Image Gallery */}
-              <div className="relative bg-slate-50">
-                <img
-                  src={selectedProject.images[currentImageIndex]}
-                  alt={`${selectedProject.title} - Screenshot ${currentImageIndex + 1}`}
-                  className="w-full h-80 md:h-96 object-contain"
-                />
-                {selectedProject.images.length > 1 && (
-                  <>
-                    <Button
-                      variant="secondary"
-                      size="icon"
-                      className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full shadow-md"
-                      onClick={prevImage}
-                    >
-                      <ChevronLeft className="w-5 h-5" />
-                    </Button>
-                    <Button
-                      variant="secondary"
-                      size="icon"
-                      className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full shadow-md"
-                      onClick={nextImage}
-                    >
-                      <ChevronRight className="w-5 h-5" />
-                    </Button>
-                  </>
-                )}
-                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium text-muted-foreground">
-                  {currentImageIndex + 1} / {selectedProject.images.length}
-                </div>
-              </div>
-
-              {/* Thumbnails */}
-              {selectedProject.images.length > 1 && (
-                <div className="p-4 border-t border-border/50">
-                  <div className="flex gap-2 overflow-x-auto pb-1">
-                    {selectedProject.images.map((image, index) => (
-                      <img
-                        key={index}
-                        src={image}
-                        alt={`Thumbnail ${index + 1}`}
-                        className={`w-14 h-14 object-cover rounded-lg cursor-pointer flex-shrink-0 transition-all ${
-                          index === currentImageIndex
-                            ? "ring-2 ring-primary ring-offset-1"
-                            : "opacity-50 hover:opacity-80"
-                        }`}
-                        onClick={() => setCurrentImageIndex(index)}
-                      />
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* Details */}
-              <div className="p-6 border-t border-border/50">
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                  {selectedProject.description}
-                </p>
-                <div className="flex flex-wrap gap-1.5">
-                  {selectedProject.technologies.map((tech, index) => (
-                    <span
-                      key={index}
-                      className="px-2.5 py-0.5 text-[11px] font-medium rounded-full bg-slate-50 text-slate-500 border border-slate-200/80"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
     </section>
   );
 };
-
-export default ProjectsSection;
