@@ -1,7 +1,13 @@
 import { SKILL_CATEGORIES } from "@/data/portfolioData";
+import { SKILL_CATEGORIES_EN } from "@/data/portfolioDataEn";
+import { useLanguage } from "@/context/LanguageContext";
 import { Terminal } from "lucide-react";
 
 export const SkillsSection = () => {
+  const { language } = useLanguage();
+  const isEn = language === "en";
+  const categories = isEn ? SKILL_CATEGORIES_EN : SKILL_CATEGORIES;
+
   return (
     <section id="skills" className="py-20 sm:py-28 px-6 sm:px-8 bg-[#F5EBE0] border-b border-[#E3D5CA]">
       <div className="max-w-7xl mx-auto">
@@ -9,20 +15,22 @@ export const SkillsSection = () => {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-8 mb-16 border-b border-[#E3D5CA]">
           <div>
             <span className="text-xs uppercase tracking-widest text-[#68635C] block mb-2 font-semibold">
-              04 / Kapabilitas Teknis
+              {isEn ? "04 / Technical Capabilities" : "04 / Kapabilitas Teknis"}
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold uppercase tracking-tight text-[#292722]">
-              04. Keahlian & Penguasaan Teknologi
+              {isEn ? "04. Technical Skills & Stack" : "04. Keahlian & Penguasaan Teknologi"}
             </h2>
           </div>
           <p className="text-xs text-[#68635C] max-w-sm font-medium leading-relaxed">
-            Matriks kompetensi teknis yang berakar pada implementasi sistem di lingkungan produksi nyata tanpa penilaian persentase arbitrer.
+            {isEn
+              ? "Technical competency matrix grounded in production-grade system implementation without arbitrary percentage ratings."
+              : "Matriks kompetensi teknis yang berakar pada implementasi sistem di lingkungan produksi nyata tanpa penilaian persentase arbitrer."}
           </p>
         </div>
 
         {/* Skills Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {SKILL_CATEGORIES.map((cat, idx) => (
+          {categories.map((cat, idx) => (
             <div
               key={idx}
               className="rounded-lg border border-[#E3D5CA] bg-[#EDEDE9] p-6 flex flex-col justify-between hover:border-[#D5BDAF] transition-all"
@@ -60,7 +68,7 @@ export const SkillsSection = () => {
               </div>
 
               <div className="mt-6 pt-3 border-t border-[#E3D5CA]/60 text-[10px] text-[#68635C] uppercase tracking-wider font-semibold">
-                Teruji di Lingkungan Produksi
+                {isEn ? "Verified in Production Environments" : "Teruji di Lingkungan Produksi"}
               </div>
             </div>
           ))}

@@ -519,6 +519,17 @@ export const FAQ_LIST: FaqItem[] = [
     category: "Fleksibilitas Posisi",
   },
   {
+    question: "Apakah Anda bisa berbahasa Inggris?",
+    answer: "Kemampuan listening dan speaking saya masih perlu ditingkatkan, sementara kemampuan reading dan writing sejauh ini sudah cukup baik dan tidak menjadi kendala bagi saya.",
+    category: "Kemampuan Bahasa",
+  },
+  {
+    question: "Apakah Anda bisa berbahasa Inggris?",
+    answer:
+      "Kemampuan listening dan speaking saya masih perlu improvement, namun mengenai reading dan writing sejauh ini saya tidak mengalami masalah.",
+    category: "Kemampuan Bahasa",
+  },
+  {
     question: "Bagaimana rincian pengalaman kerja ~1.5 tahun Anda selama ini?",
     answer:
       "Pengalaman ~1.5 tahun saya terakumulasi di 4 perusahaan lintas industri, yaitu 3 perusahaan internship (PT Telkom Satelit Indonesia selama 5 bulan, PT Cipta Krida Bahari selama 5 bulan, PT Sinergi Informatika Semen Indonesia selama 6 bulan) serta 1 project-based di PT IDS Teknologi Indonesia selama 1.5 bulan.",

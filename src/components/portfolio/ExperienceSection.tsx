@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { EXPERIENCES, ExperienceBlock, ProjectScreenshot } from "@/data/portfolioData";
+import { EXPERIENCES_EN } from "@/data/portfolioDataEn";
+import { useLanguage } from "@/context/LanguageContext";
 import { ImageLightboxModal } from "./ImageLightboxModal";
 import {
   Building2,
@@ -13,6 +15,10 @@ import {
 } from "lucide-react";
 
 export const ExperienceSection = () => {
+  const { language } = useLanguage();
+  const isEn = language === "en";
+  const experiences = isEn ? EXPERIENCES_EN : EXPERIENCES;
+
   const [lightboxState, setLightboxState] = useState<{
     isOpen: boolean;
     screenshots: ProjectScreenshot[];
@@ -45,14 +51,14 @@ export const ExperienceSection = () => {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-8 mb-16 border-b border-[#E3D5CA]">
           <div>
             <h2 className="text-3xl sm:text-4xl font-bold uppercase tracking-tight text-[#292722]">
-              03. Pengalaman Profesional
+              {isEn ? "03. Professional Experience" : "03. Pengalaman Profesional"}
             </h2>
           </div>
         </div>
 
         {/* Company Experience Blocks */}
         <div className="space-y-24">
-          {EXPERIENCES.map((exp, expIdx) => {
+          {experiences.map((exp, expIdx) => {
             const primaryScreenshot = exp.screenshots.find((s) => s.isPrimary) || exp.screenshots[0];
             const secondaryScreenshots = exp.screenshots.filter((s) => s !== primaryScreenshot);
 
@@ -111,7 +117,7 @@ export const ExperienceSection = () => {
                   <div className="flex items-center gap-2 mb-3">
                     <AlertCircle className="w-4 h-4 text-[#292722]" />
                     <h4 className="text-xl font-bold uppercase tracking-wider text-[#292722]">
-                      1. Masalah yang Ingin Diselesaikan
+                      {isEn ? "1. Problem Statement" : "1. Masalah yang Ingin Diselesaikan"}
                     </h4>
                   </div>
                   <p className="text-sm sm:text-base text-[#292722] leading-relaxed max-w-4xl font-normal whitespace-pre-line">
@@ -126,7 +132,7 @@ export const ExperienceSection = () => {
                     <div className="flex items-center gap-2">
                       <CheckCircle2 className="w-4 h-4 text-[#292722]" />
                       <h4 className="text-xl font-bold uppercase tracking-wider text-[#292722]">
-                        2. Tanggung Jawab & Kontribusi
+                        {isEn ? "2. Responsibilities & Contributions" : "2. Tanggung Jawab & Kontribusi"}
                       </h4>
                     </div>
 
@@ -171,7 +177,7 @@ export const ExperienceSection = () => {
                     <div className="flex items-center gap-2">
                       <TrendingUp className="w-4 h-4 text-emerald-800" />
                       <h4 className="text-xl font-bold uppercase tracking-wider text-[#292722]">
-                        3. Dampak Bisnis yang Terverifikasi
+                        {isEn ? "3. Verified Business Impact" : "3. Dampak Bisnis yang Terverifikasi"}
                       </h4>
                     </div>
 
@@ -218,11 +224,13 @@ export const ExperienceSection = () => {
                     <div className="flex items-center gap-2">
                       <Layers className="w-4 h-4 text-[#292722]" />
                       <h4 className="text-xl font-bold uppercase tracking-wider text-[#292722]">
-                        Dokumentasi Proyek & Antarmuka Sistem
+                        {isEn ? "Project Documentation & System Interfaces" : "Dokumentasi Proyek & Antarmuka Sistem"}
                       </h4>
                     </div>
                     <span className="text-xs text-[#68635C] font-medium">
-                      Tangkapan layar berikut merupakan cuplikan antarmuka sistem nyata. Klik gambar untuk memperbesar tampilan dan melihat detailnya.
+                      {isEn
+                        ? "The screenshots below are previews of real-world system interfaces. Click any image to enlarge and view details."
+                        : "Tangkapan layar berikut merupakan cuplikan antarmuka sistem nyata. Klik gambar untuk memperbesar tampilan dan melihat detailnya."}
                     </span>
                   </div>
 
@@ -248,14 +256,14 @@ export const ExperienceSection = () => {
                           <div className="absolute inset-0 bg-[#292722]/0 group-hover:bg-[#292722]/15 transition-colors flex items-center justify-center">
                             <span className="opacity-0 group-hover:opacity-100 transition-opacity px-3.5 py-2 rounded bg-[#EDEDE9]/95 text-[#292722] text-xs font-semibold flex items-center gap-2 shadow-md">
                               <Maximize2 className="w-4 h-4" />
-                              Perbesar Tampilan Utama
+                              {isEn ? "Enlarge Main View" : "Perbesar Tampilan Utama"}
                             </span>
                           </div>
                         </div>
                         <div className="lg:col-span-4 flex flex-col justify-center space-y-2.5">
                           <div className="inline-flex items-center gap-2">
                             <span className="text-[11px] font-bold uppercase tracking-wider text-[#292722] bg-[#D5BDAF]/40 px-2.5 py-1 rounded border border-[#D5BDAF]">
-                              Tampilan Utama
+                              {isEn ? "Main View" : "Tampilan Utama"}
                             </span>
                           </div>
                           <h5 className="text-base sm:text-lg font-bold text-[#292722] leading-snug">
@@ -292,7 +300,7 @@ export const ExperienceSection = () => {
                               <div className="absolute inset-0 bg-[#292722]/0 group-hover:bg-[#292722]/15 transition-colors flex items-center justify-center">
                                 <span className="opacity-0 group-hover:opacity-100 transition-opacity px-2.5 py-1 rounded bg-[#EDEDE9]/95 text-[#292722] text-[11px] font-semibold flex items-center gap-1 shadow-md">
                                   <Maximize2 className="w-3.5 h-3.5" />
-                                  Perbesar
+                                  {isEn ? "Enlarge" : "Perbesar"}
                                 </span>
                               </div>
                             </div>

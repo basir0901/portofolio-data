@@ -1,7 +1,13 @@
 import { CERTIFICATIONS_LIST } from "@/data/portfolioData";
+import { CERTIFICATIONS_LIST_EN } from "@/data/portfolioDataEn";
+import { useLanguage } from "@/context/LanguageContext";
 import { ExternalLink } from "lucide-react";
 
 export const CertificationsSection = () => {
+  const { language } = useLanguage();
+  const isEn = language === "en";
+  const certs = isEn ? CERTIFICATIONS_LIST_EN : CERTIFICATIONS_LIST;
+
   return (
     <section
       id="certifications"
@@ -12,20 +18,22 @@ export const CertificationsSection = () => {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-8 mb-16 border-b border-[#E3D5CA]">
           <div>
             <span className="text-xs uppercase tracking-widest text-[#68635C] block mb-2 font-semibold">
-              05 / Kredensial & Pelatihan
+              {isEn ? "05 / Credentials & Training" : "05 / Kredensial & Pelatihan"}
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold uppercase tracking-tight text-[#292722]">
-              05. Sertifikasi & Pelatihan
+              {isEn ? "05. Certifications & Training" : "05. Sertifikasi & Pelatihan"}
             </h2>
           </div>
           <p className="text-xs sm:text-sm text-[#68635C] max-w-md font-medium leading-relaxed">
-            Sertifikasi kompetensi kerja berstandar nasional (BNSP) serta program pelatihan intensif data warehousing bersertifikat (Kemendikbudristek & Dibimbing).
+            {isEn
+              ? "National work competency certification (BNSP) and certified intensive data warehousing training program (Kemendikbudristek & Dibimbing)."
+              : "Sertifikasi kompetensi kerja berstandar nasional (BNSP) serta program pelatihan intensif data warehousing bersertifikat (Kemendikbudristek & Dibimbing)."}
           </p>
         </div>
 
         {/* 2-Column Grid */}
         <div className="grid md:grid-cols-2 gap-8 items-stretch">
-          {CERTIFICATIONS_LIST.map((cert, cIdx) => (
+          {certs.map((cert, cIdx) => (
             <div
               key={cIdx}
               className="rounded-xl border border-[#E3D5CA] bg-[#F5EBE0] p-6 sm:p-8 flex flex-col justify-between hover:border-[#292722] transition-all duration-300 shadow-xs"
@@ -36,7 +44,7 @@ export const CertificationsSection = () => {
                     {cert.issuer}
                   </span>
                   <span className="text-[11px] font-bold px-2.5 py-0.5 rounded bg-[#EDEDE9] text-[#292722] border border-[#D6CCC2]">
-                    {cert.type || "Terverifikasi"}
+                    {cert.type || (isEn ? "Verified" : "Terverifikasi")}
                   </span>
                 </div>
 
@@ -56,7 +64,7 @@ export const CertificationsSection = () => {
                 {cert.competencies && cert.competencies.length > 0 && (
                   <div className="pt-2">
                     <span className="text-xs font-bold text-[#292722] uppercase tracking-wider block mb-2.5">
-                      Kompetensi & Teknologi:
+                      {isEn ? "Competencies & Tech Stack:" : "Kompetensi & Teknologi:"}
                     </span>
                     <div className="flex flex-wrap gap-2">
                       {cert.competencies.map((comp, compIdx) => (
@@ -81,7 +89,7 @@ export const CertificationsSection = () => {
                     className="inline-flex items-center gap-2 px-5 py-2.5 text-xs font-semibold rounded border border-[#292722] bg-[#292722] text-[#EDEDE9] hover:bg-[#D5BDAF] hover:text-[#292722] hover:border-[#D5BDAF] transition-all shadow-xs"
                   >
                     <ExternalLink className="w-3.5 h-3.5" />
-                    <span>Lihat Dokumen Sertifikat</span>
+                    <span>{isEn ? "View Certificate Document" : "Lihat Dokumen Sertifikat"}</span>
                   </a>
                 </div>
               )}

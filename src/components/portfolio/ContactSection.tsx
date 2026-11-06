@@ -10,7 +10,22 @@ import {
   Send,
 } from "lucide-react";
 
+import { useState } from "react";
+import { PERSONAL_INFO } from "@/data/portfolioData";
+import { useLanguage } from "@/context/LanguageContext";
+import {
+  Linkedin,
+  Github,
+  Download,
+  Copy,
+  Check,
+  ArrowUpRight,
+  Send,
+} from "lucide-react";
+
 export const ContactSection = () => {
+  const { language } = useLanguage();
+  const isEn = language === "en";
   const [copiedEmail, setCopiedEmail] = useState<string | null>(null);
 
   const handleCopyEmail = (email: string) => {
@@ -26,14 +41,16 @@ export const ContactSection = () => {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-8 mb-16 border-b border-[#E3D5CA]">
           <div>
             <span className="text-xs uppercase tracking-widest text-[#68635C] block mb-2 font-semibold">
-              07 / Komunikasi Langsung
+              {isEn ? "07 / Direct Communication" : "07 / Komunikasi Langsung"}
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold uppercase tracking-tight text-[#292722]">
-              07. Mari Terhubung & Berkolaborasi
+              {isEn ? "07. Let's Connect & Collaborate" : "07. Mari Terhubung & Berkolaborasi"}
             </h2>
           </div>
           <p className="text-xs text-[#68635C] max-w-sm font-medium leading-relaxed">
-            Terbuka untuk berbagai tawaran posisi kerja, eksplorasi peluang profesional, maupun diskusi rekayasa perangkat lunak dan data.
+            {isEn
+              ? "Open to diverse career opportunities, engineering challenges, and technical discussions in software and data."
+              : "Terbuka untuk berbagai tawaran posisi kerja, eksplorasi peluang profesional, maupun diskusi rekayasa perangkat lunak dan data."}
           </p>
         </div>
 
@@ -43,10 +60,12 @@ export const ContactSection = () => {
           <div className="md:col-span-7 rounded-xl border border-[#E3D5CA] bg-[#EDEDE9] p-6 sm:p-8 space-y-6 shadow-xs">
             <div>
               <span className="text-xs uppercase tracking-wider text-[#68635C] block font-semibold mb-1">
-                Kontak Email
+                {isEn ? "Email Inquiries" : "Kontak Email"}
               </span>
               <p className="text-xs sm:text-sm text-[#68635C] leading-relaxed">
-                Silakan hubungi saya secara langsung terkait peluang karir, tantangan rekayasa sistem, maupun kolaborasi proyek.
+                {isEn
+                  ? "Feel free to reach out directly regarding career opportunities, technical challenges, or project collaborations."
+                  : "Silakan hubungi saya secara langsung terkait peluang karir, tantangan rekayasa sistem, maupun kolaborasi proyek."}
               </p>
             </div>
 
@@ -55,10 +74,10 @@ export const ContactSection = () => {
               <div className="p-4 sm:p-5 rounded-lg bg-[#F5EBE0] border border-[#E3D5CA] space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="text-xs uppercase tracking-wider text-[#68635C] font-semibold">
-                    Kontak Email Utama
+                    {isEn ? "Primary Email Contact" : "Kontak Email Utama"}
                   </span>
                   <span className="text-[11px] font-bold px-2 py-0.5 rounded bg-[#EDEDE9] text-[#292722] border border-[#D6CCC2]">
-                    Prioritas
+                    {isEn ? "Priority" : "Prioritas"}
                   </span>
                 </div>
 
@@ -72,7 +91,7 @@ export const ContactSection = () => {
                     className="inline-flex items-center gap-2 px-4 py-2 rounded text-xs uppercase font-semibold bg-[#292722] text-[#EDEDE9] hover:bg-[#D5BDAF] hover:text-[#292722] transition-colors"
                   >
                     <Send className="w-3.5 h-3.5" />
-                    <span>Kirim Email</span>
+                    <span>{isEn ? "Send Email" : "Kirim Email"}</span>
                   </a>
 
                   <button
@@ -82,12 +101,12 @@ export const ContactSection = () => {
                     {copiedEmail === PERSONAL_INFO.email ? (
                       <>
                         <Check className="w-3.5 h-3.5 text-emerald-700" />
-                        <span>Alamat Email Tersalin!</span>
+                        <span>{isEn ? "Email Copied!" : "Alamat Email Tersalin!"}</span>
                       </>
                     ) : (
                       <>
                         <Copy className="w-3.5 h-3.5" />
-                        <span>Salin Alamat Email</span>
+                        <span>{isEn ? "Copy Email Address" : "Salin Alamat Email"}</span>
                       </>
                     )}
                   </button>
@@ -99,10 +118,10 @@ export const ContactSection = () => {
                 <div className="p-4 sm:p-5 rounded-lg bg-[#F5EBE0] border border-[#E3D5CA] space-y-3">
                   <div className="flex items-center justify-between">
                     <span className="text-xs uppercase tracking-wider text-[#68635C] font-semibold">
-                      Email Alternatif
+                      {isEn ? "Alternative Email" : "Email Alternatif"}
                     </span>
                     <span className="text-[11px] font-semibold px-2 py-0.5 rounded bg-[#EDEDE9] text-[#68635C] border border-[#D6CCC2]">
-                      Cadangan
+                      {isEn ? "Secondary" : "Cadangan"}
                     </span>
                   </div>
 
@@ -116,7 +135,7 @@ export const ContactSection = () => {
                       className="inline-flex items-center gap-2 px-4 py-2 rounded text-xs uppercase font-semibold bg-[#292722] text-[#EDEDE9] hover:bg-[#D5BDAF] hover:text-[#292722] transition-colors"
                     >
                       <Send className="w-3.5 h-3.5" />
-                      <span>Kirim Email</span>
+                      <span>{isEn ? "Send Email" : "Kirim Email"}</span>
                     </a>
 
                     <button
@@ -126,12 +145,12 @@ export const ContactSection = () => {
                       {copiedEmail === PERSONAL_INFO.altEmail ? (
                         <>
                           <Check className="w-3.5 h-3.5 text-emerald-700" />
-                          <span>Alamat Email Tersalin!</span>
+                          <span>{isEn ? "Email Copied!" : "Alamat Email Tersalin!"}</span>
                         </>
                       ) : (
                         <>
                           <Copy className="w-3.5 h-3.5" />
-                          <span>Salin Alamat Email</span>
+                          <span>{isEn ? "Copy Email Address" : "Salin Alamat Email"}</span>
                         </>
                       )}
                     </button>
@@ -156,10 +175,10 @@ export const ContactSection = () => {
                 </div>
                 <div>
                   <span className="text-xs font-bold text-[#292722] block">
-                    Profil LinkedIn
+                    {isEn ? "LinkedIn Profile" : "Profil LinkedIn"}
                   </span>
                   <span className="text-xs text-[#68635C]">
-                    Jaringan profesional & informasi karir
+                    {isEn ? "Professional network & career updates" : "Jaringan profesional & informasi karir"}
                   </span>
                 </div>
               </div>
@@ -179,10 +198,10 @@ export const ContactSection = () => {
                 </div>
                 <div>
                   <span className="text-xs font-bold text-[#292722] block">
-                    Repositori GitHub
+                    {isEn ? "GitHub Profile" : "Repositori GitHub"}
                   </span>
                   <span className="text-xs text-[#68635C]">
-                    Kode sumber & eksperimen proyek open-source
+                    {isEn ? "Source code repositories & projects" : "Kode sumber & eksperimen proyek"}
                   </span>
                 </div>
               </div>
@@ -202,10 +221,10 @@ export const ContactSection = () => {
                 </div>
                 <div>
                   <span className="text-xs font-bold text-[#292722] block">
-                    Unduh Curriculum Vitae (PDF)
+                    {isEn ? "Download Curriculum Vitae (PDF)" : "Unduh Curriculum Vitae (PDF)"}
                   </span>
                   <span className="text-xs text-[#68635C]">
-                    Dokumen riwayat hidup & pengalaman kerja lengkap
+                    {isEn ? "Complete work history and credentials" : "Dokumen riwayat hidup & pengalaman lengkap"}
                   </span>
                 </div>
               </div>
@@ -217,13 +236,13 @@ export const ContactSection = () => {
         {/* Bottom Colophon / Copyright */}
         <div className="mt-20 pt-8 border-t border-[#E3D5CA] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#68635C] font-medium">
           <p>
-            &copy; {new Date().getFullYear()} {PERSONAL_INFO.name}. Seluruh hak cipta dilindungi.
+            &copy; {new Date().getFullYear()} {PERSONAL_INFO.name}. {isEn ? "All rights reserved." : "Seluruh hak cipta dilindungi."}
           </p>
           <div className="flex items-center gap-4">
             <span>Jakarta • Bogor, Indonesia</span>
             <span>•</span>
             <a href="#" className="hover:text-[#292722] underline underline-offset-2">
-              Kembali ke atas
+              {isEn ? "Back to top" : "Kembali ke atas"}
             </a>
           </div>
         </div>

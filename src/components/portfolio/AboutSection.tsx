@@ -1,17 +1,17 @@
+import { useLanguage } from "@/context/LanguageContext";
 import {
   ArrowRight,
   ArrowDown,
   Briefcase,
   Clock,
-  Building2,
-  Calendar,
-  CheckCircle2,
-  ArrowUpRight,
   Layers,
 } from "lucide-react";
 
 export const AboutSection = () => {
-  const careerFlow = [
+  const { language } = useLanguage();
+  const isEn = language === "en";
+
+  const careerFlowId = [
     {
       step: "01",
       company: "PT Telkom Satelit Indonesia",
@@ -66,20 +66,75 @@ export const AboutSection = () => {
     },
   ];
 
+  const careerFlowEn = [
+    {
+      step: "01",
+      company: "PT Telkom Satelit Indonesia",
+      shortCompany: "Telkomsat",
+      period: "Jul — Nov 2024",
+      duration: "5 Months",
+      type: "Internship",
+      typeBadge: "bg-[#EDEDE9] text-[#292722] border-[#D6CCC2]",
+      role: "Back-End Web Developer",
+      highlight:
+        "Designed and engineered 16 high-reliability REST APIs for workshop inventory and satellite equipment test result logging systems.",
+      tags: ["Laravel", "REST API", "MySQL"],
+    },
+    {
+      step: "02",
+      company: "PT Cipta Krida Bahari",
+      shortCompany: "CKB Group",
+      period: "Jun — Oct 2025",
+      duration: "5 Months",
+      type: "Internship",
+      typeBadge: "bg-[#EDEDE9] text-[#292722] border-[#D6CCC2]",
+      role: "Full-Stack Web Developer",
+      highlight:
+        "Developed real-time First Aid Kit consumption tracking and national logistics HSE / K3 monitoring modules.",
+      tags: ["Laravel", "Vue.js", "MySQL"],
+    },
+    {
+      step: "03",
+      company: "PT Sinergi Informatika Semen Indonesia",
+      shortCompany: "PT SISI",
+      period: "Nov 2025 — May 2026",
+      duration: "6 Months",
+      type: "Internship",
+      typeBadge: "bg-[#EDEDE9] text-[#292722] border-[#D6CCC2]",
+      role: "Software Engineer & Data Engineer",
+      highlight:
+        "Developed Data Validation System (Solo Dev) and automated Apache Airflow pipelines on the corporate datamart.",
+      tags: ["Laravel", "React.js", "Python", "Airflow"],
+    },
+    {
+      step: "04",
+      company: "PT IDS Teknologi Indonesia",
+      shortCompany: "IDS Teknologi (Kansai Paint)",
+      period: "2026",
+      duration: "1.5 Months",
+      type: "Project-Based",
+      typeBadge: "bg-[#D5BDAF]/50 text-[#292722] border-[#D5BDAF]",
+      role: "Software Engineer",
+      highlight:
+        "Migrated enterprise frontend across 4 core domains, 30 business modules, and 49 workflows to a React.js Single Page Application.",
+      tags: ["React.js", "SPA", "Tailwind CSS"],
+    },
+  ];
+
+  const careerFlow = isEn ? careerFlowEn : careerFlowId;
+
   return (
     <section id="about" className="py-20 sm:py-28 px-6 sm:px-8 bg-[#F5EBE0] border-b border-[#E3D5CA]">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-8 mb-12 border-b border-[#E3D5CA]">
           <div>
-            {/* <span className="text-xs uppercase tracking-widest text-[#68635C] block mb-2 font-semibold">
-              02 / Alur & Ringkasan Pengalaman
-            </span> */}
             <h2 className="text-3xl sm:text-4xl font-bold uppercase tracking-tight text-[#292722]">
-              02. Ringkasan Perjalanan Karir (~1.5 Tahun)
+              {isEn
+                ? "02. Career Journey Summary (~1.5 Years)"
+                : "02. Ringkasan Perjalanan Karir (~1.5 Tahun)"}
             </h2>
           </div>
-
         </div>
 
         {/* Top Summary Banner: Breakdown Breakdown 1.5 Tahun */}
@@ -89,13 +144,15 @@ export const AboutSection = () => {
             <div className="md:col-span-5 space-y-2 border-b md:border-b-0 md:border-r border-[#E3D5CA] pb-6 md:pb-0 md:pr-6">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-[#D5BDAF]/30 border border-[#D5BDAF] text-xs font-semibold text-[#292722] uppercase tracking-wide">
                 <Briefcase className="w-3.5 h-3.5" />
-                <span>Akumulasi Pengalaman</span>
+                <span>{isEn ? "Accumulated Experience" : "Akumulasi Pengalaman"}</span>
               </div>
               <h3 className="text-2xl sm:text-3xl font-bold text-[#292722] tracking-tight">
-                Total ~1.5 Tahun Pengalaman
+                {isEn ? "Total ~1.5 Years Experience" : "Total ~1.5 Tahun Pengalaman"}
               </h3>
               <p className="text-xs sm:text-sm text-[#68635C] leading-relaxed">
-                Rekapitulasi pengalaman profesional selama ~1.5 tahun yang terbagi di 4 perusahaan lintas industri (IT consulting industry, Telecommunication & Satelite Industry, Transportation & Logistics Industry).
+                {isEn
+                  ? "Recap of ~1.5 years of professional experience across 4 companies in diverse sectors (IT consulting, Telecommunication & Satellite, Transportation & Logistics)."
+                  : "Rekapitulasi pengalaman profesional selama ~1.5 tahun yang terbagi di 4 perusahaan lintas industri (IT consulting industry, Telecommunication & Satelite Industry, Transportation & Logistics Industry)."}
               </p>
             </div>
 
@@ -106,11 +163,13 @@ export const AboutSection = () => {
                 <div className="flex items-center justify-center gap-2">
                   <span className="text-xl sm:text-2xl font-bold text-[#292722]">4</span>
                   <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#292722]">
-                    Perusahaan
+                    {isEn ? "Companies" : "Perusahaan"}
                   </span>
                 </div>
-                <p className="text-[11px] text-[#68635C] mt-0.5">
-                  Total ~1.5 Tahun Pengalaman Kerja Profesional
+                <p className="text-xs text-[#68635C] mt-0.5">
+                  {isEn
+                    ? "Total ~1.5 Years of Professional Work Experience"
+                    : "Total ~1.5 Tahun Pengalaman Kerja Profesional"}
                 </p>
               </div>
 
@@ -148,22 +207,22 @@ export const AboutSection = () => {
                         </span>
                       </div>
                       <span className="text-xs font-semibold px-2.5 py-0.5 rounded bg-[#EDEDE9] text-[#68635C] border border-[#D6CCC2]">
-                        16 Bulan
+                        {isEn ? "16 Months" : "16 Bulan"}
                       </span>
                     </div>
 
                     <ul className="space-y-2 text-xs sm:text-sm text-[#68635C]">
                       <li className="flex items-start gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-[#292722] mt-1.5 flex-shrink-0" />
-                        <span><strong className="text-[#292722]">PT Telkom Satelit Indonesia</strong> (5 Bulan)</span>
+                        <span><strong className="text-[#292722]">PT Telkom Satelit Indonesia</strong> ({isEn ? "5 Months" : "5 Bulan"})</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-[#292722] mt-1.5 flex-shrink-0" />
-                        <span><strong className="text-[#292722]">PT Cipta Krida Bahari</strong> (5 Bulan)</span>
+                        <span><strong className="text-[#292722]">PT Cipta Krida Bahari</strong> ({isEn ? "5 Months" : "5 Bulan"})</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-[#292722] mt-1.5 flex-shrink-0" />
-                        <span><strong className="text-[#292722]">PT Sinergi Informatika Semen Indonesia</strong> (6 Bulan)</span>
+                        <span><strong className="text-[#292722]">PT Sinergi Informatika Semen Indonesia</strong> ({isEn ? "6 Months" : "6 Bulan"})</span>
                       </li>
                     </ul>
                   </div>
@@ -180,14 +239,14 @@ export const AboutSection = () => {
                         </span>
                       </div>
                       <span className="text-xs font-semibold px-2.5 py-0.5 rounded bg-[#D5BDAF]/40 text-[#292722] border border-[#D5BDAF]">
-                        1.5 Bulan
+                        {isEn ? "1.5 Months" : "1.5 Bulan"}
                       </span>
                     </div>
 
                     <ul className="space-y-2 text-xs sm:text-sm text-[#68635C]">
                       <li className="flex items-start gap-2">
                         <span className="w-1.5 h-1.5 rounded-sm bg-[#292722] mt-1.5 flex-shrink-0" />
-                        <span><strong className="text-[#292722]">PT IDS Teknologi Indonesia</strong> (1.5 Bulan)</span>
+                        <span><strong className="text-[#292722]">PT IDS Teknologi Indonesia</strong> ({isEn ? "1.5 Months" : "1.5 Bulan"})</span>
                       </li>
                     </ul>
                   </div>
@@ -202,10 +261,10 @@ export const AboutSection = () => {
           <div className="flex items-center justify-between pb-2">
             <h4 className="text-xs font-bold uppercase tracking-wider text-[#292722] flex items-center gap-2">
               <Layers className="w-4 h-4 text-[#292722]" />
-              <span>Perjalanan Karir</span>
+              <span>{isEn ? "Career Progression" : "Perjalanan Karir"}</span>
             </h4>
             <span className="text-xs text-[#68635C] font-medium hidden sm:inline">
-              Urutan perjalanan dari 2024 hingga 2026
+              {isEn ? "Chronological order from 2024 through 2026" : "Urutan perjalanan dari 2024 hingga 2026"}
             </span>
           </div>
 
@@ -219,7 +278,7 @@ export const AboutSection = () => {
                 <div>
                   <div className="flex items-center justify-between pb-3.5 mb-3.5 border-b border-[#E3D5CA]">
                     <span className="text-xs sm:text-sm font-bold px-2.5 py-1 rounded bg-[#F5EBE0] text-[#292722] border border-[#D6CCC2]">
-                      Pengalaman {item.step}
+                      {isEn ? "Experience" : "Pengalaman"} {item.step}
                     </span>
 
                     <span
@@ -273,7 +332,11 @@ export const AboutSection = () => {
             href="#experience"
             className="inline-flex items-center gap-2 px-6 py-3 rounded text-xs uppercase font-semibold bg-[#292722] text-[#EDEDE9] hover:bg-[#D5BDAF] hover:text-[#292722] transition-all shadow-sm"
           >
-            <span>Lihat Detail Implementasi & Tangkapan Layar Proyek</span>
+            <span>
+              {isEn
+                ? "View Detailed Implementations & Project Screenshots"
+                : "Lihat Detail Implementasi & Tangkapan Layar Proyek"}
+            </span>
             <ArrowRight className="w-4 h-4" />
           </a>
         </div>

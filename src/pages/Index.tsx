@@ -6,10 +6,14 @@ import { SkillsSection } from "@/components/portfolio/SkillsSection";
 import { CertificationsSection } from "@/components/portfolio/CertificationsSection";
 import { FaqSection } from "@/components/portfolio/FaqSection";
 import { ContactSection } from "@/components/portfolio/ContactSection";
+import { LanguageModal } from "@/components/portfolio/LanguageModal";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-[#EDEDE9] text-[#292722] selection:bg-[#D5BDAF] selection:text-[#292722]">
+      {/* Welcome Language Selector Modal */}
+      <LanguageModal />
+
       {/* Global Minimalist Header Navigation */}
       <Navbar />
 
