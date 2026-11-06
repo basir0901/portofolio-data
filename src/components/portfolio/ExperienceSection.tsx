@@ -71,7 +71,7 @@ export const ExperienceSection = () => {
                 <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6 pb-8 border-b border-[#E3D5CA]">
                   <div className="space-y-2">
                     <div className="flex flex-wrap items-center gap-2.5">
-                      <span className="text-xs font-bold text-[#68635C] bg-[#EDEDE9] px-2.5 py-1 rounded border border-[#D6CCC2]">
+                      <span className="text-xs font-bold text-[#292722] bg-[#EDEDE9] px-2.5 py-1 rounded border border-[#D6CCC2]">
                         0{expIdx + 1}
                       </span>
                       <span className="text-xs uppercase tracking-wider text-[#292722] font-semibold bg-[#D5BDAF]/40 px-3 py-1 rounded border border-[#D5BDAF]">
@@ -83,16 +83,16 @@ export const ExperienceSection = () => {
                       {exp.role}
                     </h3>
 
-                    <div className="flex flex-wrap items-center gap-x-5 gap-y-1.5 text-sm font-medium text-[#68635C] pt-1">
-                      <span className="flex items-center gap-1.5 text-[#292722] font-semibold">
-                        <Building2 className="w-4 h-4 text-[#68635C]" />
+                    <div className="flex flex-wrap items-center gap-x-5 gap-y-1.5 text-sm sm:text-base font-semibold text-[#292722] pt-1">
+                      <span className="flex items-center gap-1.5 text-[#292722] font-bold">
+                        <Building2 className="w-4 h-4 text-[#292722]" />
                         {exp.company}
                       </span>
-                      <span className="flex items-center gap-1.5">
-                        <MapPin className="w-3.5 h-3.5" />
+                      <span className="flex items-center gap-1.5 text-[#292722]">
+                        <MapPin className="w-4 h-4" />
                         {exp.location}
                       </span>
-                      <span className="flex items-center gap-1.5 text-xs text-[#68635C] font-medium">
+                      <span className="flex items-center gap-1.5 text-xs sm:text-sm text-[#292722] font-bold bg-[#EDEDE9] px-2.5 py-0.5 rounded border border-[#D6CCC2]">
                         <Calendar className="w-3.5 h-3.5" />
                         {exp.period}
                       </span>
@@ -100,11 +100,11 @@ export const ExperienceSection = () => {
                   </div>
 
                   {/* Tech Stack Pills */}
-                  <div className="flex flex-wrap gap-1.5 lg:max-w-md justify-start lg:justify-end">
+                  <div className="flex flex-wrap gap-2 lg:max-w-md justify-start lg:justify-end">
                     {exp.technologies.map((tech, i) => (
                       <span
                         key={i}
-                        className="px-2.5 py-1 text-xs rounded bg-[#EDEDE9] text-[#292722] border border-[#D6CCC2] font-medium"
+                        className="px-3 py-1 text-xs sm:text-sm rounded bg-[#EDEDE9] text-[#292722] border border-[#D6CCC2] font-bold"
                       >
                         {tech}
                       </span>
@@ -115,12 +115,12 @@ export const ExperienceSection = () => {
                 {/* Concept 1: Masalah yang Ingin Diselesaikan */}
                 <div className="py-8 border-b border-[#E3D5CA]">
                   <div className="flex items-center gap-2 mb-3">
-                    <AlertCircle className="w-4 h-4 text-[#292722]" />
-                    <h4 className="text-xl font-bold uppercase tracking-wider text-[#292722]">
+                    <AlertCircle className="w-5 h-5 text-[#292722]" />
+                    <h4 className="text-xl sm:text-2xl font-bold uppercase tracking-wider text-[#292722]">
                       {isEn ? "1. Problem Statement" : "1. Masalah yang Ingin Diselesaikan"}
                     </h4>
                   </div>
-                  <p className="text-sm sm:text-base text-[#292722] leading-relaxed max-w-4xl font-normal whitespace-pre-line">
+                  <p className="text-sm sm:text-base text-[#292722] leading-[1.8] max-w-4xl font-medium whitespace-pre-line">
                     {exp.problemToSolve}
                   </p>
                 </div>
@@ -130,8 +130,8 @@ export const ExperienceSection = () => {
                   {/* Responsibilities & Contributions */}
                   <div className="space-y-4">
                     <div className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-[#292722]" />
-                      <h4 className="text-xl font-bold uppercase tracking-wider text-[#292722]">
+                      <CheckCircle2 className="w-5 h-5 text-[#292722]" />
+                      <h4 className="text-xl sm:text-2xl font-bold uppercase tracking-wider text-[#292722]">
                         {isEn ? "2. Responsibilities & Contributions" : "2. Tanggung Jawab & Kontribusi"}
                       </h4>
                     </div>
@@ -139,17 +139,17 @@ export const ExperienceSection = () => {
                     {exp.responsibilityGroups ? (
                       <div className="space-y-5">
                         {exp.responsibilityGroups.map((group, gIdx) => (
-                          <div key={gIdx} className="space-y-2.5">
-                            <h5 className="text-xs sm:text-sm font-bold text-[#292722] bg-[#EDEDE9] px-3 py-1 rounded border border-[#D6CCC2] inline-block tracking-wide">
+                          <div key={gIdx} className="space-y-3">
+                            <h5 className="text-sm sm:text-base font-bold text-[#292722] bg-[#EDEDE9] px-3.5 py-1.5 rounded border border-[#D6CCC2] inline-block tracking-wide">
                               {group.title}
                             </h5>
-                            <ul className="space-y-2.5">
+                            <ul className="space-y-3">
                               {group.items.map((item, iIdx) => (
                                 <li
                                   key={iIdx}
-                                  className="flex items-start gap-3 text-xs sm:text-sm text-[#292722] leading-relaxed"
+                                  className="flex items-start gap-3 text-sm sm:text-[15px] text-[#292722] font-medium leading-[1.75]"
                                 >
-                                  <span className="w-1.5 h-1.5 rounded-full bg-[#292722] mt-2 flex-shrink-0" />
+                                  <span className="w-2 h-2 rounded-full bg-[#292722] mt-2 flex-shrink-0" />
                                   <span>{item}</span>
                                 </li>
                               ))}
@@ -158,13 +158,13 @@ export const ExperienceSection = () => {
                         ))}
                       </div>
                     ) : (
-                      <ul className="space-y-3">
+                      <ul className="space-y-3.5">
                         {exp.responsibilities.map((resp, rIdx) => (
                           <li
                             key={rIdx}
-                            className="flex items-start gap-3 text-xs sm:text-sm text-[#292722] leading-relaxed"
+                            className="flex items-start gap-3 text-sm sm:text-[15px] text-[#292722] font-medium leading-[1.75]"
                           >
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#292722] mt-2 flex-shrink-0" />
+                            <span className="w-2 h-2 rounded-full bg-[#292722] mt-2 flex-shrink-0" />
                             <span>{resp}</span>
                           </li>
                         ))}
@@ -173,10 +173,10 @@ export const ExperienceSection = () => {
                   </div>
 
                   {/* Business Impact */}
-                  <div className="space-y-4 p-5 rounded-lg border border-[#D5BDAF] bg-[#EDEDE9]/80">
+                  <div className="space-y-4 p-5 sm:p-6 rounded-xl border border-[#D5BDAF] bg-[#EDEDE9]/90">
                     <div className="flex items-center gap-2">
-                      <TrendingUp className="w-4 h-4 text-emerald-800" />
-                      <h4 className="text-xl font-bold uppercase tracking-wider text-[#292722]">
+                      <TrendingUp className="w-5 h-5 text-emerald-800" />
+                      <h4 className="text-xl sm:text-2xl font-bold uppercase tracking-wider text-[#292722]">
                         {isEn ? "3. Verified Business Impact" : "3. Dampak Bisnis yang Terverifikasi"}
                       </h4>
                     </div>
@@ -184,17 +184,17 @@ export const ExperienceSection = () => {
                     {exp.businessImpactGroups ? (
                       <div className="space-y-5">
                         {exp.businessImpactGroups.map((group, gIdx) => (
-                          <div key={gIdx} className="space-y-2.5">
-                            <h5 className="text-xs sm:text-sm font-bold text-emerald-950 bg-emerald-100/70 px-3 py-1 rounded border border-emerald-300 inline-block tracking-wide">
+                          <div key={gIdx} className="space-y-3">
+                            <h5 className="text-sm sm:text-base font-bold text-emerald-950 bg-emerald-100 px-3.5 py-1.5 rounded border border-emerald-400 inline-block tracking-wide">
                               {group.title}
                             </h5>
-                            <ul className="space-y-2.5">
+                            <ul className="space-y-3">
                               {group.items.map((item, iIdx) => (
                                 <li
                                   key={iIdx}
-                                  className="flex items-start gap-3 text-xs sm:text-sm text-[#292722] leading-relaxed"
+                                  className="flex items-start gap-3 text-sm sm:text-[15px] text-[#292722] font-medium leading-[1.75]"
                                 >
-                                  <span className="w-1.5 h-1.5 rounded-sm bg-emerald-700 mt-2 flex-shrink-0" />
+                                  <span className="w-2 h-2 rounded-sm bg-emerald-700 mt-2 flex-shrink-0" />
                                   <span>{item}</span>
                                 </li>
                               ))}
@@ -203,13 +203,13 @@ export const ExperienceSection = () => {
                         ))}
                       </div>
                     ) : (
-                      <ul className="space-y-3">
+                      <ul className="space-y-3.5">
                         {exp.businessImpact.map((impact, iIdx) => (
                           <li
                             key={iIdx}
-                            className="flex items-start gap-3 text-xs sm:text-sm text-[#292722] leading-relaxed"
+                            className="flex items-start gap-3 text-sm sm:text-[15px] text-[#292722] font-medium leading-[1.75]"
                           >
-                            <span className="w-1.5 h-1.5 rounded-sm bg-emerald-700 mt-2 flex-shrink-0" />
+                            <span className="w-2 h-2 rounded-sm bg-emerald-700 mt-2 flex-shrink-0" />
                             <span>{impact}</span>
                           </li>
                         ))}
@@ -222,12 +222,12 @@ export const ExperienceSection = () => {
                 <div className="pt-8">
                   <div className="flex flex-col gap-1.5 mb-6">
                     <div className="flex items-center gap-2">
-                      <Layers className="w-4 h-4 text-[#292722]" />
-                      <h4 className="text-xl font-bold uppercase tracking-wider text-[#292722]">
+                      <Layers className="w-5 h-5 text-[#292722]" />
+                      <h4 className="text-xl sm:text-2xl font-bold uppercase tracking-wider text-[#292722]">
                         {isEn ? "Project Documentation & System Interfaces" : "Dokumentasi Proyek & Antarmuka Sistem"}
                       </h4>
                     </div>
-                    <span className="text-xs text-[#68635C] font-medium">
+                    <span className="text-sm sm:text-base text-[#292722] font-semibold">
                       {isEn
                         ? "The screenshots below are previews of real-world system interfaces. Click any image to enlarge and view details."
                         : "Tangkapan layar berikut merupakan cuplikan antarmuka sistem nyata. Klik gambar untuk memperbesar tampilan dan melihat detailnya."}
@@ -254,7 +254,7 @@ export const ExperienceSection = () => {
                             className="w-full h-full object-contain group-hover:scale-[1.02] transition-transform duration-300"
                           />
                           <div className="absolute inset-0 bg-[#292722]/0 group-hover:bg-[#292722]/15 transition-colors flex items-center justify-center">
-                            <span className="opacity-0 group-hover:opacity-100 transition-opacity px-3.5 py-2 rounded bg-[#EDEDE9]/95 text-[#292722] text-xs font-semibold flex items-center gap-2 shadow-md">
+                            <span className="opacity-0 group-hover:opacity-100 transition-opacity px-4 py-2 rounded bg-[#EDEDE9]/95 text-[#292722] text-xs sm:text-sm font-bold flex items-center gap-2 shadow-md">
                               <Maximize2 className="w-4 h-4" />
                               {isEn ? "Enlarge Main View" : "Perbesar Tampilan Utama"}
                             </span>
@@ -262,14 +262,14 @@ export const ExperienceSection = () => {
                         </div>
                         <div className="lg:col-span-4 flex flex-col justify-center space-y-2.5">
                           <div className="inline-flex items-center gap-2">
-                            <span className="text-[11px] font-bold uppercase tracking-wider text-[#292722] bg-[#D5BDAF]/40 px-2.5 py-1 rounded border border-[#D5BDAF]">
+                            <span className="text-xs font-bold uppercase tracking-wider text-[#292722] bg-[#D5BDAF]/50 px-3 py-1 rounded border border-[#D5BDAF]">
                               {isEn ? "Main View" : "Tampilan Utama"}
                             </span>
                           </div>
                           <h5 className="text-base sm:text-lg font-bold text-[#292722] leading-snug">
                             {primaryScreenshot.title}
                           </h5>
-                          <p className="text-xs sm:text-sm text-[#68635C] leading-relaxed">
+                          <p className="text-sm sm:text-[15px] text-[#292722] font-medium leading-relaxed">
                             {primaryScreenshot.caption}
                           </p>
                         </div>
@@ -278,7 +278,7 @@ export const ExperienceSection = () => {
 
                     {/* Secondary Supporting Screenshots Grid */}
                     {secondaryScreenshots.length > 0 && (
-                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4.5">
                         {secondaryScreenshots.map((sec, secIdx) => (
                           <div
                             key={secIdx}
@@ -289,26 +289,26 @@ export const ExperienceSection = () => {
                                 exp.company
                               )
                             }
-                            className="group cursor-pointer rounded-lg border border-[#D6CCC2] bg-[#EDEDE9] p-3 flex flex-col justify-between hover:border-[#292722] transition-all duration-300 shadow-xs"
+                            className="group cursor-pointer rounded-xl border border-[#D6CCC2] bg-[#EDEDE9] p-3.5 sm:p-4 flex flex-col justify-between hover:border-[#292722] transition-all duration-300 shadow-xs"
                           >
-                            <div className="relative aspect-[16/10] overflow-hidden rounded bg-white flex items-center justify-center border border-[#E3D5CA]">
+                            <div className="relative aspect-[16/10] overflow-hidden rounded-lg bg-white flex items-center justify-center border border-[#E3D5CA]">
                               <img
                                 src={sec.url}
                                 alt={sec.title}
                                 className="w-full h-full object-contain group-hover:scale-[1.02] transition-transform duration-300"
                               />
                               <div className="absolute inset-0 bg-[#292722]/0 group-hover:bg-[#292722]/15 transition-colors flex items-center justify-center">
-                                <span className="opacity-0 group-hover:opacity-100 transition-opacity px-2.5 py-1 rounded bg-[#EDEDE9]/95 text-[#292722] text-[11px] font-semibold flex items-center gap-1 shadow-md">
+                                <span className="opacity-0 group-hover:opacity-100 transition-opacity px-3 py-1.5 rounded bg-[#EDEDE9]/95 text-[#292722] text-xs font-bold flex items-center gap-1.5 shadow-md">
                                   <Maximize2 className="w-3.5 h-3.5" />
                                   {isEn ? "Enlarge" : "Perbesar"}
                                 </span>
                               </div>
                             </div>
-                            <div className="pt-3">
-                              <h5 className="text-xs font-bold text-[#292722] line-clamp-1">
+                            <div className="pt-3.5">
+                              <h5 className="text-sm font-bold text-[#292722] leading-snug">
                                 {sec.title}
                               </h5>
-                              <p className="text-[11px] text-[#68635C] mt-1 leading-snug line-clamp-2">
+                              <p className="text-xs sm:text-sm text-[#292722] font-medium mt-1.5 leading-relaxed">
                                 {sec.caption}
                               </p>
                             </div>

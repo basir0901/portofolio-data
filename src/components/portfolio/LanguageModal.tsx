@@ -35,18 +35,18 @@ export const LanguageModal = () => {
             >
               Pilih Bahasa / Select Language
             </h3>
-            <span className="text-xs text-[#68635C] font-medium">
+            <span className="text-xs text-[#292722] font-semibold">
               Preferensi Bahasa Portofolio
             </span>
           </div>
         </div>
 
         {/* Description */}
-        <div className="space-y-1.5 mb-6 text-xs sm:text-sm text-[#68635C] leading-relaxed">
+        <div className="space-y-1.5 mb-6 text-sm text-[#292722] font-medium leading-relaxed">
           <p>
             Selamat datang di portofolio <strong>Basir Arsy Syams</strong>. Silakan pilih bahasa yang ingin Anda gunakan:
           </p>
-          <p className="italic text-[#68635C]/80">
+          <p className="italic text-[#292722]/80">
             Welcome to Basir Arsy Syams' portfolio. Please choose your preferred language:
           </p>
         </div>
@@ -57,11 +57,10 @@ export const LanguageModal = () => {
           <button
             type="button"
             onClick={() => setLanguage("id")}
-            className={`group text-left p-4 sm:p-5 rounded-xl border transition-all cursor-pointer flex flex-col justify-between ${
-              language === "id"
+            className={`group text-left p-4 sm:p-5 rounded-xl border transition-all cursor-pointer flex flex-col justify-between ${language === "id"
                 ? "border-[#292722] bg-[#F5EBE0] shadow-sm ring-1 ring-[#292722]"
                 : "border-[#E3D5CA] bg-[#F5EBE0]/60 hover:bg-[#F5EBE0] hover:border-[#D5BDAF]"
-            }`}
+              }`}
           >
             <div>
               <div className="flex items-center justify-between mb-2">
@@ -77,12 +76,12 @@ export const LanguageModal = () => {
               <h4 className="text-base font-bold text-[#292722]">
                 Bahasa Indonesia
               </h4>
-              <p className="text-xs text-[#68635C] mt-1 leading-snug">
+              <p className="text-xs sm:text-[13px] text-[#292722] font-medium mt-1 leading-snug">
                 Baca seluruh isi profil & proyek dalam Bahasa Indonesia.
               </p>
             </div>
             <div className="pt-3 mt-3 border-t border-[#E3D5CA]/80">
-              <span className="text-[11px] font-semibold text-[#292722] uppercase tracking-wider group-hover:underline">
+              <span className="text-xs font-bold text-[#292722] uppercase tracking-wider group-hover:underline">
                 Pilih Bahasa Indonesia →
               </span>
             </div>
@@ -92,11 +91,10 @@ export const LanguageModal = () => {
           <button
             type="button"
             onClick={() => setLanguage("en")}
-            className={`group text-left p-4 sm:p-5 rounded-xl border transition-all cursor-pointer flex flex-col justify-between ${
-              language === "en"
+            className={`group text-left p-4 sm:p-5 rounded-xl border transition-all cursor-pointer flex flex-col justify-between ${language === "en"
                 ? "border-[#292722] bg-[#F5EBE0] shadow-sm ring-1 ring-[#292722]"
                 : "border-[#E3D5CA] bg-[#F5EBE0]/60 hover:bg-[#F5EBE0] hover:border-[#D5BDAF]"
-            }`}
+              }`}
           >
             <div>
               <div className="flex items-center justify-between mb-2">
@@ -112,12 +110,12 @@ export const LanguageModal = () => {
               <h4 className="text-base font-bold text-[#292722]">
                 English
               </h4>
-              <p className="text-xs text-[#68635C] mt-1 leading-snug">
+              <p className="text-xs sm:text-[13px] text-[#292722] font-medium mt-1 leading-snug">
                 Explore the complete profile & projects in English.
               </p>
             </div>
             <div className="pt-3 mt-3 border-t border-[#E3D5CA]/80">
-              <span className="text-[11px] font-semibold text-[#292722] uppercase tracking-wider group-hover:underline">
+              <span className="text-xs font-bold text-[#292722] uppercase tracking-wider group-hover:underline">
                 Select English →
               </span>
             </div>
@@ -125,10 +123,10 @@ export const LanguageModal = () => {
         </div>
 
         {/* Footer Note */}
-        <p className="text-[11px] text-[#68635C] text-center leading-normal">
-          * Anda dapat mengganti bahasa kapan saja melalui tombol <strong>[ID | EN]</strong> pada bilah navigasi atas.
+        <p className="text-xs text-[#292722] font-medium text-center leading-relaxed">
+          * Anda dapat mengganti bahasa kapan saja melalui tombol <strong>[Bahasa Indonesia | Bahasa Inggris]</strong> pada bilah navigasi atas.
           <br />
-          <span className="italic">You can switch language anytime using the toggle on the top navigation bar.</span>
+          <span className="italic">You can switch language anytime using the <strong>[Bahasa Indonesia | Bahasa Inggris]</strong> buttons on the top navigation bar.</span>
         </p>
       </div>
     </div>

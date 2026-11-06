@@ -14,14 +14,14 @@ export const SkillsSection = () => {
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-8 mb-16 border-b border-[#E3D5CA]">
           <div>
-            <span className="text-xs uppercase tracking-widest text-[#68635C] block mb-2 font-semibold">
+            <span className="text-xs sm:text-sm uppercase tracking-widest text-[#292722] block mb-2 font-bold">
               {isEn ? "04 / Technical Capabilities" : "04 / Kapabilitas Teknis"}
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold uppercase tracking-tight text-[#292722]">
               {isEn ? "04. Technical Skills & Stack" : "04. Keahlian & Penguasaan Teknologi"}
             </h2>
           </div>
-          <p className="text-xs text-[#68635C] max-w-sm font-medium leading-relaxed">
+          <p className="text-sm sm:text-base text-[#292722] max-w-md font-semibold leading-relaxed">
             {isEn
               ? "Technical competency matrix grounded in production-grade system implementation without arbitrary percentage ratings."
               : "Matriks kompetensi teknis yang berakar pada implementasi sistem di lingkungan produksi nyata tanpa penilaian persentase arbitrer."}
@@ -33,17 +33,17 @@ export const SkillsSection = () => {
           {categories.map((cat, idx) => (
             <div
               key={idx}
-              className="rounded-lg border border-[#E3D5CA] bg-[#EDEDE9] p-6 flex flex-col justify-between hover:border-[#D5BDAF] transition-all"
+              className="rounded-xl border border-[#E3D5CA] bg-[#EDEDE9] p-6 sm:p-7 flex flex-col justify-between hover:border-[#292722] transition-all shadow-xs"
             >
               <div>
-                <div className="flex items-center justify-between pb-3 mb-4 border-b border-[#E3D5CA]">
-                  <div className="flex items-center gap-2">
-                    <Terminal className="w-4 h-4 text-[#292722]" />
-                    <h3 className="font-bold text-sm uppercase tracking-wider text-[#292722]">
+                <div className="flex items-center justify-between pb-3.5 mb-4 border-b border-[#E3D5CA]">
+                  <div className="flex items-center gap-2.5">
+                    <Terminal className="w-5 h-5 text-[#292722]" />
+                    <h3 className="font-bold text-sm sm:text-base uppercase tracking-wider text-[#292722]">
                       {cat.category}
                     </h3>
                   </div>
-                  <span className="text-[11px] font-semibold text-[#68635C]">
+                  <span className="text-xs font-bold text-[#292722] px-2 py-0.5 rounded bg-[#F5EBE0] border border-[#E3D5CA]">
                     0{idx + 1}
                   </span>
                 </div>
@@ -52,13 +52,13 @@ export const SkillsSection = () => {
                   {cat.skills.map((skill, sIdx) => (
                     <div
                       key={sIdx}
-                      className="p-2.5 rounded bg-[#F5EBE0] border border-[#E3D5CA]/70 flex flex-col gap-0.5"
+                      className="p-3 rounded-lg bg-[#F5EBE0] border border-[#E3D5CA] flex flex-col gap-1 shadow-2xs"
                     >
-                      <span className="text-xs font-bold text-[#292722]">
+                      <span className="text-sm sm:text-[15px] font-bold text-[#292722] tracking-tight">
                         {skill.name}
                       </span>
                       {skill.note && (
-                        <span className="text-[11px] text-[#68635C] leading-normal font-normal">
+                        <span className="text-xs sm:text-[13px] text-[#292722] font-semibold leading-relaxed tracking-normal">
                           {skill.note}
                         </span>
                       )}
@@ -67,7 +67,7 @@ export const SkillsSection = () => {
                 </div>
               </div>
 
-              <div className="mt-6 pt-3 border-t border-[#E3D5CA]/60 text-[10px] text-[#68635C] uppercase tracking-wider font-semibold">
+              <div className="mt-6 pt-3.5 border-t border-[#E3D5CA] text-xs text-[#292722] uppercase tracking-wider font-bold">
                 {isEn ? "Verified in Production Environments" : "Teruji di Lingkungan Produksi"}
               </div>
             </div>

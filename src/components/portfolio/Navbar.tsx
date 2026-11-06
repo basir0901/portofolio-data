@@ -51,7 +51,7 @@ export const Navbar = () => {
             <a
               key={link.label}
               href={link.href}
-              className="text-xs uppercase font-medium tracking-wider text-[#68635C] hover:text-[#292722] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#292722] hover:after:w-full after:transition-all after:duration-200"
+              className="text-xs uppercase font-bold tracking-wider text-[#292722]/85 hover:text-[#292722] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#292722] hover:after:w-full after:transition-all after:duration-200"
             >
               {link.label}
             </a>
@@ -61,28 +61,31 @@ export const Navbar = () => {
         {/* Right Actions: Language Switcher & CV Button */}
         <div className="hidden md:flex items-center gap-3.5 ml-auto">
           {/* Language Switcher Pill */}
-          <div className="flex items-center rounded-lg border border-[#D6CCC2] bg-[#F5EBE0] p-1 text-xs font-bold text-[#292722] shadow-xs">
+          <div className="flex items-center gap-1 rounded-lg border border-[#D6CCC2] bg-[#F5EBE0] p-1 text-xs font-bold text-[#292722] shadow-xs">
+            <div className="pl-1.5 pr-0.5 text-[#292722] flex items-center" aria-hidden="true">
+              <Globe className="w-3.5 h-3.5" />
+            </div>
             <button
               onClick={() => setLanguage("id")}
-              className={`px-2.5 py-1 rounded transition-all text-xs font-bold flex items-center gap-1 ${
+              className={`px-3 py-1.5 rounded transition-all text-xs font-bold flex items-center gap-1.5 ${
                 !isEn
                   ? "bg-[#292722] text-[#EDEDE9] shadow-xs"
-                  : "text-[#68635C] hover:text-[#292722]"
+                  : "text-[#292722]/70 hover:text-[#292722]"
               }`}
-              title="Bahasa Indonesia"
+              title="Ganti ke Bahasa Indonesia"
             >
-              <span>ID</span>
+              <span>Bahasa Indonesia</span>
             </button>
             <button
               onClick={() => setLanguage("en")}
-              className={`px-2.5 py-1 rounded transition-all text-xs font-bold flex items-center gap-1 ${
+              className={`px-3 py-1.5 rounded transition-all text-xs font-bold flex items-center gap-1.5 ${
                 isEn
                   ? "bg-[#292722] text-[#EDEDE9] shadow-xs"
-                  : "text-[#68635C] hover:text-[#292722]"
+                  : "text-[#292722]/70 hover:text-[#292722]"
               }`}
-              title="English"
+              title="Switch to Bahasa Inggris"
             >
-              <span>EN</span>
+              <span>Bahasa Inggris</span>
             </button>
           </div>
 
@@ -102,25 +105,28 @@ export const Navbar = () => {
         <div className="flex md:hidden items-center justify-between w-full">
           <div className="flex items-center gap-2">
             <div className="flex items-center rounded-lg border border-[#D6CCC2] bg-[#F5EBE0] p-0.5 text-xs font-bold text-[#292722]">
+              <div className="pl-1.5 pr-0.5 text-[#292722] flex items-center" aria-hidden="true">
+                <Globe className="w-3 h-3" />
+              </div>
               <button
                 onClick={() => setLanguage("id")}
-                className={`px-2 py-0.5 rounded text-[11px] font-bold ${
+                className={`px-2 py-1 rounded text-[11px] font-bold ${
                   !isEn
                     ? "bg-[#292722] text-[#EDEDE9]"
-                    : "text-[#68635C]"
+                    : "text-[#292722]/70"
                 }`}
               >
-                ID
+                Bahasa Indonesia
               </button>
               <button
                 onClick={() => setLanguage("en")}
-                className={`px-2 py-0.5 rounded text-[11px] font-bold ${
+                className={`px-2 py-1 rounded text-[11px] font-bold ${
                   isEn
                     ? "bg-[#292722] text-[#EDEDE9]"
-                    : "text-[#68635C]"
+                    : "text-[#292722]/70"
                 }`}
               >
-                EN
+                Bahasa Inggris
               </button>
             </div>
           </div>
@@ -156,7 +162,41 @@ export const Navbar = () => {
             ))}
           </nav>
 
-          <div className="pt-2">
+          <div className="pt-2 space-y-3">
+            <div className="p-3 rounded-lg border border-[#D6CCC2] bg-[#F5EBE0]">
+              <span className="text-xs uppercase tracking-wider text-[#292722] font-bold block mb-2">
+                {isEn ? "Select Language:" : "Pilih Bahasa:"}
+              </span>
+              <div className="grid grid-cols-2 gap-2">
+                <button
+                  onClick={() => {
+                    setLanguage("id");
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className={`py-2 px-3 rounded text-xs font-bold text-center transition-all ${
+                    !isEn
+                      ? "bg-[#292722] text-[#EDEDE9] shadow-xs"
+                      : "bg-[#EDEDE9] text-[#292722] border border-[#D6CCC2]"
+                  }`}
+                >
+                  Bahasa Indonesia
+                </button>
+                <button
+                  onClick={() => {
+                    setLanguage("en");
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className={`py-2 px-3 rounded text-xs font-bold text-center transition-all ${
+                    isEn
+                      ? "bg-[#292722] text-[#EDEDE9] shadow-xs"
+                      : "bg-[#EDEDE9] text-[#292722] border border-[#D6CCC2]"
+                  }`}
+                >
+                  Bahasa Inggris
+                </button>
+              </div>
+            </div>
+
             <a
               href={PERSONAL_INFO.cvPath}
               target="_blank"

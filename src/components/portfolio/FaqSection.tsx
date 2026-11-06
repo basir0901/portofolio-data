@@ -27,14 +27,14 @@ export const FaqSection = () => {
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-8 mb-14 border-b border-[#E3D5CA]">
           <div>
-            <span className="text-xs uppercase tracking-widest text-[#68635C] block mb-2 font-semibold">
+            <span className="text-xs uppercase tracking-widest text-[#292722] block mb-2 font-bold">
               {isEn ? "06 / Recruiter FAQ & Clarifications" : "06 / Tanya Jawab Rekruter"}
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold uppercase tracking-tight text-[#292722]">
               {isEn ? "06. Frequently Asked Questions & Clarifications" : "06. Pertanyaan Umum & Klarifikasi"}
             </h2>
           </div>
-          <p className="text-xs sm:text-sm text-[#68635C] max-w-sm font-medium leading-relaxed">
+          <p className="text-sm sm:text-base text-[#292722] max-w-md font-medium leading-relaxed">
             {isEn
               ? "Direct clarifications regarding role flexibility, work readiness, and professional adaptability."
               : "Klarifikasi langsung mengenai fleksibilitas posisi, kesiapan kerja, dan adaptabilitas profesional."}
@@ -48,7 +48,7 @@ export const FaqSection = () => {
             <h4 className="text-sm font-bold text-[#292722] uppercase tracking-wide">
               {isEn ? "Open & Flexible Mindset" : "Komitmen Terbuka & Fleksibel"}
             </h4>
-            <p className="text-xs sm:text-sm text-[#68635C] leading-relaxed">
+            <p className="text-sm sm:text-[15px] text-[#292722] font-medium leading-[1.75]">
               {isEn
                 ? "I am highly flexible and not limited to software or data roles. With ~1.5 years of multi-industry experience, I possess high adaptability and fast-learning capability across diverse technical and operational roles."
                 : "Saya sangat fleksibel dan tidak kaku hanya di posisi data maupun software. Dengan pengalaman ~1.5 tahun di berbagai industri, saya memiliki kemampuan adaptasi yang tinggi dan daya belajar yang cepat untuk berbagai peran teknis maupun operasional."}
@@ -77,12 +77,12 @@ export const FaqSection = () => {
                   aria-expanded={isOpen}
                 >
                   <div className="flex items-start gap-3.5">
-                    <span className="text-xs font-bold text-[#68635C] bg-[#F5EBE0] px-2.5 py-1 rounded border border-[#E3D5CA] flex-shrink-0">
+                    <span className="text-xs font-bold text-[#292722] bg-[#F5EBE0] px-2.5 py-1 rounded border border-[#E3D5CA] flex-shrink-0">
                       0{idx + 1}
                     </span>
                     <div>
                       {item.category && (
-                        <span className="text-[11px] font-semibold uppercase tracking-wider text-[#68635C] block mb-1">
+                        <span className="text-xs font-bold uppercase tracking-wider text-[#292722] block mb-1">
                           {item.category}
                         </span>
                       )}
@@ -103,7 +103,7 @@ export const FaqSection = () => {
 
                 {isOpen && (
                   <div className="px-5 sm:px-6 pb-6 pt-1 border-t border-[#E3D5CA]/80">
-                    <div className="pl-0 sm:pl-10 text-xs sm:text-sm text-[#292722] leading-relaxed font-normal whitespace-pre-line space-y-2">
+                    <div className="pl-0 sm:pl-10 text-sm sm:text-[15px] text-[#292722] leading-[1.75] font-medium whitespace-pre-line space-y-2">
                       <p>{item.answer}</p>
                     </div>
                   </div>
@@ -123,7 +123,7 @@ export const FaqSection = () => {
                   ? "Have other questions or wish to discuss an opportunity?"
                   : "Punya pertanyaan lain atau ingin mendiskusikan peluang?"}
               </h4>
-              <p className="text-xs text-[#68635C]">
+              <p className="text-xs sm:text-sm text-[#292722] font-medium">
                 {isEn
                   ? "I warmly welcome further discussions regarding your team's needs and challenges."
                   : "Saya dengan senang hati menyambut diskusi lebih lanjut mengenai kebutuhan tim Anda."}
@@ -132,7 +132,7 @@ export const FaqSection = () => {
           </div>
           <a
             href="#contact"
-            className="px-5 py-2.5 rounded bg-[#292722] text-[#EDEDE9] hover:bg-[#D5BDAF] hover:text-[#292722] text-xs font-semibold uppercase tracking-wider transition-all flex-shrink-0 shadow-xs"
+            className="px-5 py-2.5 rounded bg-[#292722] text-[#EDEDE9] hover:bg-[#D5BDAF] hover:text-[#292722] text-xs font-bold uppercase tracking-wider transition-all flex-shrink-0 shadow-xs"
           >
             {isEn ? "Contact Me" : "Hubungi Saya"}
           </a>

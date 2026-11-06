@@ -63,7 +63,7 @@ export const ImageLightboxModal = ({
         {/* Top bar */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-[#E3D5CA] bg-[#F5EBE0]">
           <div>
-            <span className="text-xs uppercase tracking-wider text-[#68635C] font-semibold">
+            <span className="text-xs uppercase tracking-wider text-[#292722] font-bold">
               {companyName} • {isEn ? `Image ${currentIndex + 1} of ${screenshots.length}` : `Gambar ${currentIndex + 1} dari ${screenshots.length}`}
             </span>
             <h3 className="text-base sm:text-lg font-bold text-[#292722] mt-0.5">
@@ -130,8 +130,8 @@ export const ImageLightboxModal = ({
 
         {/* Caption bar */}
         <div className="px-6 py-4 bg-[#F5EBE0] border-t border-[#E3D5CA]">
-          <p className="text-sm text-[#292722] leading-relaxed">
-            <strong className="font-semibold text-[#292722]">
+          <p className="text-sm sm:text-[15px] text-[#292722] font-medium leading-[1.75]">
+            <strong className="font-bold text-[#292722]">
               {isEn ? "Interface Purpose:" : "Fungsi Antarmuka:"}
             </strong>{" "}
             {current.caption}

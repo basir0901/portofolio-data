@@ -141,15 +141,15 @@ export const AboutSection = () => {
         <div className="rounded-xl border border-[#E3D5CA] bg-[#EDEDE9] p-6 sm:p-8 mb-12 shadow-sm">
           <div className="grid md:grid-cols-12 gap-6 items-center">
             {/* Left: Highlight Total */}
-            <div className="md:col-span-5 space-y-2 border-b md:border-b-0 md:border-r border-[#E3D5CA] pb-6 md:pb-0 md:pr-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-[#D5BDAF]/30 border border-[#D5BDAF] text-xs font-semibold text-[#292722] uppercase tracking-wide">
-                <Briefcase className="w-3.5 h-3.5" />
+            <div className="md:col-span-5 space-y-2.5 border-b md:border-b-0 md:border-r border-[#E3D5CA] pb-6 md:pb-0 md:pr-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-[#D5BDAF]/30 border border-[#D5BDAF] text-xs font-bold text-[#292722] uppercase tracking-wide">
+                <Briefcase className="w-4 h-4 text-[#292722]" />
                 <span>{isEn ? "Accumulated Experience" : "Akumulasi Pengalaman"}</span>
               </div>
               <h3 className="text-2xl sm:text-3xl font-bold text-[#292722] tracking-tight">
                 {isEn ? "Total ~1.5 Years Experience" : "Total ~1.5 Tahun Pengalaman"}
               </h3>
-              <p className="text-xs sm:text-sm text-[#68635C] leading-relaxed">
+              <p className="text-sm sm:text-[15px] text-[#292722] font-medium leading-relaxed">
                 {isEn
                   ? "Recap of ~1.5 years of professional experience across 4 companies in diverse sectors (IT consulting, Telecommunication & Satellite, Transportation & Logistics)."
                   : "Rekapitulasi pengalaman profesional selama ~1.5 tahun yang terbagi di 4 perusahaan lintas industri (IT consulting industry, Telecommunication & Satelite Industry, Transportation & Logistics Industry)."}
@@ -161,12 +161,12 @@ export const AboutSection = () => {
               {/* Node Atas: 4 Perusahaan */}
               <div className="w-full max-w-sm p-3.5 rounded-lg bg-[#F5EBE0] border border-[#E3D5CA] text-center shadow-xs">
                 <div className="flex items-center justify-center gap-2">
-                  <span className="text-xl sm:text-2xl font-bold text-[#292722]">4</span>
-                  <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#292722]">
+                  <span className="text-2xl sm:text-3xl font-bold text-[#292722]">4</span>
+                  <span className="text-sm sm:text-base font-bold uppercase tracking-wider text-[#292722]">
                     {isEn ? "Companies" : "Perusahaan"}
                   </span>
                 </div>
-                <p className="text-xs text-[#68635C] mt-0.5">
+                <p className="text-xs sm:text-sm text-[#292722] font-semibold mt-1">
                   {isEn
                     ? "Total ~1.5 Years of Professional Work Experience"
                     : "Total ~1.5 Tahun Pengalaman Kerja Profesional"}
@@ -201,28 +201,28 @@ export const AboutSection = () => {
                   <div>
                     <div className="flex items-center justify-between border-b border-[#E3D5CA] pb-2.5 mb-2.5">
                       <div className="flex items-center gap-2">
-                        <span className="text-xl font-bold text-[#292722]">3</span>
-                        <span className="text-sm font-bold uppercase tracking-wider text-[#292722]">
+                        <span className="text-xl sm:text-2xl font-bold text-[#292722]">3</span>
+                        <span className="text-sm sm:text-base font-bold uppercase tracking-wider text-[#292722]">
                           Internship
                         </span>
                       </div>
-                      <span className="text-xs font-semibold px-2.5 py-0.5 rounded bg-[#EDEDE9] text-[#68635C] border border-[#D6CCC2]">
+                      <span className="text-xs font-bold px-2.5 py-0.5 rounded bg-[#EDEDE9] text-[#292722] border border-[#D6CCC2]">
                         {isEn ? "16 Months" : "16 Bulan"}
                       </span>
                     </div>
 
-                    <ul className="space-y-2 text-xs sm:text-sm text-[#68635C]">
+                    <ul className="space-y-2 text-sm text-[#292722] font-medium">
                       <li className="flex items-start gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#292722] mt-1.5 flex-shrink-0" />
-                        <span><strong className="text-[#292722]">PT Telkom Satelit Indonesia</strong> ({isEn ? "5 Months" : "5 Bulan"})</span>
+                        <span className="w-2 h-2 rounded-full bg-[#292722] mt-1.5 flex-shrink-0" />
+                        <span><strong className="text-[#292722] font-bold">PT Telkom Satelit Indonesia</strong> ({isEn ? "5 Months" : "5 Bulan"})</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#292722] mt-1.5 flex-shrink-0" />
-                        <span><strong className="text-[#292722]">PT Cipta Krida Bahari</strong> ({isEn ? "5 Months" : "5 Bulan"})</span>
+                        <span className="w-2 h-2 rounded-full bg-[#292722] mt-1.5 flex-shrink-0" />
+                        <span><strong className="text-[#292722] font-bold">PT Cipta Krida Bahari</strong> ({isEn ? "5 Months" : "5 Bulan"})</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#292722] mt-1.5 flex-shrink-0" />
-                        <span><strong className="text-[#292722]">PT Sinergi Informatika Semen Indonesia</strong> ({isEn ? "6 Months" : "6 Bulan"})</span>
+                        <span className="w-2 h-2 rounded-full bg-[#292722] mt-1.5 flex-shrink-0" />
+                        <span><strong className="text-[#292722] font-bold">PT Sinergi Informatika Semen Indonesia</strong> ({isEn ? "6 Months" : "6 Bulan"})</span>
                       </li>
                     </ul>
                   </div>
@@ -233,20 +233,20 @@ export const AboutSection = () => {
                   <div>
                     <div className="flex items-center justify-between border-b border-[#E3D5CA] pb-2.5 mb-2.5">
                       <div className="flex items-center gap-2">
-                        <span className="text-xl font-bold text-[#292722]">1</span>
-                        <span className="text-sm font-bold uppercase tracking-wider text-[#292722]">
+                        <span className="text-xl sm:text-2xl font-bold text-[#292722]">1</span>
+                        <span className="text-sm sm:text-base font-bold uppercase tracking-wider text-[#292722]">
                           Project-Based
                         </span>
                       </div>
-                      <span className="text-xs font-semibold px-2.5 py-0.5 rounded bg-[#D5BDAF]/40 text-[#292722] border border-[#D5BDAF]">
+                      <span className="text-xs font-bold px-2.5 py-0.5 rounded bg-[#D5BDAF]/40 text-[#292722] border border-[#D5BDAF]">
                         {isEn ? "1.5 Months" : "1.5 Bulan"}
                       </span>
                     </div>
 
-                    <ul className="space-y-2 text-xs sm:text-sm text-[#68635C]">
+                    <ul className="space-y-2 text-sm text-[#292722] font-medium">
                       <li className="flex items-start gap-2">
-                        <span className="w-1.5 h-1.5 rounded-sm bg-[#292722] mt-1.5 flex-shrink-0" />
-                        <span><strong className="text-[#292722]">PT IDS Teknologi Indonesia</strong> ({isEn ? "1.5 Months" : "1.5 Bulan"})</span>
+                        <span className="w-2 h-2 rounded-sm bg-[#292722] mt-1.5 flex-shrink-0" />
+                        <span><strong className="text-[#292722] font-bold">PT IDS Teknologi Indonesia</strong> ({isEn ? "1.5 Months" : "1.5 Bulan"})</span>
                       </li>
                     </ul>
                   </div>
@@ -259,11 +259,11 @@ export const AboutSection = () => {
         {/* Visual Progression Flow: 4 Steps */}
         <div className="space-y-6">
           <div className="flex items-center justify-between pb-2">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#292722] flex items-center gap-2">
+            <h4 className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#292722] flex items-center gap-2">
               <Layers className="w-4 h-4 text-[#292722]" />
               <span>{isEn ? "Career Progression" : "Perjalanan Karir"}</span>
             </h4>
-            <span className="text-xs text-[#68635C] font-medium hidden sm:inline">
+            <span className="text-xs sm:text-sm text-[#292722] font-semibold hidden sm:inline">
               {isEn ? "Chronological order from 2024 through 2026" : "Urutan perjalanan dari 2024 hingga 2026"}
             </span>
           </div>
@@ -282,7 +282,7 @@ export const AboutSection = () => {
                     </span>
 
                     <span
-                      className={`text-xs sm:text-sm px-2.5 py-1 rounded border font-semibold ${item.typeBadge}`}
+                      className={`text-xs sm:text-sm px-2.5 py-1 rounded border font-bold ${item.typeBadge}`}
                     >
                       {item.type}
                     </span>
@@ -290,8 +290,8 @@ export const AboutSection = () => {
 
                   {/* Company & Role */}
                   <div className="space-y-1.5 mb-3.5">
-                    <span className="text-xs sm:text-sm text-[#68635C] font-semibold flex items-center gap-1.5">
-                      <Clock className="w-4 h-4 text-[#68635C]" />
+                    <span className="text-xs sm:text-sm text-[#292722] font-bold flex items-center gap-1.5">
+                      <Clock className="w-4 h-4 text-[#292722]" />
                       {item.duration} ({item.period})
                     </span>
 
@@ -299,13 +299,13 @@ export const AboutSection = () => {
                       {item.company}
                     </h5>
 
-                    <p className="text-sm sm:text-base font-semibold text-[#68635C]">
+                    <p className="text-sm sm:text-base font-bold text-[#292722]">
                       {item.role}
                     </p>
                   </div>
 
                   {/* Highlight */}
-                  <p className="text-sm text-[#292722] leading-relaxed mb-5">
+                  <p className="text-sm sm:text-[15px] text-[#292722] font-medium leading-relaxed mb-5">
                     {item.highlight}
                   </p>
                 </div>
@@ -315,7 +315,7 @@ export const AboutSection = () => {
                   {item.tags.map((t, tIdx) => (
                     <span
                       key={tIdx}
-                      className="px-2.5 py-1 text-xs rounded bg-[#F5EBE0] text-[#292722] border border-[#D6CCC2] font-medium"
+                      className="px-2.5 py-1 text-xs rounded bg-[#F5EBE0] text-[#292722] border border-[#D6CCC2] font-bold"
                     >
                       {t}
                     </span>

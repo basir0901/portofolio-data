@@ -35,7 +35,7 @@ export const HeroSection = () => {
               </h1>
             </div>
 
-            <p className="text-base sm:text-lg text-[#292722] leading-relaxed max-w-3xl font-normal pt-1">
+            <p className="text-base sm:text-lg text-[#292722] leading-relaxed max-w-3xl font-medium pt-1">
               {info.bio}
             </p>
 
@@ -45,19 +45,19 @@ export const HeroSection = () => {
                 <GraduationCap className="w-4 h-4" />
               </div>
               <div className="space-y-0.5">
-                <span className="text-xs font-semibold uppercase tracking-wider text-[#292722] block">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#292722] block">
                   {isEn ? "Educational Background" : "Latar Belakang Pendidikan"}
                 </span>
-                <p className="text-xs sm:text-sm text-[#68635C] leading-normal">
+                <p className="text-xs sm:text-sm text-[#292722] font-medium leading-normal">
                   {isEn ? (
                     <>
                       Bachelor of Applied Science (D-IV) in Software Engineering Technology —{" "}
-                      <strong className="text-[#292722] font-semibold">IPB University</strong> (Class of 2025)
+                      <strong className="text-[#292722] font-bold">IPB University</strong> (Class of 2025)
                     </>
                   ) : (
                     <>
                       Sarjana Terapan (D-IV) Teknologi Rekayasa Perangkat Lunak —{" "}
-                      <strong className="text-[#292722] font-semibold">IPB University</strong> (Lulus 2025)
+                      <strong className="text-[#292722] font-bold">IPB University</strong> (Lulus 2025)
                     </>
                   )}
                 </p>

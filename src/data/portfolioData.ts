@@ -438,8 +438,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
       { name: "Git & GitHub", note: "Version Control, Branching, Pull Request" },
       { name: "Postman", note: "Dokumentasi & Otomasi Pengujian API" },
       { name: "VS Code", note: "Workspace Pengembangan & Debugging" },
-      { name: "Linux / Bash", note: "Shell Scripting, Cron Job, Konfigurasi Server" },
-      { name: "Eksplorasi AI Engineering", note: "Integrasi LLM, Otomasi Validasi Data" },
+      { name: "Antigravity", note: "IDE" },
     ],
   },
 ];
