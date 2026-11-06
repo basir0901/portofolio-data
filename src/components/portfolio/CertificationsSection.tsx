@@ -17,9 +17,6 @@ export const CertificationsSection = () => {
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-8 mb-16 border-b border-[#E3D5CA]">
           <div>
-            <span className="text-xs uppercase tracking-widest text-[#292722] block mb-2 font-bold">
-              {isEn ? "05 / Credentials & Training" : "05 / Kredensial & Pelatihan"}
-            </span>
             <h2 className="text-3xl sm:text-4xl font-bold uppercase tracking-tight text-[#292722]">
               {isEn ? "05. Certifications & Training" : "05. Sertifikasi & Pelatihan"}
             </h2>

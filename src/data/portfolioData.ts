@@ -86,9 +86,9 @@ export const EXPERIENCES: ExperienceBlock[] = [
     responsibilities: [
       "Melakukan migrasi frontend sistem enterprise berbasis website untuk client dari arsitektur multi-page HTML/CSS/Vanilla JavaScript lama menjadi Single Page Application (SPA) berbasis React.js, mencakup 4 domain utama, 30 modul bisnis, dan 49 tahapan alur kerja (workflow).",
       "Mengembangkan arsitektur frontend modul Request Management yang mencakup Purchase Request, Reimbursement, Cash Advance, dan Settlement.",
-      "Membangun modul Approval Report (PO, AR Invoice, Outgoing Payments) dengan otorisasi berbasis peran (role-based authorization).",
-      "Mengembangkan antarmuka Tracking Document (alur siklus PR-to-PO, invoice, outgoing cash settlement) dengan indikator status real-time.",
-      "Mengimplementasikan modul Master Data untuk Users Management, Chart of Accounts (COA), Approval Rules, dan Master Access.",
+      "Membangun modul Approval Report (PO, AR Invoice, Outgoing Payments, Reimbursment, dll) dengan otorisasi berbasis peran (role-based authorization).",
+      "Mengembangkan antarmuka Tracking Document (alur siklus PR-to-PO, invoice, outgoing cash settlement, dll) dengan indikator status real-time.",
+      "Mengimplementasikan modul Master Data untuk Users Management, Chart of Accounts (COA), Approval Rules,  Master Access, dll.",
       "Menyelesaikan seluruh implementasi antarmuka, sinkronisasi state, dan pengujian integrasi dalam tenggat waktu intensif 4 hingga 5 minggu.",
     ],
     businessImpact: [
@@ -435,10 +435,11 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   {
     category: "Tools, Platform & AI",
     skills: [
+      { name: "Antigravity", note: "IDE" },
       { name: "Git & GitHub", note: "Version Control, Branching, Pull Request" },
       { name: "Postman", note: "Dokumentasi & Otomasi Pengujian API" },
       { name: "VS Code", note: "Workspace Pengembangan & Debugging" },
-      { name: "Antigravity", note: "IDE" },
+      { name: "Excel", note: "Excel fundamental" },
     ],
   },
 ];
@@ -519,14 +520,15 @@ export const FAQ_LIST: FaqItem[] = [
   },
   {
     question: "Apakah Anda bisa berbahasa Inggris?",
-    answer: "Kemampuan listening dan speaking saya masih perlu ditingkatkan, sementara kemampuan reading dan writing sejauh ini sudah cukup baik dan tidak menjadi kendala bagi saya.",
-    category: "Kemampuan Bahasa",
-  },
-  {
-    question: "Apakah Anda bisa berbahasa Inggris?",
     answer:
       "Kemampuan listening dan speaking saya masih perlu improvement, namun mengenai reading dan writing sejauh ini saya tidak mengalami masalah.",
     category: "Kemampuan Bahasa",
+  },
+  {
+    question: "Apakah Anda bisa mengoperasikan Microsoft Excel?",
+    answer:
+      "Ya, saya menguasai dasar-dasar fundamental Microsoft Excel, seperti input dan pembersihan data tabular, penggunaan fungsi dan rumus umum (seperti SUM, AVERAGE, COUNT, IF, VLOOKUP/XLOOKUP), serta pembuatan tabel dan grafik sederhana.\n\nSelama penugasan kerja profesional saya sebelumnya, saya memang lebih banyak berfokus pada sistem basis data (SQL/PostgreSQL/MySQL), aplikasi web enterprise, dan script otomasi (Python/Airflow) karena kebutuhan arsitektur data berskala besar, sehingga penggunaan tools Excel jarang dibutuhkan dalam tugas harian saya. Namun hal tersebut bukan berarti saya tidak bisa; dengan pemahaman logika data yang saya miliki, saya dapat mengoperasikan Excel dengan baik dan sangat siap mempelajari fungsi lanjutan lainnya sesuai kebutuhan pekerjaan.",
+    category: "Penguasaan Tools",
   },
   {
     question: "Bagaimana rincian pengalaman kerja ~1.5 tahun Anda selama ini?",

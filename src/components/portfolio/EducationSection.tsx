@@ -8,9 +8,6 @@ export const EducationSection = () => {
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-8 mb-16 border-b border-[#E3D5CA]">
           <div>
-            <span className="text-xs uppercase tracking-widest text-[#68635C] block mb-2 font-semibold">
-              06 / Fondasi & Kredensial
-            </span>
             <h2 className="text-3xl sm:text-4xl font-bold uppercase tracking-tight text-[#292722]">
               Pendidikan & Sertifikasi
             </h2>

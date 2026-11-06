@@ -39,9 +39,9 @@ export const EXPERIENCES_EN: ExperienceBlock[] = [
     responsibilities: [
       "Migrated client enterprise web frontend from a legacy multi-page HTML/CSS/Vanilla JavaScript architecture into a high-performance React.js Single Page Application (SPA), encompassing 4 core domains, 30 business modules, and 49 workflows.",
       "Architected the Request Management frontend module, including Purchase Requests, Reimbursements, Cash Advances, and Settlements.",
-      "Built Approval Report modules (Purchase Orders, AR Invoices, Outgoing Payments) integrated with role-based authorization.",
-      "Developed the Document Tracking interface (PR-to-PO lifecycle, invoices, outgoing cash settlements) with real-time status indicators.",
-      "Implemented Master Data modules for User Management, Chart of Accounts (COA), Approval Rules, and Master Access permissions.",
+      "Built Approval Report modules (Purchase Orders, AR Invoices, Outgoing Payments, reimbursment) integrated with role-based authorization.",
+      "Developed the Document Tracking interface (PR-to-PO lifecycle, invoices, outgoing cash settlements, etc) with real-time status indicators.",
+      "Implemented Master Data modules for User Management, Chart of Accounts (COA), Approval Rules, Master Access permissions, etc.",
       "Delivered full UI implementation, state synchronization, and integration testing within an intensive 4-to-5-week timeline.",
     ],
     businessImpact: [
@@ -444,6 +444,12 @@ export const FAQ_LIST_EN: FaqItem[] = [
     answer:
       "My listening and speaking skills still need improvement, but regarding reading and technical writing, I have no issues so far.",
     category: "Language Proficiency",
+  },
+  {
+    question: "Are you proficient in Microsoft Excel?",
+    answer:
+      "Yes, I understand the fundamental features of Microsoft Excel, such as tabular data input and cleaning, common formulas and functions (e.g., SUM, AVERAGE, COUNT, IF, VLOOKUP/XLOOKUP), as well as basic charts and tables.\n\nDuring my previous professional engagements, my work primarily focused on relational databases (SQL/PostgreSQL/MySQL), enterprise web applications, and data automation scripts (Python/Airflow) due to large-scale enterprise data requirements, which meant that Excel was rarely required in my daily routine. However, this does not mean I cannot use it; with my solid foundation in data logic, I can operate Excel effectively and am readily prepared to learn advanced functions whenever operational workflows require them.",
+    category: "Technical Tools",
   },
   {
     question: "How is your ~1.5 years of experience broken down?",

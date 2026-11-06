@@ -27,9 +27,6 @@ export const FaqSection = () => {
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-8 mb-14 border-b border-[#E3D5CA]">
           <div>
-            <span className="text-xs uppercase tracking-widest text-[#292722] block mb-2 font-bold">
-              {isEn ? "06 / Recruiter FAQ & Clarifications" : "06 / Tanya Jawab Rekruter"}
-            </span>
             <h2 className="text-3xl sm:text-4xl font-bold uppercase tracking-tight text-[#292722]">
               {isEn ? "06. Frequently Asked Questions & Clarifications" : "06. Pertanyaan Umum & Klarifikasi"}
             </h2>
