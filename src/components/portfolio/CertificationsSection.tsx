@@ -21,11 +21,7 @@ export const CertificationsSection = () => {
               {isEn ? "05. Certifications & Training" : "05. Sertifikasi & Pelatihan"}
             </h2>
           </div>
-          <p className="text-sm sm:text-base text-[#292722] max-w-md font-medium leading-relaxed">
-            {isEn
-              ? "National work competency certification (BNSP) and certified intensive data warehousing training program (Kemendikbudristek & Dibimbing)."
-              : "Sertifikasi kompetensi kerja berstandar nasional (BNSP) serta program pelatihan intensif data warehousing bersertifikat (Kemendikbudristek & Dibimbing)."}
-          </p>
+
         </div>
 
         {/* 2-Column Grid */}

@@ -55,7 +55,7 @@ export const AboutSection = () => {
       step: "04",
       company: "PT IDS Teknologi Indonesia",
       shortCompany: "IDS Teknologi (Kansai Paint)",
-      period: "2026",
+      period: "July - September 2026",
       duration: "1.5 Bulan",
       type: "Project-Based",
       typeBadge: "bg-[#D5BDAF]/50 text-[#292722] border-[#D5BDAF]",
