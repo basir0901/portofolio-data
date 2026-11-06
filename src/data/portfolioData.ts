@@ -80,7 +80,7 @@ export const EXPERIENCES: ExperienceBlock[] = [
     company: "PT IDS Teknologi Indonesia",
     role: "Software Engineer",
     period: "2026",
-    location: "Jakarta, Indonesia",
+    location: "Bogor, Indonesia",
     employmentType: "Project Based",
     problemToSolve: "Aplikasi internal enterprise sebelumnya dibangun menggunakan arsitektur multi-page konvensional berbasis HTML, CSS, dan Vanilla JavaScript. Seiring berkembangnya kebutuhan bisnis, sistem harus mengakomodasi 30 modul bisnis yang tersebar dalam 4 domain utama serta 49 tahapan workflow operasional dan persetujuan. Arsitektur lama mulai menghadapi tantangan dalam hal efisiensi navigasi, pengelolaan kode, dan konsistensi antarmuka. Setiap perpindahan halaman memerlukan proses reload dokumen, sehingga pengalaman pengguna menjadi kurang responsif ketika menjalankan proses bisnis yang melibatkan banyak tahapan. Selain itu, implementasi antarmuka dan pengelolaan interaksi yang tersebar pada berbagai halaman meningkatkan kompleksitas pemeliharaan serta menyulitkan standarisasi komponen dan perilaku sistem antarmodul. Diperlukan modernisasi arsitektur frontend menjadi Single Page Application (SPA) berbasis React.js untuk meningkatkan responsivitas navigasi, menyederhanakan pengelolaan state, serta membangun fondasi frontend yang lebih modular, konsisten, dan mudah dikembangkan seiring pertumbuhan kebutuhan bisnis.",
     responsibilities: [
