@@ -2,9 +2,9 @@ import { Navbar } from "@/components/portfolio/Navbar";
 import { HeroSection } from "@/components/portfolio/HeroSection";
 import { AboutSection } from "@/components/portfolio/AboutSection";
 import { ExperienceSection } from "@/components/portfolio/ExperienceSection";
-import { ProjectsSection } from "@/components/portfolio/ProjectsSection";
 import { SkillsSection } from "@/components/portfolio/SkillsSection";
-import { EducationSection } from "@/components/portfolio/EducationSection";
+import { CertificationsSection } from "@/components/portfolio/CertificationsSection";
+import { FaqSection } from "@/components/portfolio/FaqSection";
 import { ContactSection } from "@/components/portfolio/ContactSection";
 
 const Index = () => {
@@ -17,23 +17,23 @@ const Index = () => {
         {/* Section 01: Hero / Introduction */}
         <HeroSection />
 
-        {/* Section 02: About Me */}
+        {/* Section 02: Ringkasan Perjalanan Karir */}
         <AboutSection />
 
-        {/* Section 03: Professional Experience (Centerpiece with 3-Screenshot Mixed Layout) */}
+        {/* Section 03: Pengalaman Profesional & Dokumentasi Antarmuka */}
         <ExperienceSection />
 
-        {/* Section 04: Selected Projects & Architectural Showcases */}
-        <ProjectsSection />
-
-        {/* Section 05: Technical Skills */}
+        {/* Section 04: Keahlian Teknis */}
         <SkillsSection />
 
-        {/* Section 06: Education & Certifications */}
-        <EducationSection />
+        {/* Section 05: Sertifikasi & Pelatihan */}
+        <CertificationsSection />
+
+        {/* Section 06: Pertanyaan Umum & Klarifikasi (FAQ) */}
+        <FaqSection />
       </main>
 
-      {/* Section 07: Contact & Minimalist Colophon */}
+      {/* Section 07: Kontak & Komunikasi Langsung */}
       <ContactSection />
     </div>
   );

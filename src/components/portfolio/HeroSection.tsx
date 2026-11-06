@@ -103,7 +103,7 @@ export const HeroSection = () => {
                 <img
                   src={PERSONAL_INFO.avatarPath}
                   alt={PERSONAL_INFO.name}
-                  className="w-full h-full object-cover rounded filter grayscale contrast-105 hover:grayscale-0 transition-all duration-500"
+                  className="w-full h-full object-cover rounded"
                 />
               </div>
             </div>

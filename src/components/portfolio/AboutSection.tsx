@@ -138,58 +138,57 @@ export const AboutSection = () => {
               {/* Node Bawah: 3 Internship & 1 Project Based */}
               <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-3.5 mt-2">
                 {/* Cabang Kiri: 3 Internship */}
-                <div className="p-3.5 rounded-lg bg-[#F5EBE0] border border-[#E3D5CA] flex flex-col justify-between">
+                <div className="p-4 rounded-lg bg-[#F5EBE0] border border-[#E3D5CA] flex flex-col justify-between">
                   <div>
-                    <div className="flex items-center justify-between border-b border-[#E3D5CA] pb-2 mb-2">
-                      <div className="flex items-center gap-1.5">
-                        <span className="text-lg font-bold text-[#292722]">3</span>
+                    <div className="flex items-center justify-between border-b border-[#E3D5CA] pb-2.5 mb-2.5">
+                      <div className="flex items-center gap-2">
+                        <span className="text-xl font-bold text-[#292722]">3</span>
                         <span className="text-sm font-bold uppercase tracking-wider text-[#292722]">
                           Internship
                         </span>
                       </div>
-                      <span className="text-[10px] font-semibold px-2 py-0.5 rounded bg-[#EDEDE9] text-[#68635C] border border-[#D6CCC2]">
+                      <span className="text-xs font-semibold px-2.5 py-0.5 rounded bg-[#EDEDE9] text-[#68635C] border border-[#D6CCC2]">
                         16 Bulan
                       </span>
                     </div>
 
-                    <ul className="space-y-1.5 text-[11px] text-[#68635C]">
-                      <li className="flex items-start gap-1.5">
+                    <ul className="space-y-2 text-xs sm:text-sm text-[#68635C]">
+                      <li className="flex items-start gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-[#292722] mt-1.5 flex-shrink-0" />
-                        <span className="text-sm"><strong className="text-[#292722]">PT Telkom Satelit Indonesia</strong> (5 Bulan)</span>
+                        <span><strong className="text-[#292722]">PT Telkom Satelit Indonesia</strong> (5 Bulan)</span>
                       </li>
-                      <li className="flex items-start gap-1.5">
+                      <li className="flex items-start gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-[#292722] mt-1.5 flex-shrink-0" />
-                        <span className="text-sm"><strong className="text-[#292722]">PT Cipta Krida Bahari</strong> (5 Bulan)</span>
+                        <span><strong className="text-[#292722]">PT Cipta Krida Bahari</strong> (5 Bulan)</span>
                       </li>
-                      <li className="flex items-start gap-1.5">
+                      <li className="flex items-start gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-[#292722] mt-1.5 flex-shrink-0" />
-                        <span className="text-sm"><strong className="text-[#292722]">PT Sinergi Informatika Semen Indonesia</strong> (6 Bulan)</span>
+                        <span><strong className="text-[#292722]">PT Sinergi Informatika Semen Indonesia</strong> (6 Bulan)</span>
                       </li>
                     </ul>
                   </div>
                 </div>
 
                 {/* Cabang Kanan: 1 Project Based */}
-                <div className="p-3.5 rounded-lg bg-[#F5EBE0] border border-[#D5BDAF] flex flex-col justify-between">
+                <div className="p-4 rounded-lg bg-[#F5EBE0] border border-[#D5BDAF] flex flex-col justify-between">
                   <div>
-                    <div className="flex items-center justify-between border-b border-[#E3D5CA] pb-2 mb-2">
-                      <div className="flex items-center gap-1.5">
-                        <span className="text-lg font-bold text-[#292722]">1</span>
+                    <div className="flex items-center justify-between border-b border-[#E3D5CA] pb-2.5 mb-2.5">
+                      <div className="flex items-center gap-2">
+                        <span className="text-xl font-bold text-[#292722]">1</span>
                         <span className="text-sm font-bold uppercase tracking-wider text-[#292722]">
                           Project-Based
                         </span>
                       </div>
-                      <span className="text-[10px] font-semibold px-2 py-0.5 rounded bg-[#D5BDAF]/40 text-[#292722] border border-[#D5BDAF]">
+                      <span className="text-xs font-semibold px-2.5 py-0.5 rounded bg-[#D5BDAF]/40 text-[#292722] border border-[#D5BDAF]">
                         1.5 Bulan
                       </span>
                     </div>
 
-                    <ul className="space-y-1.5 text-[11px] text-[#68635C]">
-                      <li className="flex items-start gap-1.5">
+                    <ul className="space-y-2 text-xs sm:text-sm text-[#68635C]">
+                      <li className="flex items-start gap-2">
                         <span className="w-1.5 h-1.5 rounded-sm bg-[#292722] mt-1.5 flex-shrink-0" />
-                        <span className="text-sm"><strong className="text-[#292722]">PT IDS Teknologi Indonesia</strong> (1.5 Bulan)</span>
+                        <span><strong className="text-[#292722]">PT IDS Teknologi Indonesia</strong> (1.5 Bulan)</span>
                       </li>
-
                     </ul>
                   </div>
                 </div>
@@ -205,12 +204,12 @@ export const AboutSection = () => {
               <Layers className="w-4 h-4 text-[#292722]" />
               <span>Perjalanan Karir</span>
             </h4>
-            <span className="text-[11px] text-[#68635C] font-medium hidden sm:inline">
+            <span className="text-xs text-[#68635C] font-medium hidden sm:inline">
               Urutan perjalanan dari 2024 hingga 2026
             </span>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 relative">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 relative">
             {careerFlow.map((item, idx) => (
               <div
                 key={idx}
@@ -218,46 +217,46 @@ export const AboutSection = () => {
               >
                 {/* Step & Duration Header */}
                 <div>
-                  <div className="flex items-center justify-between pb-3 mb-3 border-b border-[#E3D5CA]">
-                    <span className="text-xs font-bold px-2.5 py-0.5 rounded bg-[#F5EBE0] text-[#292722] border border-[#D6CCC2]">
+                  <div className="flex items-center justify-between pb-3.5 mb-3.5 border-b border-[#E3D5CA]">
+                    <span className="text-xs sm:text-sm font-bold px-2.5 py-1 rounded bg-[#F5EBE0] text-[#292722] border border-[#D6CCC2]">
                       Pengalaman {item.step}
                     </span>
 
                     <span
-                      className={`text-xs px-2.5 py-0.5 rounded border font-semibold ${item.typeBadge}`}
+                      className={`text-xs sm:text-sm px-2.5 py-1 rounded border font-semibold ${item.typeBadge}`}
                     >
                       {item.type}
                     </span>
                   </div>
 
                   {/* Company & Role */}
-                  <div className="space-y-1.5 mb-3">
-                    <span className="text-xs text-[#68635C] font-semibold flex items-center gap-1.5">
-                      <Clock className="w-3.5 h-3.5" />
+                  <div className="space-y-1.5 mb-3.5">
+                    <span className="text-xs sm:text-sm text-[#68635C] font-semibold flex items-center gap-1.5">
+                      <Clock className="w-4 h-4 text-[#68635C]" />
                       {item.duration} ({item.period})
                     </span>
 
-                    <h5 className="text-base font-bold text-[#292722] leading-snug">
+                    <h5 className="text-lg sm:text-xl font-bold text-[#292722] leading-snug">
                       {item.company}
                     </h5>
 
-                    <p className="text-xs font-semibold text-[#68635C]">
+                    <p className="text-sm sm:text-base font-semibold text-[#68635C]">
                       {item.role}
                     </p>
                   </div>
 
                   {/* Highlight */}
-                  <p className="text-xs text-[#292722] leading-relaxed mb-4">
+                  <p className="text-sm text-[#292722] leading-relaxed mb-5">
                     {item.highlight}
                   </p>
                 </div>
 
                 {/* Bottom Tags */}
-                <div className="pt-3 border-t border-[#E3D5CA]/70 flex flex-wrap gap-1.5">
+                <div className="pt-3.5 border-t border-[#E3D5CA]/70 flex flex-wrap gap-2">
                   {item.tags.map((t, tIdx) => (
                     <span
                       key={tIdx}
-                      className="px-2 py-0.5 text-[10px] rounded bg-[#F5EBE0] text-[#292722] border border-[#D6CCC2] font-medium"
+                      className="px-2.5 py-1 text-xs rounded bg-[#F5EBE0] text-[#292722] border border-[#D6CCC2] font-medium"
                     >
                       {t}
                     </span>

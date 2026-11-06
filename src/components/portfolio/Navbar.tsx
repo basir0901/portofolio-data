@@ -17,9 +17,9 @@ export const Navbar = () => {
   const navLinks = [
     { label: "Tentang", href: "#about" },
     { label: "Pengalaman", href: "#experience" },
-    { label: "Proyek", href: "#projects" },
     { label: "Keahlian", href: "#skills" },
-    { label: "Pendidikan", href: "#education" },
+    { label: "Sertifikasi & Pelatihan", href: "#certifications" },
+    { label: "Tanya Jawab", href: "#faq" },
     { label: "Kontak", href: "#contact" },
   ];
 

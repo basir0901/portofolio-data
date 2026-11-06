@@ -50,6 +50,8 @@ export interface CertificationItem {
   credentialUrl?: string;
   documentPath?: string;
   description: string;
+  type?: string;
+  competencies?: string[];
 }
 
 export const PERSONAL_INFO = {
@@ -58,15 +60,17 @@ export const PERSONAL_INFO = {
   availabilityText1:
     "Saya terbuka dengan posisi lain di luar posisi yang pernah saya kerjakan",
   availabilityText2:
-    "Fast learner, Adaptive & Growth-Oriented",
+    "Fast learner, Adaptive & Flexible",
   bio: "Saya memiliki pengalaman profesional dalam pengembangan website dan pengolahan data end-to-end untuk menghasilkan data yang bersih, terstruktur, dan siap digunakan. Berbekal pengalaman tersebut, saya memiliki fleksibilitas tinggi dan terbuka untuk berkontribusi tidak hanya di bidang software maupun data. Saya meyakini bahwa latar belakang ini membekali saya dengan kemampuan adaptasi yang cepat, kemampuan belajar yang cepat, serta mentalitas untuk memecahkan berbagai tantangan teknis maupun operasional di posisi baru.",
   educationShort:
-    "Sarjana Terapan (D-IV) Teknologi Rekayasa Perangkat Lunak — IPB University (Lulus 2025 • IPK 3.20)",
-  email: "basirarsy0@gmail.com",
+    "Sarjana Terapan (D-IV) Teknologi Rekayaka Perangkat Lunak — IPB University (Lulus 2025 • IPK 3.20)",
+  email: "basirarsy2609@gmail.com",
+  altEmail: "basirsyams26@gmail.com",
   linkedin: "https://www.linkedin.com/in/basrarsy/",
   github: "https://github.com/basrarsy",
   cvPath: "/assets/cv_basir.pdf",
   bnspPath: "/assets/BNSP.pdf",
+  dataWarehousePath: "/assets/DataWarehousing.pdf",
   avatarPath: "/assets/profile.jpg",
 };
 
@@ -207,23 +211,51 @@ export const EXPERIENCES: ExperienceBlock[] = [
     screenshots: [
       {
         url: "/assets/sisi/csa1.png",
-        title: "Dashboard Validasi Data & Datamart",
+        title: "Antarmuka Upload Raw Data (Sheet Control)",
         caption:
-          "Monitoring utama yang menampilkan volume dataset yang dimuat, status klasifikasi validasi, dan progres pemeriksaan data per modul departemen.",
+          "Fitur import berkas Excel SLA Report atau CSV dengan mekanisme drag & drop (maks. 500MB) ke database staging, dilengkapi deteksi tipe berkas dan alur multi-step pemetaan sheet.",
         isPrimary: true,
       },
       {
-        url: "/assets/sisi/csa2.png",
-        title: "Penanganan Anomali SLA & Routing Catatan",
+        url: "/assets/sisi/csa8.png",
+        title: "Portal Monev MagangHub — Rapor Bulanan",
         caption:
-          "Antarmuka detail rekaman yang melampaui standar SLA dengan kolom feedback interaktif untuk tim penanggung jawab data.",
+          "Dashboard monitoring dan evaluasi resmi MagangHub (Kemnaker) yang merekam rekapitulasi penilaian berkala penugasan magang di PT SISI bersama mentor industri.",
         isPrimary: false,
       },
       {
-        url: "/assets/sisi/csa6.png",
-        title: "Portal Unggah Staging & Verifikasi Skema",
+        url: "/assets/sisi/csa9.png",
+        title: "Indikator Kinerja: Standar Kualitas & Go-Live Sistem",
         caption:
-          "Antarmuka penyerapan data berkapasitas besar yang memvalidasi skema data ke partisi staging sebelum dimuat ke datamart.",
+          "Verifikasi pencapaian target evaluasi sistem mencakup Go-Live On-Time 100%, akurasi data >=99%, system uptime >=99.5%, serta pemenuhan 100% audit trail kepatuhan regulasi.",
+        isPrimary: false,
+      },
+      {
+        url: "/assets/sisi/csa10.png",
+        title: "Evaluasi Kinerja: Pengembangan Aplikasi Report Dashboard",
+        caption:
+          "Penilaian KPI pengembangan aplikasi pelaporan berbasis sistem untuk mendukung keputusan operasional dengan target deployment dashboard ke lingkungan production.",
+        isPrimary: false,
+      },
+      {
+        url: "/assets/sisi/csa11.png",
+        title: "Evaluasi Kinerja: Pembuatan Aplikasi Sheet Control",
+        caption:
+          "Penilaian capaian 100% penyelesaian fitur inti dan upload data aplikasi Sheet Control sesuai timeline, dengan predikat baik pada produktivitas dan kerja sama tim.",
+        isPrimary: false,
+      },
+      {
+        url: "/assets/sisi/csa12.png",
+        title: "Evaluasi Kinerja: Kelengkapan & Akurasi Pipeline ETL",
+        caption:
+          "Penilaian capaian target pipeline ETL (minimal 95% data akurat dan lengkap) tanpa kehilangan record maupun kesalahan transformasi logis untuk pelaporan korporat.",
+        isPrimary: false,
+      },
+      {
+        url: "/assets/sisi/csa13.png",
+        title: "Profil Verifikasi Magang PT SISI — MagangHub",
+        caption:
+          "Dokumentasi identitas resmi peserta magang di PT Sinergi Informatika Semen Indonesia (GRAHA Aktiva Lt. 11, Jakarta Selatan) terdaftar pada sistem MagangHub Kemnaker.",
         isPrimary: false,
       },
     ],
@@ -265,16 +297,30 @@ export const EXPERIENCES: ExperienceBlock[] = [
     screenshots: [
       {
         url: "/assets/consumptionP3K/consumptionP3K1.png",
-        title: "Antarmuka Pemantauan Konsumsi P3K",
+        title: "Dashboard Pemantauan Konsumsi P3K",
         caption:
-          "Dashboard operasional cabang yang menampilkan status stok terkini, tren pemakaian perlengkapan, dan rekap mutasi barang.",
+          "Dashboard operasional cabang yang menampilkan status stok terkini, tren pemakaian perlengkapan, dan rekap mutasi barang medis.",
         isPrimary: true,
       },
       {
-        url: "/assets/consumptionP3K/consumptionP3K2.png",
-        title: "Formulir Pencatatan Transaksi Cabang",
+        url: "/assets/consumptionP3K/inspectionP3K_1.png",
+        title: "Modul First Aid Kit Inspection",
         caption:
-          "Antarmuka entri data yang efisien bagi petugas lapangan untuk mencatat kuantitas terpakai, nomor batch, dan keterangan pemakaian.",
+          "Dokumentasi inspeksi rutin bulanan untuk memantau tren pemakaian, perlengkapan yang digunakan, dan sisa stok P3K cabang.",
+        isPrimary: false,
+      },
+      {
+        url: "/assets/consumptionP3K/inspectionP3K_2.png",
+        title: "Formulir Pemeriksaan Kotak P3K",
+        caption:
+          "Formulir entri data kondisi fisik dan kelengkapan kotak P3K yang diisi oleh petugas lapangan.",
+        isPrimary: false,
+      },
+      {
+        url: "/assets/consumptionP3K/inspectionGenset_1.png",
+        title: "Modul Genset Inspection",
+        caption:
+          "Sistem dokumentasi inspeksi berkala untuk memantau kesiapan operasional dan pemeliharaan genset di fasilitas cabang.",
         isPrimary: false,
       },
     ],
@@ -316,9 +362,9 @@ export const EXPERIENCES: ExperienceBlock[] = [
     screenshots: [
       {
         url: "/assets/magangTelkomsat/magangTel1.png",
-        title: "Manajemen Inventaris & Status Peralatan Workshop",
+        title: "Dashboard Monitoring Status Alat Produksi",
         caption:
-          "Tampilan utama yang menyajikan daftar perangkat satelit, status pengujian aktif di workshop, dan parameter operasional.",
+          "Dashboard terpusat untuk memantau distribusi status pengujian perangkat workshop (Progress, Not OK, OK, dan belum diuji).",
         isPrimary: true,
       },
       {
@@ -333,6 +379,13 @@ export const EXPERIENCES: ExperienceBlock[] = [
         title: "Jadwal Pemeliharaan & Riwayat Kalibrasi",
         caption:
           "Log operasional untuk memantau siklus servis berkala, catatan teknisi penguji, dan status kepatuhan kalibrasi alat.",
+        isPrimary: false,
+      },
+      {
+        url: "/assets/magangTelkomsat/sertifikatTelkomsat.jpg",
+        title: "Sertifikat Magang Industri — PT Telkom Satelit Indonesia",
+        caption:
+          "Sertifikat penghargaan resmi atas perancangan 16 RESTful API dan modul inventaris workshop alat komunikasi satelit.",
         isPrimary: false,
       },
     ],
@@ -409,21 +462,84 @@ export const EDUCATION_LIST: EducationItem[] = [
   },
 ];
 
+export interface TrainingItem {
+  title: string;
+  organizer: string;
+  period: string;
+  type: string;
+  description: string;
+  competencies: string[];
+}
+
+export interface FaqItem {
+  question: string;
+  answer: string;
+  category?: string;
+}
+
 export const CERTIFICATIONS_LIST: CertificationItem[] = [
   {
     title: "Sertifikasi Profesi Software Developer",
     issuer: "Badan Nasional Sertifikasi Profesi (BNSP)",
     issueDate: "Standar Kompetensi Kerja Nasional (SKKNI)",
     documentPath: "/assets/BNSP.pdf",
+    type: "Sertifikasi Profesi Berlisensi",
     description:
-      "Sertifikasi kompetensi nasional yang memvalidasi keahlian profesional dalam perancangan perangkat lunak, pemrograman terstruktur, pengujian kode, dan integrasi basis data.",
+      "Sertifikasi kompetensi resmi nasional yang memvalidasi keahlian profesional dalam perancangan spesifikasi perangkat lunak, pemrograman terstruktur, implementasi basis data, pengujian kode, dan integrasi antarmuka sistem.",
+    competencies: [
+      "Perancangan Perangkat Lunak Terstruktur",
+      "Implementasi Basis Data Relasional & Kueri SQL",
+      "Pengujian Kode Program & Standarisasi Dokumentasi",
+    ],
   },
   {
-    title: "Sertifikat Magang Industri — Back-End Engineering",
-    issuer: "PT Telkom Satelit Indonesia (Telkomsat)",
-    issueDate: "Nov 2024",
-    documentPath: "/assets/magangTelkomsat/sertifikatTelkomsat.jpg",
+    title: "Pelatihan Data Warehousing & Engineering — Studi Independen Bersertifikat",
+    issuer: "Kemendikbudristek & PT Dibimbing Digital Indonesia",
+    issueDate: "Februari — Juni 2024",
+    documentPath: "/assets/DataWarehousing.pdf",
+    type: "Program Pelatihan Bersertifikat",
     description:
-      "Penghargaan resmi atas keberhasilan merancang dan mengimplementasikan 16 REST API penting serta modul inventaris workshop pemeliharaan perangkat satelit.",
+      "Program pelatihan intensif Studi Independen (Kampus Merdeka Kemendikbudristek) bekerja sama dengan mitra PT Dibimbing Digital Indonesia. Mempelajari dan mempraktikkan pengolahan data end-to-end, perancangan data warehouse, tata kelola data, serta otomatisasi pipeline ETL.",
+    competencies: [
+      "Python",
+      "SQL",
+      "Data Governance",
+      "ETL Pipelines",
+      "Apache Airflow",
+      "Git & Version Control",
+    ],
+  },
+];
+
+export const FAQ_LIST: FaqItem[] = [
+  {
+    question: "Apakah Anda hanya terbuka untuk posisi Software Engineer atau Data Engineer?",
+    answer:
+      "Tidak. Saya sangat terbuka dengan posisi lain di luar posisi yang pernah saya kerjakan. Saya memiliki latar belakang pengalaman profesional di bidang Software Engineering dan Data Engineering di berbagai industri. Dengan latar belakang tersebut, saya sangat fleksibel dan tidak kaku hanya di posisi data maupun software. Saya percaya pengalaman ini membentuk kemampuan adaptasi yang tinggi serta daya belajar yang cepat terhadap alur kerja, domain bisnis, maupun teknologi baru.",
+    category: "Fleksibilitas Posisi",
+  },
+  {
+    question: "Bagaimana rincian pengalaman kerja ~1.5 tahun Anda selama ini?",
+    answer:
+      "Pengalaman ~1.5 tahun saya terakumulasi di 4 perusahaan lintas industri, yaitu 3 perusahaan internship (PT Telkom Satelit Indonesia selama 5 bulan, PT Cipta Krida Bahari selama 5 bulan, PT Sinergi Informatika Semen Indonesia selama 6 bulan) serta 1 project-based di PT IDS Teknologi Indonesia selama 1.5 bulan.",
+    category: "Riwayat Pengalaman",
+  },
+  {
+    question: "Bagaimana kesiapan Anda terkait model kerja (On-Site, Hybrid, atau Remote)?",
+    answer:
+      "Saya sangat siap dan fleksibel bekerja dengan sistem On-Site (WFO), Hybrid, maupun Remote. Saya terbiasa bekerja secara mandiri maupun kolaboratif dalam tim di lingkungan perkantoran Jakarta dan sekitarnya.",
+    category: "Kesiapan Kerja",
+  },
+  {
+    question: "Apa nilai tambah utama yang Anda tawarkan untuk tim atau perusahaan?",
+    answer:
+      "Kombinasi pemahaman rekayasa perangkat lunak (Laravel, React.js, Vue.js, RESTful API) dan rekayasa data (Python, Apache Airflow, PostgreSQL, staging database, ETL pipelines). Saya dapat melihat tantangan operasional dari sisi arsitektur aplikasi sekaligus integritas alur data, sehingga solusi yang dibangun lebih terstruktur dan berorientasi pada efisiensi bisnis nyata.",
+    category: "Nilai Tambah",
+  },
+  {
+    question: "Kapan Anda siap untuk mulai bergabung?",
+    answer:
+      "Saya siap bergabung secepatnya (immediately available) dan siap mengikuti tahapan wawancara maupun orientasi kerja perusahaan.",
+    category: "Ketersediaan",
   },
 ];

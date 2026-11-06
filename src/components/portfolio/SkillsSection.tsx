@@ -9,10 +9,10 @@ export const SkillsSection = () => {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-8 mb-16 border-b border-[#E3D5CA]">
           <div>
             <span className="text-xs uppercase tracking-widest text-[#68635C] block mb-2 font-semibold">
-              05 / Kapabilitas Teknis
+              04 / Kapabilitas Teknis
             </span>
             <h2 className="text-3xl sm:text-4xl font-bold uppercase tracking-tight text-[#292722]">
-              Keahlian & Penguasaan Teknologi
+              04. Keahlian & Penguasaan Teknologi
             </h2>
           </div>
           <p className="text-xs text-[#68635C] max-w-sm font-medium leading-relaxed">
