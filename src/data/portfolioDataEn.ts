@@ -13,7 +13,7 @@ export const PERSONAL_INFO_EN = {
     "Open to diverse roles beyond previous job titles",
   availabilityText2:
     "Fast learner, Highly Adaptive, Flexible & Impact Oriented",
-  bio: "I have professional experience in web development and end-to-end data processing to produce clean, structured, and production-ready data. Leveraging this background, I am highly flexible and eager to contribute beyond software and data domains. I believe this experience equips me with strong adaptability, fast learning skills, and the mindset to solve diverse technical and operational challenges in new roles.",
+  bio: "I have professional experience 1.5 years in web development and end-to-end data processing to produce clean, structured, and production-ready data. Leveraging this background, I am highly flexible and eager to contribute beyond software and data domains. I believe this experience equips me with strong adaptability, fast learning skills, and the mindset to solve diverse technical and operational challenges in new roles.",
   educationShort:
     "Bachelor of Applied Science (D-IV) in Software Engineering Technology — IPB University (Class of 2025 • GPA 3.20)",
   email: "basirarsy2609@gmail.com",

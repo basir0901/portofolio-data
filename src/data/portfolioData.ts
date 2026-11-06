@@ -61,7 +61,7 @@ export const PERSONAL_INFO = {
     "Saya terbuka dengan posisi lain di luar posisi yang pernah saya kerjakan",
   availabilityText2:
     "Fast learner, Adaptive, Flexible & Impact Oriented",
-  bio: "Saya memiliki pengalaman profesional dalam pengembangan website dan pengolahan data end-to-end untuk menghasilkan data yang bersih, terstruktur, dan siap digunakan. Berbekal pengalaman tersebut, saya memiliki fleksibilitas tinggi dan terbuka untuk berkontribusi tidak hanya di bidang software maupun data. Saya meyakini bahwa latar belakang ini membekali saya dengan kemampuan adaptasi yang cepat, kemampuan belajar yang cepat, serta mentalitas untuk memecahkan berbagai tantangan teknis maupun operasional di posisi baru.",
+  bio: "Saya memiliki pengalaman profesional selama 1.5 tahun dalam pengembangan website dan pengolahan data end-to-end untuk menghasilkan data yang bersih, terstruktur, dan siap digunakan. Berbekal pengalaman tersebut, saya memiliki fleksibilitas tinggi dan terbuka untuk berkontribusi tidak hanya di bidang software maupun data. Saya meyakini bahwa latar belakang ini membekali saya dengan kemampuan adaptasi yang cepat, kemampuan belajar yang cepat, serta mentalitas untuk memecahkan berbagai tantangan teknis maupun operasional di posisi baru.",
   educationShort:
     "Sarjana Terapan (D-IV) Teknologi Rekayaka Perangkat Lunak — IPB University (Lulus 2025 • IPK 3.20)",
   email: "basirarsy2609@gmail.com",
