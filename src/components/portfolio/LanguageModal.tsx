@@ -1,14 +1,30 @@
+import { useEffect } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { Globe, Check, X } from "lucide-react";
 
 export const LanguageModal = () => {
   const { isModalOpen, setIsModalOpen, language, setLanguage } = useLanguage();
 
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isModalOpen]);
+
   if (!isModalOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-[#292722]/60 backdrop-blur-sm animate-fade-in">
+    <div
+      onClick={() => setIsModalOpen(false)}
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-[#292722]/60 backdrop-blur-sm animate-fade-in"
+    >
       <div
+        onClick={(e) => e.stopPropagation()}
         className="w-full max-w-lg rounded-2xl border border-[#D5BDAF] bg-[#EDEDE9] p-6 sm:p-8 shadow-2xl relative animate-scale-in"
         role="dialog"
         aria-modal="true"

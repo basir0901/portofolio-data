@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from "react";
+import React, { createContext, useContext, useState } from "react";
 
 export type Language = "id" | "en";
 
@@ -13,23 +13,22 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguageState] = useState<Language>("id");
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  useEffect(() => {
-    const saved = localStorage.getItem("portfolio_language") as Language | null;
-    if (saved && (saved === "id" || saved === "en")) {
-      setLanguageState(saved);
-      setIsModalOpen(false);
-    } else {
-      // First time visiting: open the language selection modal
-      setIsModalOpen(true);
+  const [language, setLanguageState] = useState<Language>(() => {
+    if (typeof window !== "undefined") {
+      const saved = localStorage.getItem("portfolio_language") as Language | null;
+      if (saved === "id" || saved === "en") return saved;
     }
-  }, []);
+    return "id";
+  });
+
+  // Always show language selection modal on initial visit / page open
+  const [isModalOpen, setIsModalOpen] = useState(true);
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
-    localStorage.setItem("portfolio_language", lang);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("portfolio_language", lang);
+    }
     setIsModalOpen(false);
   };
 
