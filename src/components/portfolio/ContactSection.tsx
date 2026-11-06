@@ -32,11 +32,7 @@ export const ContactSection = () => {
               {isEn ? "07. Let's Connect & Collaborate" : "07. Mari Terhubung & Berkolaborasi"}
             </h2>
           </div>
-          <p className="text-sm sm:text-base text-[#292722] max-w-md font-medium leading-relaxed">
-            {isEn
-              ? "Open to diverse career opportunities, engineering challenges, and technical discussions in software and data."
-              : "Terbuka untuk berbagai tawaran posisi kerja, eksplorasi peluang profesional, maupun diskusi rekayasa perangkat lunak dan data."}
-          </p>
+
         </div>
 
         {/* Contact Cards Grid */}
