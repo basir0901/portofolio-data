@@ -21,6 +21,7 @@ export const PERSONAL_INFO_EN = {
   linkedin: "https://www.linkedin.com/in/basrarsy/",
   github: "https://github.com/basrarsy",
   cvPath: "/assets/cv_basir.pdf",
+  diplomaPath: "/assets/Ijazah_Basir.pdf",
   bnspPath: "/assets/BNSP.pdf",
   dataWarehousePath: "/assets/DataWarehousing.pdf",
   avatarPath: "/assets/profile.jpg",

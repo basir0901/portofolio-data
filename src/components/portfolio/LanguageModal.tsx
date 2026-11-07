@@ -140,9 +140,9 @@ export const LanguageModal = () => {
 
         {/* Footer Note */}
         <p className="text-xs text-[#292722] font-medium text-center leading-relaxed">
-          * Anda dapat mengganti bahasa kapan saja melalui tombol <strong>[Bahasa Indonesia | Bahasa Inggris]</strong> pada bilah navigasi atas.
+          * Anda dapat mengganti bahasa kapan saja melalui tombol <strong>[ID | EN]</strong> pada bilah navigasi atas.
           <br />
-          <span className="italic">You can switch language anytime using the <strong>[Bahasa Indonesia | Bahasa Inggris]</strong> buttons on the top navigation bar.</span>
+          <span className="italic">You can switch language anytime using the <strong>[ID | EN]</strong> toggle on the top navigation bar.</span>
         </p>
       </div>
     </div>

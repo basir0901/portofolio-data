@@ -1,7 +1,7 @@
 import { PERSONAL_INFO } from "@/data/portfolioData";
 import { PERSONAL_INFO_EN } from "@/data/portfolioDataEn";
 import { useLanguage } from "@/context/LanguageContext";
-import { GraduationCap } from "lucide-react";
+import { GraduationCap, Download } from "lucide-react";
 
 export const HeroSection = () => {
   const { language } = useLanguage();
@@ -61,6 +61,17 @@ export const HeroSection = () => {
                     </>
                   )}
                 </p>
+                <div className="pt-2">
+                  <a
+                    href={info.diplomaPath || PERSONAL_INFO.diplomaPath}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[#292722] hover:underline"
+                  >
+                    <Download className="w-3.5 h-3.5" />
+                    <span>{isEn ? "View / Download Diploma (PDF)" : "Lihat / Unduh Dokumen Ijazah (PDF)"}</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

@@ -9,6 +9,7 @@ import {
   Check,
   ArrowUpRight,
   Send,
+  GraduationCap,
 } from "lucide-react";
 
 export const ContactSection = () => {
@@ -206,6 +207,29 @@ export const ContactSection = () => {
                   </span>
                   <span className="text-xs sm:text-[13px] text-[#292722] font-medium">
                     {isEn ? "Complete work history and credentials" : "Dokumen riwayat hidup & pengalaman lengkap"}
+                  </span>
+                </div>
+              </div>
+              <ArrowUpRight className="w-4 h-4 text-[#292722] transition-all" />
+            </a>
+
+            {/* Diploma / Ijazah Card */}
+            <a
+              href={PERSONAL_INFO.diplomaPath}
+              target="_blank"
+              rel="noreferrer"
+              className="p-5 rounded-lg border border-[#D5BDAF] bg-[#EDEDE9] hover:bg-[#D5BDAF]/20 transition-all flex items-center justify-between group block"
+            >
+              <div className="flex items-center gap-3.5">
+                <div className="p-2.5 rounded bg-[#292722] text-[#EDEDE9]">
+                  <GraduationCap className="w-4 h-4" />
+                </div>
+                <div>
+                  <span className="text-sm font-bold text-[#292722] block">
+                    {isEn ? "Download Degree Diploma (PDF)" : "Unduh Ijazah Kelulusan (PDF)"}
+                  </span>
+                  <span className="text-xs sm:text-[13px] text-[#292722] font-medium">
+                    {isEn ? "Official Bachelor of Applied Science Diploma" : "Dokumen Ijazah Sarjana Terapan Resmi (IPB University)"}
                   </span>
                 </div>
               </div>

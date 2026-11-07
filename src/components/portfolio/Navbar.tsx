@@ -46,87 +46,101 @@ export const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 flex items-center justify-between">
         {/* Desktop Navigation Links */}
-        <nav className="hidden md:flex items-center gap-7">
+        <nav className="hidden md:flex items-center gap-4 lg:gap-6">
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
-              className="text-xs uppercase font-bold tracking-wider text-[#292722]/85 hover:text-[#292722] transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#292722] hover:after:w-full after:transition-all after:duration-200"
+              className="text-xs uppercase font-bold tracking-wider text-[#292722]/85 hover:text-[#292722] transition-colors relative py-1 whitespace-nowrap after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[#292722] hover:after:w-full after:transition-all after:duration-200"
             >
               {link.label}
             </a>
           ))}
         </nav>
 
-        {/* Right Actions: Language Switcher & CV Button */}
-        <div className="hidden md:flex items-center gap-3.5 ml-auto">
-          {/* Language Switcher Pill */}
-          <div className="flex items-center gap-1 rounded-lg border border-[#D6CCC2] bg-[#F5EBE0] p-1 text-xs font-bold text-[#292722] shadow-xs">
-            <div className="pl-1.5 pr-0.5 text-[#292722] flex items-center" aria-hidden="true">
+        {/* Right Actions: Compact Language Switcher & Document Buttons */}
+        <div className="hidden md:flex items-center gap-2.5 lg:gap-3 ml-auto pl-4">
+          {/* Efficient Compact Language Switcher */}
+          <div className="flex items-center rounded-lg border border-[#D6CCC2] bg-[#F5EBE0] p-1 text-xs font-bold text-[#292722] shadow-xs whitespace-nowrap flex-shrink-0">
+            <div className="px-1.5 text-[#292722] flex items-center" aria-hidden="true">
               <Globe className="w-3.5 h-3.5" />
             </div>
             <button
               onClick={() => setLanguage("id")}
-              className={`px-3 py-1.5 rounded transition-all text-xs font-bold flex items-center gap-1.5 ${
+              className={`px-2.5 py-1 rounded transition-all text-xs font-bold ${
                 !isEn
                   ? "bg-[#292722] text-[#EDEDE9] shadow-xs"
                   : "text-[#292722]/70 hover:text-[#292722]"
               }`}
-              title="Ganti ke Bahasa Indonesia"
+              title="Bahasa Indonesia"
             >
-              <span>Bahasa Indonesia</span>
+              ID
             </button>
             <button
               onClick={() => setLanguage("en")}
-              className={`px-3 py-1.5 rounded transition-all text-xs font-bold flex items-center gap-1.5 ${
+              className={`px-2.5 py-1 rounded transition-all text-xs font-bold ${
                 isEn
                   ? "bg-[#292722] text-[#EDEDE9] shadow-xs"
                   : "text-[#292722]/70 hover:text-[#292722]"
               }`}
-              title="Switch to Bahasa Inggris"
+              title="English"
             >
-              <span>Bahasa Inggris</span>
+              EN
             </button>
           </div>
 
-          {/* Download CV */}
-          <a
-            href={PERSONAL_INFO.cvPath}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold rounded border border-[#292722] bg-[#292722] text-[#EDEDE9] hover:bg-[#D5BDAF] hover:text-[#292722] hover:border-[#D5BDAF] transition-all shadow-sm"
-          >
-            <Download className="w-3.5 h-3.5" />
-            <span>{isEn ? "Download CV" : "Unduh CV"}</span>
-          </a>
+          {/* Action Buttons: Download CV & Download Diploma (Same Style & Background) */}
+          <div className="flex items-center gap-2 flex-shrink-0">
+            <a
+              href={PERSONAL_INFO.cvPath}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold rounded border border-[#292722] bg-[#292722] text-[#EDEDE9] hover:bg-[#D5BDAF] hover:text-[#292722] hover:border-[#D5BDAF] transition-all shadow-sm whitespace-nowrap"
+              title={isEn ? "Download Curriculum Vitae (PDF)" : "Unduh Curriculum Vitae (PDF)"}
+            >
+              <Download className="w-3.5 h-3.5" />
+              <span>{isEn ? "Download CV" : "Unduh CV"}</span>
+            </a>
+
+            <a
+              href={PERSONAL_INFO.diplomaPath}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold rounded border border-[#292722] bg-[#292722] text-[#EDEDE9] hover:bg-[#D5BDAF] hover:text-[#292722] hover:border-[#D5BDAF] transition-all shadow-sm whitespace-nowrap"
+              title={isEn ? "Download Degree Diploma (PDF)" : "Unduh Ijazah Kelulusan (PDF)"}
+            >
+              <Download className="w-3.5 h-3.5" />
+              <span>{isEn ? "Download Diploma" : "Unduh Ijazah"}</span>
+            </a>
+          </div>
         </div>
 
         {/* Mobile Hamburger & Language Switcher */}
         <div className="flex md:hidden items-center justify-between w-full">
           <div className="flex items-center gap-2">
             <div className="flex items-center rounded-lg border border-[#D6CCC2] bg-[#F5EBE0] p-0.5 text-xs font-bold text-[#292722]">
-              <div className="pl-1.5 pr-0.5 text-[#292722] flex items-center" aria-hidden="true">
-                <Globe className="w-3 h-3" />
+              <div className="px-1.5 text-[#292722] flex items-center" aria-hidden="true">
+                <Globe className="w-3.5 h-3.5" />
               </div>
               <button
                 onClick={() => setLanguage("id")}
-                className={`px-2 py-1 rounded text-[11px] font-bold ${
+                className={`px-2 py-1 rounded text-xs font-bold ${
                   !isEn
                     ? "bg-[#292722] text-[#EDEDE9]"
                     : "text-[#292722]/70"
                 }`}
               >
-                Bahasa Indonesia
+                ID
               </button>
               <button
                 onClick={() => setLanguage("en")}
-                className={`px-2 py-1 rounded text-[11px] font-bold ${
+                className={`px-2 py-1 rounded text-xs font-bold ${
                   isEn
                     ? "bg-[#292722] text-[#EDEDE9]"
                     : "text-[#292722]/70"
                 }`}
               >
-                Bahasa Inggris
+                EN
               </button>
             </div>
           </div>
@@ -164,9 +178,12 @@ export const Navbar = () => {
 
           <div className="pt-2 space-y-3">
             <div className="p-3 rounded-lg border border-[#D6CCC2] bg-[#F5EBE0]">
-              <span className="text-xs uppercase tracking-wider text-[#292722] font-bold block mb-2">
-                {isEn ? "Select Language:" : "Pilih Bahasa:"}
-              </span>
+              <div className="flex items-center gap-2 mb-2">
+                <Globe className="w-3.5 h-3.5 text-[#292722]" />
+                <span className="text-xs uppercase tracking-wider text-[#292722] font-bold">
+                  {isEn ? "Select Language:" : "Pilih Bahasa:"}
+                </span>
+              </div>
               <div className="grid grid-cols-2 gap-2">
                 <button
                   onClick={() => {
@@ -179,7 +196,7 @@ export const Navbar = () => {
                       : "bg-[#EDEDE9] text-[#292722] border border-[#D6CCC2]"
                   }`}
                 >
-                  Bahasa Indonesia
+                  Bahasa Indonesia (ID)
                 </button>
                 <button
                   onClick={() => {
@@ -192,20 +209,31 @@ export const Navbar = () => {
                       : "bg-[#EDEDE9] text-[#292722] border border-[#D6CCC2]"
                   }`}
                 >
-                  Bahasa Inggris
+                  English (EN)
                 </button>
               </div>
             </div>
 
-            <a
-              href={PERSONAL_INFO.cvPath}
-              target="_blank"
-              rel="noreferrer"
-              className="w-full inline-flex items-center justify-center gap-2 py-2.5 text-xs font-semibold rounded bg-[#292722] text-[#EDEDE9]"
-            >
-              <Download className="w-4 h-4" />
-              <span>{isEn ? "Download CV (PDF)" : "Unduh CV (PDF)"}</span>
-            </a>
+            <div className="grid grid-cols-2 gap-2">
+              <a
+                href={PERSONAL_INFO.cvPath}
+                target="_blank"
+                rel="noreferrer"
+                className="w-full inline-flex items-center justify-center gap-1.5 py-2.5 text-xs font-bold rounded bg-[#292722] text-[#EDEDE9] hover:bg-[#D5BDAF] hover:text-[#292722] transition-colors"
+              >
+                <Download className="w-3.5 h-3.5" />
+                <span>{isEn ? "Download CV" : "Unduh CV"}</span>
+              </a>
+              <a
+                href={PERSONAL_INFO.diplomaPath}
+                target="_blank"
+                rel="noreferrer"
+                className="w-full inline-flex items-center justify-center gap-1.5 py-2.5 text-xs font-bold rounded bg-[#292722] text-[#EDEDE9] hover:bg-[#D5BDAF] hover:text-[#292722] transition-colors"
+              >
+                <Download className="w-3.5 h-3.5" />
+                <span>{isEn ? "Download Diploma" : "Unduh Ijazah"}</span>
+              </a>
+            </div>
           </div>
         </div>
       )}
