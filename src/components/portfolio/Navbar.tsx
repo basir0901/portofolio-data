@@ -20,29 +20,28 @@ export const Navbar = () => {
 
   const navLinks = isEn
     ? [
-        { label: "About", href: "#about" },
-        { label: "Experience", href: "#experience" },
-        { label: "Skills", href: "#skills" },
-        { label: "Certifications & Training", href: "#certifications" },
-        { label: "FAQ", href: "#faq" },
-        { label: "Contact", href: "#contact" },
-      ]
+      { label: "About", href: "#about" },
+      { label: "Experience", href: "#experience" },
+      { label: "Skills", href: "#skills" },
+      { label: "Certifications & Training", href: "#certifications" },
+      { label: "FAQ", href: "#faq" },
+      { label: "Contact", href: "#contact" },
+    ]
     : [
-        { label: "Tentang", href: "#about" },
-        { label: "Pengalaman", href: "#experience" },
-        { label: "Keahlian", href: "#skills" },
-        { label: "Sertifikasi & Pelatihan", href: "#certifications" },
-        { label: "Tanya Jawab", href: "#faq" },
-        { label: "Kontak", href: "#contact" },
-      ];
+      { label: "Tentang", href: "#about" },
+      { label: "Pengalaman", href: "#experience" },
+      { label: "Keahlian", href: "#skills" },
+      { label: "Sertifikasi & Pelatihan", href: "#certifications" },
+      { label: "Tanya Jawab", href: "#faq" },
+      { label: "Kontak", href: "#contact" },
+    ];
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        isScrolled
+      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${isScrolled
           ? "bg-[#EDEDE9]/95 backdrop-blur-md border-b border-[#E3D5CA] shadow-sm py-3.5"
           : "bg-transparent py-5"
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 flex items-center justify-between">
         {/* Desktop Navigation Links */}
@@ -67,29 +66,27 @@ export const Navbar = () => {
             </div>
             <button
               onClick={() => setLanguage("id")}
-              className={`px-2.5 py-1 rounded transition-all text-xs font-bold ${
-                !isEn
+              className={`px-2.5 py-1 rounded transition-all text-xs font-bold ${!isEn
                   ? "bg-[#292722] text-[#EDEDE9] shadow-xs"
                   : "text-[#292722]/70 hover:text-[#292722]"
-              }`}
+                }`}
               title="Bahasa Indonesia"
             >
               ID
             </button>
             <button
               onClick={() => setLanguage("en")}
-              className={`px-2.5 py-1 rounded transition-all text-xs font-bold ${
-                isEn
+              className={`px-2.5 py-1 rounded transition-all text-xs font-bold ${isEn
                   ? "bg-[#292722] text-[#EDEDE9] shadow-xs"
                   : "text-[#292722]/70 hover:text-[#292722]"
-              }`}
+                }`}
               title="English"
             >
               EN
             </button>
           </div>
 
-          {/* Action Buttons: Download CV & Download Diploma (Same Style & Background) */}
+          {/* Action Buttons: Download CV & Download Ijazah (Same Style & Background) */}
           <div className="flex items-center gap-2 flex-shrink-0">
             <a
               href={PERSONAL_INFO.cvPath}
@@ -110,7 +107,7 @@ export const Navbar = () => {
               title={isEn ? "Download Degree Diploma (PDF)" : "Unduh Ijazah Kelulusan (PDF)"}
             >
               <Download className="w-3.5 h-3.5" />
-              <span>{isEn ? "Download Diploma" : "Unduh Ijazah"}</span>
+              <span>{isEn ? "Download Ijazah" : "Unduh Ijazah"}</span>
             </a>
           </div>
         </div>
@@ -124,21 +121,19 @@ export const Navbar = () => {
               </div>
               <button
                 onClick={() => setLanguage("id")}
-                className={`px-2 py-1 rounded text-xs font-bold ${
-                  !isEn
+                className={`px-2 py-1 rounded text-xs font-bold ${!isEn
                     ? "bg-[#292722] text-[#EDEDE9]"
                     : "text-[#292722]/70"
-                }`}
+                  }`}
               >
                 ID
               </button>
               <button
                 onClick={() => setLanguage("en")}
-                className={`px-2 py-1 rounded text-xs font-bold ${
-                  isEn
+                className={`px-2 py-1 rounded text-xs font-bold ${isEn
                     ? "bg-[#292722] text-[#EDEDE9]"
                     : "text-[#292722]/70"
-                }`}
+                  }`}
               >
                 EN
               </button>
@@ -190,11 +185,10 @@ export const Navbar = () => {
                     setLanguage("id");
                     setIsMobileMenuOpen(false);
                   }}
-                  className={`py-2 px-3 rounded text-xs font-bold text-center transition-all ${
-                    !isEn
+                  className={`py-2 px-3 rounded text-xs font-bold text-center transition-all ${!isEn
                       ? "bg-[#292722] text-[#EDEDE9] shadow-xs"
                       : "bg-[#EDEDE9] text-[#292722] border border-[#D6CCC2]"
-                  }`}
+                    }`}
                 >
                   Bahasa Indonesia (ID)
                 </button>
@@ -203,11 +197,10 @@ export const Navbar = () => {
                     setLanguage("en");
                     setIsMobileMenuOpen(false);
                   }}
-                  className={`py-2 px-3 rounded text-xs font-bold text-center transition-all ${
-                    isEn
+                  className={`py-2 px-3 rounded text-xs font-bold text-center transition-all ${isEn
                       ? "bg-[#292722] text-[#EDEDE9] shadow-xs"
                       : "bg-[#EDEDE9] text-[#292722] border border-[#D6CCC2]"
-                  }`}
+                    }`}
                 >
                   English (EN)
                 </button>
@@ -231,7 +224,7 @@ export const Navbar = () => {
                 className="w-full inline-flex items-center justify-center gap-1.5 py-2.5 text-xs font-bold rounded bg-[#292722] text-[#EDEDE9] hover:bg-[#D5BDAF] hover:text-[#292722] transition-colors"
               >
                 <Download className="w-3.5 h-3.5" />
-                <span>{isEn ? "Download Diploma" : "Unduh Ijazah"}</span>
+                <span>{isEn ? "Download Ijazah" : "Unduh Ijazah"}</span>
               </a>
             </div>
           </div>
