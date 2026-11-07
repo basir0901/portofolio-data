@@ -51,12 +51,12 @@ export const HeroSection = () => {
                 <p className="text-xs sm:text-sm text-[#292722] font-medium leading-normal">
                   {isEn ? (
                     <>
-                      Bachelor of Applied Science (D-IV) in Software Engineering Technology —{" "}
+                      Bachelor of Applied Science in Software Engineering Technology —{" "}
                       <strong className="text-[#292722] font-bold">IPB University</strong> (Class of 2025)
                     </>
                   ) : (
                     <>
-                      Sarjana Terapan (D-IV) Teknologi Rekayasa Perangkat Lunak —{" "}
+                      Sarjana Terapan Komputer —{" "}
                       <strong className="text-[#292722] font-bold">IPB University</strong> (Lulus 2025)
                     </>
                   )}
@@ -69,7 +69,7 @@ export const HeroSection = () => {
                     className="inline-flex items-center gap-1.5 text-xs font-bold text-[#292722] hover:underline"
                   >
                     <Download className="w-3.5 h-3.5" />
-                    <span>{isEn ? "View / Download Diploma (PDF)" : "Lihat / Unduh Dokumen Ijazah (PDF)"}</span>
+                    <span>{isEn ? "View / Download Ijazah (PDF)" : "Lihat / Unduh Dokumen Ijazah (PDF)"}</span>
                   </a>
                 </div>
               </div>

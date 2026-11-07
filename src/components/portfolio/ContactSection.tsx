@@ -226,7 +226,7 @@ export const ContactSection = () => {
                 </div>
                 <div>
                   <span className="text-sm font-bold text-[#292722] block">
-                    {isEn ? "Download Degree Diploma (PDF)" : "Unduh Ijazah Kelulusan (PDF)"}
+                    {isEn ? "Download Degree Ijazah (PDF)" : "Unduh Ijazah Kelulusan (PDF)"}
                   </span>
                   <span className="text-xs sm:text-[13px] text-[#292722] font-medium">
                     {isEn ? "Official Bachelor of Applied Science Diploma" : "Dokumen Ijazah Sarjana Terapan Resmi (IPB University)"}

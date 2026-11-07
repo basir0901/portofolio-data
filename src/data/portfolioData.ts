@@ -63,7 +63,7 @@ export const PERSONAL_INFO = {
     "Fast learner, Adaptive, Flexible & Impact Oriented",
   bio: "Saya memiliki pengalaman profesional selama 1.5 tahun dalam pengembangan website dan pengolahan data end-to-end untuk menghasilkan data yang bersih, terstruktur, dan siap digunakan. Berbekal pengalaman tersebut, saya memiliki fleksibilitas tinggi dan terbuka untuk berkontribusi tidak hanya di bidang software maupun data. Saya meyakini bahwa latar belakang ini membekali saya dengan kemampuan adaptasi yang cepat, kemampuan belajar yang cepat, serta mentalitas untuk memecahkan berbagai tantangan teknis maupun operasional di posisi baru.",
   educationShort:
-    "Sarjana Terapan (D-IV) Teknologi Rekayaka Perangkat Lunak — IPB University (Lulus 2025 • IPK 3.20)",
+    "Sarjana Terapan Komputer — IPB University (Lulus 2025 • IPK 3.20)",
   email: "basirarsy2609@gmail.com",
   altEmail: "basirsyams26@gmail.com",
   linkedin: "https://www.linkedin.com/in/basrarsy/",
