@@ -73,16 +73,24 @@ export const LanguageModal = () => {
           <button
             type="button"
             onClick={() => setLanguage("id")}
-            className={`group text-left p-4 sm:p-5 rounded-xl border transition-all cursor-pointer flex flex-col justify-between ${language === "id"
+            className={`group text-left p-4 sm:p-5 rounded-xl border transition-all cursor-pointer flex flex-col justify-between ${
+              language === "id"
                 ? "border-[#292722] bg-[#F5EBE0] shadow-sm ring-1 ring-[#292722]"
                 : "border-[#E3D5CA] bg-[#F5EBE0]/60 hover:bg-[#F5EBE0] hover:border-[#D5BDAF]"
-              }`}
+            }`}
           >
             <div>
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-2xl" role="img" aria-label="Bendera Indonesia">
-                  🇮🇩
-                </span>
+              <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center gap-2.5">
+                  {/* Bendera Merah Putih Indonesia (SVG Grafis Nyata) */}
+                  <div className="w-8 h-5.5 rounded overflow-hidden border border-[#D6CCC2] shadow-xs flex flex-col flex-shrink-0">
+                    <div className="h-1/2 w-full bg-[#E70011]" />
+                    <div className="h-1/2 w-full bg-white" />
+                  </div>
+                  <span className="text-xs font-bold px-2 py-0.5 rounded bg-[#EDEDE9] text-[#292722] border border-[#D6CCC2]">
+                    ID
+                  </span>
+                </div>
                 {language === "id" && (
                   <span className="w-5 h-5 rounded-full bg-[#292722] text-[#EDEDE9] flex items-center justify-center">
                     <Check className="w-3 h-3" />
@@ -107,16 +115,32 @@ export const LanguageModal = () => {
           <button
             type="button"
             onClick={() => setLanguage("en")}
-            className={`group text-left p-4 sm:p-5 rounded-xl border transition-all cursor-pointer flex flex-col justify-between ${language === "en"
+            className={`group text-left p-4 sm:p-5 rounded-xl border transition-all cursor-pointer flex flex-col justify-between ${
+              language === "en"
                 ? "border-[#292722] bg-[#F5EBE0] shadow-sm ring-1 ring-[#292722]"
                 : "border-[#E3D5CA] bg-[#F5EBE0]/60 hover:bg-[#F5EBE0] hover:border-[#D5BDAF]"
-              }`}
+            }`}
           >
             <div>
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-2xl" role="img" aria-label="UK Flag">
-                  🇬🇧
-                </span>
+              <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center gap-2.5">
+                  {/* Bendera United Kingdom / Great Britain (SVG Grafis Nyata) */}
+                  <svg
+                    className="w-8 h-5.5 rounded overflow-hidden border border-[#D6CCC2] shadow-xs flex-shrink-0"
+                    viewBox="0 0 60 30"
+                    aria-hidden="true"
+                  >
+                    <rect width="60" height="30" fill="#012169" />
+                    <path d="M0 0 L60 30 M60 0 L0 30" stroke="#fff" strokeWidth="6" />
+                    <path d="M0 0 L60 30" stroke="#C8102E" strokeWidth="2" />
+                    <path d="M60 0 L0 30" stroke="#C8102E" strokeWidth="2" />
+                    <path d="M30 0 v30 M0 15 h60" stroke="#fff" strokeWidth="10" />
+                    <path d="M30 0 v30 M0 15 h60" stroke="#C8102E" strokeWidth="6" />
+                  </svg>
+                  <span className="text-xs font-bold px-2 py-0.5 rounded bg-[#EDEDE9] text-[#292722] border border-[#D6CCC2]">
+                    EN
+                  </span>
+                </div>
                 {language === "en" && (
                   <span className="w-5 h-5 rounded-full bg-[#292722] text-[#EDEDE9] flex items-center justify-center">
                     <Check className="w-3 h-3" />
