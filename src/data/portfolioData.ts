@@ -520,6 +520,12 @@ export const FAQ_LIST: FaqItem[] = [
     category: "Fleksibilitas Posisi",
   },
   {
+    question:
+      "Apa fokus dan arah karier yang ingin Anda tekuni ke depannya? Posisi atau bidang pekerjaan apa yang ingin Anda jalani dalam jangka panjang?",
+    answer: "Untuk rencana karier ke depan, saya ingin terus berkembang di bidang pekerjaan yang melibatkan kemampuan teknikal, analisis, dan problem- solving. Sebagai seorang freshgraduate yang masih berada ditahap awal perjalan profesional, saya belum ingin membatasi arah karier saya pada satu posisi atau spesialisasi tertentu. Sejauh ini, kesempatan dan pengalaman yang paling banyak saya dapatkan memang berada di bidang software development dan juga data processing (data engineering). Bagi saya, untuk saat ini hal terpenting bukan semata - mata posisi atau jabatan yang saya pegang, melainkan bagaimana saya bisa memberikan kontribusi nyata bagi perusahaan melalui kemampuan yang saya miliki, membantu tim menyelesaikan permasalahan, dan memberikan dampak positif bagi team atau perusahaan melalui posisi apapun itu",
+    category: "Arah & Fokus Karier",
+  },
+  {
     question: "Apakah Anda bisa berbahasa Inggris?",
     answer:
       "Kemampuan listening dan speaking saya masih perlu improvement, namun mengenai reading dan writing sejauh ini saya tidak mengalami masalah.",

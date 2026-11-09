@@ -390,11 +390,11 @@ export const SKILL_CATEGORIES_EN: SkillCategory[] = [
   {
     category: "Tools, Platforms & AI",
     skills: [
+      { name: "Antigravity", note: "Development Workspace & Debugging" },
+      { name: "Excel" },
       { name: "Git & GitHub", note: "Version Control, Branching, Pull Requests" },
       { name: "Postman", note: "API Documentation & Automated Testing" },
-      { name: "VS Code", note: "Development Workspace & Debugging" },
-      { name: "Linux / Bash", note: "Shell Scripting, Cron Jobs, Server Configuration" },
-      { name: "AI Engineering Exploration", note: "LLM Integrations, Automated Data Validation" },
+
     ],
   },
 ];
@@ -439,6 +439,13 @@ export const FAQ_LIST_EN: FaqItem[] = [
     answer:
       "No. I am very open to other positions outside of the roles I have previously worked in. I have a professional background in Software Engineering and Data Engineering across multiple industries. With this background, I am highly flexible and not rigidly confined to data or software roles alone. I believe this experience equips me with strong adaptability and rapid learning skills for new workflows, business domains, and technologies.",
     category: "Role Flexibility",
+  },
+  {
+    question:
+      "What is your career focus and direction moving forward? What roles or fields do you aspire to pursue long-term?",
+    answer:
+      "At present, I prefer not to restrict my career path to a single role or rigid specialization. As a fresh graduate at the early stage of my professional journey, I see that many fields offer exciting technical and analytical challenges worth pursuing.\n\nSo far, the majority of opportunities and practical experience I have gained have been in software development. However, I also hold a strong interest in other domains that require technical capability, deep analysis, and a problem-solving mindset.\n\nTo me, the most crucial aspect is not merely the job title I hold, but how I can deliver real value to the company through my skills—helping teams resolve blockers, improving workflow effectiveness, and creating solutions that drive positive business impact.\n\nLooking ahead, I aim to continuously sharpen my technical and analytical capabilities, broaden my cross-disciplinary exposure, and discover the specialization that aligns best with my strengths and where I can make the most meaningful contribution.",
+    category: "Career Direction & Goals",
   },
   {
     question: "What is your proficiency in English?",
