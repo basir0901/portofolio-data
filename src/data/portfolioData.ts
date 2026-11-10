@@ -410,8 +410,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
       { name: "Python", note: "Pandas, Pembersihan Data, Otomasi" },
       { name: "Apache Airflow", note: "Penjadwalan DAG, Alur Kerja ETL" },
       { name: "Pipeline ETL", note: "Ingest Data, Transformasi, Validasi" },
-      { name: "Validasi Data", note: "Deteksi Anomali SLA, Pemisahan Audit" },
-      { name: "Sistem Datamart", note: "Skema Analitik & Pencatatan Log" },
+      { name: "Validasi Data" },
     ],
   },
   {

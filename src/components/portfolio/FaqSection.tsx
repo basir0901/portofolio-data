@@ -31,11 +31,6 @@ export const FaqSection = () => {
               {isEn ? "06. Frequently Asked Questions & Clarifications" : "06. Pertanyaan Umum & Klarifikasi"}
             </h2>
           </div>
-          <p className="text-sm sm:text-base text-[#292722] max-w-md font-medium leading-relaxed">
-            {isEn
-              ? "Direct clarifications regarding role flexibility, work readiness, and professional adaptability."
-              : "Klarifikasi langsung mengenai fleksibilitas posisi, kesiapan kerja, dan adaptabilitas profesional."}
-          </p>
         </div>
 
         {/* Highlights Banner */}
@@ -61,11 +56,10 @@ export const FaqSection = () => {
             return (
               <div
                 key={idx}
-                className={`rounded-xl border transition-all duration-200 overflow-hidden ${
-                  isOpen
+                className={`rounded-xl border transition-all duration-200 overflow-hidden ${isOpen
                     ? "border-[#292722] bg-[#EDEDE9] shadow-sm"
                     : "border-[#E3D5CA] bg-[#EDEDE9]/70 hover:border-[#D5BDAF]"
-                }`}
+                  }`}
               >
                 <button
                   type="button"
@@ -90,9 +84,8 @@ export const FaqSection = () => {
                   </div>
 
                   <div
-                    className={`p-1.5 rounded-full border border-[#D6CCC2] bg-[#F5EBE0] transition-transform duration-300 flex-shrink-0 ${
-                      isOpen ? "rotate-180" : ""
-                    }`}
+                    className={`p-1.5 rounded-full border border-[#D6CCC2] bg-[#F5EBE0] transition-transform duration-300 flex-shrink-0 ${isOpen ? "rotate-180" : ""
+                      }`}
                   >
                     <ChevronDown className="w-4 h-4 text-[#292722]" />
                   </div>

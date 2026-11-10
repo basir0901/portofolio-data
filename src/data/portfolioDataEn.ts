@@ -364,8 +364,7 @@ export const SKILL_CATEGORIES_EN: SkillCategory[] = [
       { name: "Python", note: "Pandas, Data Cleaning, Automation" },
       { name: "Apache Airflow", note: "DAG Scheduling, ETL Workflows" },
       { name: "ETL Pipelines", note: "Data Ingestion, Transformation, Validation" },
-      { name: "Data Validation", note: "SLA Anomaly Detection, Audit Separation" },
-      { name: "Datamart Systems", note: "Analytical Schemas & Logging" },
+      { name: "Data Validation" }
     ],
   },
   {
@@ -394,6 +393,7 @@ export const SKILL_CATEGORIES_EN: SkillCategory[] = [
       { name: "Excel" },
       { name: "Git & GitHub", note: "Version Control, Branching, Pull Requests" },
       { name: "Postman", note: "API Documentation & Automated Testing" },
+      { name: "Vs Code", note: "IDE" },
 
     ],
   },
@@ -444,7 +444,7 @@ export const FAQ_LIST_EN: FaqItem[] = [
     question:
       "What is your career focus and direction moving forward? What roles or fields do you aspire to pursue long-term?",
     answer:
-      "At present, I prefer not to restrict my career path to a single role or rigid specialization. As a fresh graduate at the early stage of my professional journey, I see that many fields offer exciting technical and analytical challenges worth pursuing.\n\nSo far, the majority of opportunities and practical experience I have gained have been in software development. However, I also hold a strong interest in other domains that require technical capability, deep analysis, and a problem-solving mindset.\n\nTo me, the most crucial aspect is not merely the job title I hold, but how I can deliver real value to the company through my skills—helping teams resolve blockers, improving workflow effectiveness, and creating solutions that drive positive business impact.\n\nLooking ahead, I aim to continuously sharpen my technical and analytical capabilities, broaden my cross-disciplinary exposure, and discover the specialization that aligns best with my strengths and where I can make the most meaningful contribution.",
+      "For my future career plans, I want to continuously grow in roles that involve technical capabilities, analysis, and problem-solving. As a fresh graduate at the early stage of my professional journey, I do not want to restrict my career path to a single rigid position or specialization. So far, the opportunities and experiences I have engaged in the most have indeed been in software development and data processing (data engineering). For me right now, what matters most is not merely the specific job title or position I hold, but how I can deliver tangible contributions to the company using my skill set, assist the team in solving problems, and create a positive impact for the team or organization in whatever role I undertake.",
     category: "Career Direction & Goals",
   },
   {

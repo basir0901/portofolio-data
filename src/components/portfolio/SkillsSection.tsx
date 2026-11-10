@@ -63,10 +63,6 @@ export const SkillsSection = () => {
                   ))}
                 </div>
               </div>
-
-              <div className="mt-6 pt-3.5 border-t border-[#E3D5CA] text-xs text-[#292722] uppercase tracking-wider font-bold">
-                {isEn ? "Verified in Production Environments" : "Teruji di Lingkungan Produksi"}
-              </div>
             </div>
           ))}
         </div>
