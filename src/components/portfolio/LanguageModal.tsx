@@ -83,10 +83,14 @@ export const LanguageModal = () => {
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-2.5">
                   {/* Bendera Merah Putih Indonesia (SVG Grafis Nyata) */}
-                  <div className="w-8 h-5.5 rounded overflow-hidden border border-[#D6CCC2] shadow-xs flex flex-col flex-shrink-0">
-                    <div className="h-1/2 w-full bg-[#E70011]" />
-                    <div className="h-1/2 w-full bg-white" />
-                  </div>
+                  <svg
+                    className="w-8 h-auto rounded overflow-hidden border border-[#D6CCC2] shadow-sm flex-shrink-0"
+                    viewBox="0 0 60 30"
+                    aria-hidden="true"
+                  >
+                    <rect width="60" height="15" fill="#E70011" />
+                    <rect y="15" width="60" height="15" fill="#FFFFFF" />
+                  </svg>
                   <span className="text-xs font-bold px-2 py-0.5 rounded bg-[#EDEDE9] text-[#292722] border border-[#D6CCC2]">
                     ID
                   </span>
@@ -126,7 +130,7 @@ export const LanguageModal = () => {
                 <div className="flex items-center gap-2.5">
                   {/* Bendera United Kingdom / Great Britain (SVG Grafis Nyata) */}
                   <svg
-                    className="w-8 h-5.5 rounded overflow-hidden border border-[#D6CCC2] shadow-xs flex-shrink-0"
+                    className="w-8 h-auto rounded overflow-hidden border border-[#D6CCC2] shadow-sm flex-shrink-0"
                     viewBox="0 0 60 30"
                     aria-hidden="true"
                   >
