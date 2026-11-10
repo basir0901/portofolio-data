@@ -551,7 +551,7 @@ export const FAQ_LIST: FaqItem[] = [
   {
     question: "Apa nilai tambah utama yang Anda tawarkan untuk tim atau perusahaan?",
     answer:
-      "Kombinasi pemahaman rekayasa perangkat lunak (Laravel, React.js, Vue.js, RESTful API) dan rekayasa data (Python, Apache Airflow, PostgreSQL, staging database, ETL pipelines). Saya dapat melihat tantangan operasional dari sisi arsitektur aplikasi sekaligus integritas alur data, sehingga solusi yang dibangun lebih terstruktur dan berorientasi pada efisiensi bisnis nyata.",
+      "Kombinasi pemahaman rekayasa perangkat lunak dan rekayasa data (Python, SQL, ETL (extract, transform, load data)). Saya dapat melihat tantangan operasional dari sisi arsitektur aplikasi sekaligus integritas alur data, sehingga solusi yang dibangun lebih terstruktur dan berorientasi pada efisiensi bisnis nyata.",
     category: "Nilai Tambah",
   },
   {

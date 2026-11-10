@@ -474,7 +474,7 @@ export const FAQ_LIST_EN: FaqItem[] = [
   {
     question: "What key value do you bring to a team or company?",
     answer:
-      "The dual capability bridging software engineering (Laravel, React.js, Vue.js, RESTful APIs) and data engineering (Python, Apache Airflow, PostgreSQL, staging databases, ETL pipelines). I can approach operational challenges from both application architecture and data integrity perspectives, resulting in robust and business-driven solutions.",
+      "The dual capability bridging software engineering and data engineering (Python, SQL, ETL (extract, transform, and load data)). I can approach operational challenges from both application architecture and data integrity perspectives, resulting in robust and business-driven solutions.",
     category: "Value Proposition",
   },
   {
