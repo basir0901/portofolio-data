@@ -13,7 +13,7 @@ export const PERSONAL_INFO_EN = {
     "Open to diverse roles beyond previous job titles",
   availabilityText2:
     "Fast learner, Highly Adaptive, Flexible & Impact Oriented",
-  bio: "I have professional experience 1.5 years in web development and end-to-end data processing to produce clean, structured, and production-ready data. Leveraging this background, I am highly flexible and eager to contribute beyond software and data domains. I believe this experience equips me with strong adaptability, fast learning skills, and the mindset to solve diverse technical and operational challenges in new roles.",
+  bio: "I have professional experience 1.5 years in web development and end-to-end data processing to produce clean, structured, and production-ready data. Leveraging this background, I am highly flexible and eager to contribute beyond software and data domains. I believe this experience equips me with strong adaptability, fast learning skills, and the mindset to solve diverse technical and operational challenges in different roles.",
   educationShort:
     "Bachelor of Applied Science in Software Engineering Technology — IPB University (class of 2025 • GPA 3.20)",
   email: "basirarsy2609@gmail.com",
@@ -234,11 +234,11 @@ export const EXPERIENCES_EN: ExperienceBlock[] = [
       "Built full-stack frontend and backend interfaces and performed rigorous API integration testing using Postman.",
     ],
     businessImpact: [
-      "Digitized safety consumption tracking and periodic facility audits, replacing error-prone manual paper logs.",
-      "Streamlined inventory monitoring and timely First Aid Kit replenishment through structured periodic stock inspections.",
-      "Provided comprehensive inspection audit trails for generators and hydrant pipelines to guarantee operational facility readiness.",
-      "Centralized safety data across nationwide branches, expediting management monitoring and data traceability.",
-      "Standardized routine inspection protocols in compliance with corporate HSE standards.",
+      "Digitized First Aid Kit usage records and facility inspection documentation, replacing previously manual recording processes.",
+      "Simplified the monitoring of First Aid Kit consumption and availability through structured usage records and periodic stock inspections.",
+      "Established inspection records for generators and hydrant pipeline systems to support facility condition monitoring and operational readiness assessments.",
+      "Centralized usage records and inspection results across multiple branches, facilitating monitoring and data traceability for relevant stakeholders.",
+      "Supported the standardization of routine inspection reporting and documentation processes across the company's operational environment.",
     ],
     technologies: [
       "Laravel",
