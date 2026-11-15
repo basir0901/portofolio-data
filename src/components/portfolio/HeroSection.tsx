@@ -217,8 +217,8 @@ export const HeroSection = () => {
               {/* Main Description */}
               <p className="text-sm sm:text-[15px] text-[#292722] font-medium leading-relaxed mb-4">
                 {isEn
-                  ? "Demonstrated ability to rapidly understand corporate workflows and business requirements through building diverse systems and applications. This allows me to translate business needs into precise system solutions and adapt quickly to technical and operational challenges."
-                  : "Memiliki kemampuan memahami alur kerja dan kebutuhan bisnis perusahaan secara cepat melalui pengalaman membangun berbagai sistem dan aplikasi. Kemampuan ini membantu saya menerjemahkan kebutuhan bisnis menjadi solusi sistem yang tepat serta beradaptasi dalam menghadapi berbagai tantangan teknis maupun operasional."}
+                  ? "Able to quickly understand business processes, workflows and requirements, and translate them into effective and efficient solutions. My experience building a variety of systems and applications has made me adaptable in addressing both technical and operational challenges."
+                  : "Mampu memahami proses bisnis, alur kerja dan kebutuhan bisnis dengan cepat, lalu menerjemahkannya menjadi solusi yang efektif dan efisien. Pengalaman membangun berbagai sistem dan aplikasi membuat saya adaptif menghadapi tantangan teknis maupun operasional."}
               </p>
 
               {/* Subsection: Key Capabilities */}
