@@ -259,6 +259,13 @@ export const EXPERIENCES: ExperienceBlock[] = [
           "Dokumentasi identitas resmi peserta magang di PT Sinergi Informatika Semen Indonesia (GRAHA Aktiva Lt. 11, Jakarta Selatan) terdaftar pada sistem MagangHub Kemnaker.",
         isPrimary: false,
       },
+      {
+        url: "/assets/sisi/sertifikat_magang_hub.jpg",
+        title: "Sertifikat Program Pemagangan MagangHub — PT Sinergi Informatika Semen Indonesia",
+        caption:
+          "Sertifikat resmi Program Pemagangan Lulusan Perguruan Tinggi (Nomor: MN.031.041543.02.2025) yang diselenggarakan oleh Kemnaker bersama PT Sinergi Informatika Semen Indonesia via MagangHub, diselesaikan dengan predikat kelulusan Sangat Baik.",
+        isPrimary: false,
+      },
     ],
   },
   {

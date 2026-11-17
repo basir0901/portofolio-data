@@ -214,6 +214,13 @@ export const EXPERIENCES_EN: ExperienceBlock[] = [
           "Official verification credential at PT Sinergi Informatika Semen Indonesia (GRAHA Aktiva 11th Floor, Jakarta) registered in MagangHub Kemnaker.",
         isPrimary: false,
       },
+      {
+        url: "/assets/sisi/sertifikat_magang_hub.jpg",
+        title: "Official Graduate Internship Certificate (MagangHub) — PT Sinergi Informatika Semen Indonesia",
+        caption:
+          "Official national graduate internship certificate (No: MN.031.041543.02.2025) issued by the Ministry of Manpower (Kemnaker) & PT SISI via MagangHub, achieved with a 'Very Good' (Sangat Baik) performance rating.",
+        isPrimary: false,
+      },
     ],
   },
   {
