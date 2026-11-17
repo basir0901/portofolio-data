@@ -53,8 +53,8 @@ export const AboutSection = () => {
     },
     {
       step: "04",
-      company: "Dyafera Teknologi",
-      shortCompany: "Dyafera Teknologi",
+      company: "IT Consulting Client & Confidential Enterprise Project",
+      shortCompany: "IT Consulting Client & Confidential Enterprise Project",
       period: "August 2026",
       duration: "4 - 5 minggu",
       type: "Project-Based",
@@ -108,8 +108,8 @@ export const AboutSection = () => {
     },
     {
       step: "04",
-      company: "Dyafera Teknologi",
-      shortCompany: "Dyafera Teknologi",
+      company: "IT Consulting Client & Confidential Enterprise Project",
+      shortCompany: "IT Consulting Client & Confidential Enterprise Project",
       period: "August 2026",
       duration: "1 Month",
       type: "Project-Based/Freelance",
@@ -246,7 +246,7 @@ export const AboutSection = () => {
                     <ul className="space-y-2 text-sm text-[#292722] font-medium">
                       <li className="flex items-start gap-2">
                         <span className="w-2 h-2 rounded-sm bg-[#292722] mt-1.5 flex-shrink-0" />
-                        <span><strong className="text-[#292722] font-bold">Dyafera Teknologi</strong> ({isEn ? "4 - 5 weeks" : "4 - 5 weeks"})</span>
+                        <span><strong className="text-[#292722] font-bold">IT Consulting Client & Confidential Enterprise Project</strong> ({isEn ? "4 - 5 weeks" : "4 - 5 weeks"})</span>
                       </li>
                     </ul>
                   </div>

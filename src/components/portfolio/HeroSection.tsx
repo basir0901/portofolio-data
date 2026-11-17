@@ -135,7 +135,7 @@ export const HeroSection = () => {
                 Tools & Technologies
               </h4>
               <div className="flex flex-wrap gap-1.5">
-                {["Python", "SQL", "Airflow", "PostgreSQL", "Data Governance", "Data Quality", "Datamart"].map((tool) => (
+                {["Python", "SQL", "Airflow", "PostgreSQL", "Power BI", "Data Governance", "Data Quality", "Datamart"].map((tool) => (
                   <span
                     key={tool}
                     className="px-2.5 py-1 text-xs font-bold rounded bg-[#EDEDE9] text-[#292722] border border-[#D6CCC2]"
@@ -161,8 +161,8 @@ export const HeroSection = () => {
               {/* Main Description */}
               <p className="text-sm sm:text-[15px] text-[#292722] font-medium leading-relaxed mb-4">
                 {isEn
-                  ? "1.5 years of professional experience in web-based application development deployed across diverse business environments, including PT Telkom Satelit Indonesia, PT Sinergi Informatika Semen Indonesia, PT Cipta Krida Bahari, and Dyafera Teknologi."
-                  : "Memiliki pengalaman profesional selama 1,5 tahun dalam pengembangan aplikasi berbasis website yang telah diterapkan di berbagai lingkungan bisnis, termasuk PT Telkom Satelit Indonesia, PT Sinergi Informatika Semen Indonesia, PT Cipta Krida Bahari, dan Dyafera Teknologi."}
+                  ? "1.5 years of professional experience in web-based application development deployed across diverse business environments, including PT Telkom Satelit Indonesia, PT Sinergi Informatika Semen Indonesia, PT Cipta Krida Bahari, and IT Consulting Client & Confidential Enterprise Project."
+                  : "Memiliki pengalaman profesional selama 1,5 tahun dalam pengembangan aplikasi berbasis website yang telah diterapkan di berbagai lingkungan bisnis, termasuk PT Telkom Satelit Indonesia, PT Sinergi Informatika Semen Indonesia, PT Cipta Krida Bahari, dan IT Consulting Client & Confidential Enterprise Project."}
               </p>
 
               {/* Subsection: Pengalaman di 4 Perusahaan */}
@@ -175,7 +175,7 @@ export const HeroSection = () => {
                     "PT Telkom Satelit Indonesia",
                     "PT Sinergi Informatika Semen Indonesia",
                     "PT Cipta Krida Bahari",
-                    "Dyafera Teknologi",
+                    "IT Consulting Client & Confidential Enterprise Project",
                   ].map((company) => (
                     <li key={company} className="flex items-center gap-2">
                       <CheckCircle2 className="w-4 h-4 text-[#292722] flex-shrink-0" />

@@ -31,7 +31,7 @@ export const PERSONAL_INFO_EN = {
 export const EXPERIENCES_EN: ExperienceBlock[] = [
   {
     id: "ids-teknologi",
-    company: "Dyafera Teknologi",
+    company: "IT Consulting Client & Confidential Enterprise Project",
     role: "Software Engineer",
     period: "2026",
     location: "Jakarta, Indonesia",
@@ -388,6 +388,12 @@ export const SKILL_CATEGORIES_EN: SkillCategory[] = [
     ],
   },
   {
+    category: "Business Intelligence Tools",
+    skills: [
+      { name: "Power BI", note: "Interactive Dashboards, Data Visualization & Business Reporting" },
+    ],
+  },
+  {
     category: "Tools, Platforms & AI",
     skills: [
       { name: "Antigravity", note: "Development Workspace & Debugging" },
@@ -445,7 +451,7 @@ export const FAQ_LIST_EN: FaqItem[] = [
     question:
       "What is your career focus and direction moving forward? What roles or fields do you aspire to pursue long-term?",
     answer:
-      "For my future career plans, I want to continuously grow in roles that involve technical capabilities, analysis, and problem-solving. As a fresh graduate at the early stage of my professional journey, I do not want to restrict my career path to a single rigid position or specialization. So far, the opportunities and experiences I have engaged in the most have indeed been in software development and data processing (data engineering). For me right now, what matters most is not merely the specific job title or position I hold, but how I can deliver tangible contributions to the company using my skill set, assist the team in solving problems, and create a positive impact for the team or organization in whatever role I undertake.",
+      "Looking ahead in my career, I want to focus on and develop a career in the Data field, specifically in roles involving data analysis, data processing, and data engineering. I have a genuine passion for numbers and data, particularly in analyzing information, recognizing patterns, and uncovering insights that help organizations make informed decisions and solve business challenges.\n\nThis interest is reinforced by my professional background in web application development and data processing (Data Engineering). In my perspective, experience in Software Development provides a solid foundation for understanding system workflows, database schemas and relationships, and core business processes. This represents a tangible advantage in structuring, managing, and analyzing data with higher precision.\n\nIn the long run, I aim to continuously sharpen my technical and analytical capabilities to contribute meaningful, high-value insights for the company, while evolving into a Data professional who effectively bridges technical implementation with business needs.",
     category: "Career Direction & Goals",
   },
   {
@@ -463,7 +469,7 @@ export const FAQ_LIST_EN: FaqItem[] = [
   {
     question: "How is your ~1.5 years of experience broken down?",
     answer:
-      "My ~1.5 years of experience is distributed across 4 companies in diverse industries: 3 internships (PT Telkom Satelit Indonesia for 5 months, PT Cipta Krida Bahari for 5 months, PT Sinergi Informatika Semen Indonesia for 6 months), and 1 project-based engagement at Dyafera Teknologi for 4 - 5 weeks.",
+      "My ~1.5 years of experience is distributed across 4 companies in diverse industries: 3 internships (PT Telkom Satelit Indonesia for 5 months, PT Cipta Krida Bahari for 5 months, PT Sinergi Informatika Semen Indonesia for 6 months), and 1 project-based engagement at IT Consulting Client & Confidential Enterprise Project for 4 - 5 weeks.",
     category: "Experience Overview",
   },
   {

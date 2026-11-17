@@ -78,10 +78,10 @@ export const PERSONAL_INFO = {
 export const EXPERIENCES: ExperienceBlock[] = [
   {
     id: "ids-teknologi",
-    company: "Dyafera Teknologi",
+    company: "IT Consulting Client & Confidential Enterprise Project",
     role: "Software Engineer",
-    period: "2026",
-    location: "Bogor, Indonesia",
+    period: "August 2026",
+    location: "",
     employmentType: "Project Based",
     problemToSolve: "Aplikasi internal enterprise sebelumnya dibangun menggunakan arsitektur multi-page konvensional berbasis HTML, CSS, dan Vanilla JavaScript. Seiring berkembangnya kebutuhan bisnis, sistem harus mengakomodasi 30 modul bisnis yang tersebar dalam 4 domain utama serta 49 tahapan workflow operasional dan persetujuan. Arsitektur lama mulai menghadapi tantangan dalam hal efisiensi navigasi, pengelolaan kode, dan konsistensi antarmuka. Setiap perpindahan halaman memerlukan proses reload dokumen, sehingga pengalaman pengguna menjadi kurang responsif ketika menjalankan proses bisnis yang melibatkan banyak tahapan. Selain itu, implementasi antarmuka dan pengelolaan interaksi yang tersebar pada berbagai halaman meningkatkan kompleksitas pemeliharaan serta menyulitkan standarisasi komponen dan perilaku sistem antarmodul. Diperlukan modernisasi arsitektur frontend menjadi Single Page Application (SPA) berbasis React.js untuk meningkatkan responsivitas navigasi, menyederhanakan pengelolaan state, serta membangun fondasi frontend yang lebih modular, konsisten, dan mudah dikembangkan seiring pertumbuhan kebutuhan bisnis.",
     responsibilities: [
@@ -433,6 +433,12 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     ],
   },
   {
+    category: "Business Intelligence Tools",
+    skills: [
+      { name: "Power BI", note: "Dashboard Interaktif, Visualisasi Data & Pelaporan Bisnis" },
+    ],
+  },
+  {
     category: "Tools, Platform & AI",
     skills: [
       { name: "Antigravity", note: "IDE" },
@@ -521,7 +527,8 @@ export const FAQ_LIST: FaqItem[] = [
   {
     question:
       "Apa fokus dan arah karier yang ingin Anda tekuni ke depannya? Posisi atau bidang pekerjaan apa yang ingin Anda jalani dalam jangka panjang?",
-    answer: "Untuk rencana karier ke depan, saya ingin terus berkembang di bidang pekerjaan yang melibatkan kemampuan teknikal, analisis, dan problem- solving. Sebagai seorang freshgraduate yang masih berada ditahap awal perjalan profesional, saya belum ingin membatasi arah karier saya pada satu posisi atau spesialisasi tertentu. Sejauh ini, kesempatan dan pengalaman yang paling banyak saya dapatkan memang berada di bidang software development dan juga data processing (data engineering). Bagi saya, untuk saat ini hal terpenting bukan semata - mata posisi atau jabatan yang saya pegang, melainkan bagaimana saya bisa memberikan kontribusi nyata bagi perusahaan melalui kemampuan yang saya miliki, membantu tim menyelesaikan permasalahan, dan memberikan dampak positif bagi team atau perusahaan melalui posisi apapun itu",
+    answer:
+      "Untuk rencana karier ke depan, saya ingin berfokus dan mengembangkan karier di bidang Data, khususnya pada pekerjaan yang melibatkan analisis data, data processing, dan data engineering. Saya memiliki ketertarikan terhadap angka dan data, terutama dalam menganalisis informasi, memahami pola, serta menemukan insight yang dapat membantu perusahaan dalam mengambil keputusan dan menyelesaikan permasalahan bisnis.\n\nKetertarikan tersebut juga didukung oleh pengalaman profesional saya dalam pengembangan aplikasi berbasis web dan data processing (Data Engineering). Menurut saya, pengalaman di bidang Software Development memberikan fondasi yang kuat dalam memahami alur sistem, struktur dan relasi database, serta proses bisnis. Hal tersebut dapat menjadi nilai tambah dalam mengolah, mengelola, dan menganalisis data secara lebih terstruktur.\n\nDalam jangka panjang, saya ingin terus meningkatkan kemampuan teknis dan analitis agar dapat berkontribusi dalam menghasilkan informasi dan insight yang bernilai bagi perusahaan, serta berkembang menjadi profesional di bidang Data yang mampu menjembatani kebutuhan teknis dengan kebutuhan bisnis.",
     category: "Arah & Fokus Karier",
   },
   {
@@ -539,7 +546,7 @@ export const FAQ_LIST: FaqItem[] = [
   {
     question: "Bagaimana rincian pengalaman kerja ~1.5 tahun Anda selama ini?",
     answer:
-      "Pengalaman ~1.5 tahun saya terakumulasi di 4 perusahaan lintas industri, yaitu 3 perusahaan internship (PT Telkom Satelit Indonesia selama 5 bulan, PT Cipta Krida Bahari selama 5 bulan, PT Sinergi Informatika Semen Indonesia selama 6 bulan) serta 1 project-based di Dyafera Teknologi selama 4 - 5 weeks",
+      "Pengalaman ~1.5 tahun saya terakumulasi di 4 perusahaan lintas industri, yaitu 3 perusahaan internship (PT Telkom Satelit Indonesia selama 5 bulan, PT Cipta Krida Bahari selama 5 bulan, PT Sinergi Informatika Semen Indonesia selama 6 bulan) serta 1 project-based di IT Consulting Client & Confidential Enterprise Project selama 4 - 5 weeks",
     category: "Riwayat Pengalaman",
   },
   {
